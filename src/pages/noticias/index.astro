@@ -1,0 +1,29 @@
+---
+import Base from '../../layouts/Base.astro';
+import Cartao from '../../components/Cartao.astro';
+import Paginacao from '../../components/Paginacao.astro';
+import { getTag, getTextos } from '../../lib/conteudo';
+
+const POR_PAGINA = 12;
+const tagPedida = (Astro.url.searchParams.get('tag') ?? '').trim();
+const tag = tagPedida ? await getTag(tagPedida) : null;
+// Tag que não existe (ou categoria antiga): a lista completa.
+if (tagPedida && !tag) return Astro.redirect('/noticias', 302);
+
+const todas = await getTextos('noticias');
+const lista = tag ? todas.filter((n) => n.tags.some((t) => t.slug === tag.slug)) : todas;
+const total = Math.max(1, Math.ceil(lista.length / POR_PAGINA));
+const pagina = Math.min(total, Math.max(1, Number(Astro.url.searchParams.get('pagina')) || 1));
+const itens = lista.slice((pagina - 1) * POR_PAGINA, pagina * POR_PAGINA);
+const base = tag ? `/noticias?tag=${encodeURIComponent(tag.slug)}` : '/noticias';
+const titulo = tag ? `Notícias: ${tag.rotulo}` : 'Notícias';
+---
+
+<Base titulo={pagina > 1 ? `${titulo} (página ${pagina})` : titulo} descricao="Notícias, chamadas e eventos do Transfopress Brasil." naoIndexar={!!tag}>
+  <h1 class="titulo-pagina">{titulo}</h1>
+  {tag && <p class="filtro">{lista.length} {lista.length === 1 ? 'notícia' : 'notícias'} com a tag <strong>{tag.rotulo}</strong>. <a href="/noticias">Ver todas</a></p>}
+  <div class="lista">
+    {itens.map((n) => <Cartao texto={n} />)}
+  </div>
+  <Paginacao atual={pagina} total={total} base={base} />
+</Base>

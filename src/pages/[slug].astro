@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+import Prosa from '../components/Prosa.astro';
+import { getPagina } from '../lib/conteudo';
+
+// Páginas fixas (Pesquisadores, Publicações, Memória, Contato e outras criadas
+// no admin). A Apresentação é a página inicial.
+const { slug } = Astro.params;
+if (!slug || slug === 'apresentacao') return Astro.redirect('/', 301);
+const pagina = await getPagina(slug);
+if (!pagina) return new Response(null, { status: 404 });
+---
+
+<Base titulo={pagina.titulo} descricao={pagina.resumo}>
+  <h1 class="titulo-pagina" {...pagina.edit.title}>{pagina.titulo}</h1>
+  <Prosa conteudo={pagina.conteudo} edit={pagina.edit.conteudo} />
+</Base>

@@ -1,0 +1,28 @@
+---
+import ImagemSite from './ImagemSite.astro';
+import { IDIOMAS, dataLegivel, type Texto } from '../lib/conteudo';
+
+// Item das listas de notícias, verbetes e memória.
+interface Props {
+  texto: Texto;
+  mostrarData?: boolean;
+  nivel?: 'h2' | 'h3';
+}
+const { texto, mostrarData = true, nivel = 'h2' } = Astro.props;
+const Titulo = nivel;
+const lang = texto.idioma === 'pt' ? undefined : IDIOMAS[texto.idioma];
+---
+
+<article class="cartao">
+  {texto.imagem && <ImagemSite imagem={texto.imagem} alt="" classe="cartao-imagem" />}
+  <div class="cartao-corpo">
+    <Titulo class="cartao-titulo" lang={lang}><a href={texto.url}>{texto.titulo}</a></Titulo>
+    {(texto.autoria || (mostrarData && texto.data)) && (
+      <p class="cartao-meta">
+        {texto.autoria && <span>{texto.autoria}</span>}
+        {mostrarData && texto.data && <time datetime={texto.data.toISOString()}>{dataLegivel(texto.data)}</time>}
+      </p>
+    )}
+    {texto.resumo && <p class="cartao-resumo" lang={lang}>{texto.resumo}</p>}
+  </div>
+</article>

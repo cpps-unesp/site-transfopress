@@ -1,0 +1,49 @@
+---
+import Base from '../layouts/Base.astro';
+import { buscarNoSite, type Resultado } from '../lib/conteudo';
+
+const q = (Astro.url.searchParams.get('q') ?? '').trim().slice(0, 100);
+let resultados: Resultado[] = [];
+let falhou = false;
+if (q.length >= 2) {
+  try {
+    resultados = await buscarNoSite(q);
+  } catch (erro) {
+    console.error('busca', erro);
+    falhou = true;
+  }
+}
+---
+
+<Base titulo={q ? `Busca: ${q}` : 'Busca'} naoIndexar>
+  <h1 class="titulo-pagina">Buscar no site</h1>
+  <form class="busca-pagina" action="/busca" method="get" role="search">
+    <label for="busca-q">Palavras</label>
+    <input id="busca-q" type="search" name="q" value={q} />
+    <button class="botao" type="submit">Buscar</button>
+  </form>
+  {
+    q.length < 2 ? (
+      <p>Digite pelo menos duas letras.</p>
+    ) : falhou ? (
+      <p>A busca não funcionou agora. Tente de novo em instantes.</p>
+    ) : resultados.length === 0 ? (
+      <p>Nada encontrado para <strong>{q}</strong>. Tente outras palavras ou menos palavras.</p>
+    ) : (
+      <>
+        <p role="status">
+          {resultados.length} {resultados.length === 1 ? 'resultado' : 'resultados'} para <strong>{q}</strong>
+        </p>
+        <ol class="resultados">
+          {resultados.map((r) => (
+            <li>
+              <span class="r-tipo">{r.tipo}</span>
+              <a href={r.url}>{r.titulo}</a>
+              {r.trecho && <p set:html={r.trecho} />}
+            </li>
+          ))}
+        </ol>
+      </>
+    )
+  }
+</Base>

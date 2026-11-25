@@ -1,0 +1,18 @@
+---
+import { PortableText } from 'emdash/ui';
+import type { PortableTextBlock } from 'emdash';
+import { IDIOMAS, type Idioma } from '../lib/conteudo';
+
+// Texto rico do EmDash. Quando o texto está em outro idioma, o atributo lang
+// avisa os leitores de tela e os buscadores.
+interface Props {
+  conteudo: PortableTextBlock[];
+  idioma?: Idioma;
+  edit?: Record<string, unknown>;
+}
+const { conteudo, idioma = 'pt', edit } = Astro.props;
+---
+
+<div class="prosa" lang={idioma === 'pt' ? undefined : IDIOMAS[idioma]} {...edit}>
+  <PortableText value={conteudo} tablePlaceholder="Tabela" />
+</div>

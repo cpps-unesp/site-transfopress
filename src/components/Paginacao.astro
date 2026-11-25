@@ -1,0 +1,27 @@
+---
+// Navegação entre páginas de uma lista (?pagina=2).
+interface Props {
+  atual: number;
+  total: number;
+  base: string;
+}
+const { atual, total, base } = Astro.props;
+const link = (n: number) => {
+  const url = new URL(base, 'http://x');
+  if (n > 1) url.searchParams.set('pagina', String(n));
+  else url.searchParams.delete('pagina');
+  return `${url.pathname}${url.search}`;
+};
+---
+
+{
+  total > 1 && (
+    <nav class="paginacao" aria-label="Páginas da lista">
+      {atual > 1 ? <a href={link(atual - 1)} rel="prev">← Anteriores</a> : <span />}
+      <span>
+        Página {atual} de {total}
+      </span>
+      {atual < total ? <a href={link(atual + 1)} rel="next">Seguintes →</a> : <span />}
+    </nav>
+  )
+}

@@ -1,0 +1,9 @@
+---
+import TextoCompleto from '../../components/TextoCompleto.astro';
+import { getTexto } from '../../lib/conteudo';
+
+const texto = Astro.params.slug ? await getTexto('verbetes', Astro.params.slug) : null;
+if (!texto) return new Response(null, { status: 404 });
+---
+
+<TextoCompleto texto={texto} voltar={{ url: '/verbetes', rotulo: 'Verbetes' }} />

@@ -1,0 +1,41 @@
+---
+import Base from '../layouts/Base.astro';
+import Prosa from './Prosa.astro';
+import { IDIOMAS, dataLegivel, type Texto } from '../lib/conteudo';
+
+// Página de uma notícia, verbete ou registro de memória.
+interface Props {
+  texto: Texto;
+  voltar: { url: string; rotulo: string };
+}
+const { texto, voltar } = Astro.props;
+const lang = texto.idioma === 'pt' ? undefined : IDIOMAS[texto.idioma];
+const og = texto.imagem?.src && texto.imagem.src.startsWith('/') ? texto.imagem.src : null;
+---
+
+<Base titulo={texto.titulo} descricao={texto.resumo} ogImagem={og}>
+  <article class="texto">
+    <p class="trilha"><a href={voltar.url}>{voltar.rotulo}</a></p>
+    <h1 lang={lang} {...texto.edit.title}>{texto.titulo}</h1>
+    {(texto.autoria || texto.data) && (
+      <p class="texto-meta">
+        {texto.autoria && <span {...texto.edit.autoria}>{texto.autoria}</span>}
+        {texto.data && (
+          <span>
+            Publicado em <time datetime={texto.data.toISOString()}>{dataLegivel(texto.data)}</time>
+          </span>
+        )}
+      </p>
+    )}
+    <Prosa conteudo={texto.conteudo} idioma={texto.idioma} edit={texto.edit.conteudo} />
+    {texto.tags.length > 0 && (
+      <ul class="tags" aria-label="Tags">
+        {texto.tags.map((t) => (
+          <li>
+            <a href={`/noticias?tag=${encodeURIComponent(t.slug)}`}>{t.rotulo}</a>
+          </li>
+        ))}
+      </ul>
+    )}
+  </article>
+</Base>
