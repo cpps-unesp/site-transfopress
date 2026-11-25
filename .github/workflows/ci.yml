@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+
+      # Actions fixadas por SHA, como no site do CPPS (ver .github/scripts).
+      - name: Actions fixadas por SHA
+        run: python3 .github/scripts/checa-actions-fixadas.py
+
+      - name: Setup Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version-file: '.nvmrc'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Valida o seed, gera os tipos, checa os tipos e faz o build.
+      - name: Run CI
+        run: npm run ci
+
+      - name: Seed gerado a partir do script
+        run: node seed/gerar-seed.mjs && git diff --exit-code seed/seed.json src/lib/redirecionamentos.json

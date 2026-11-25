@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "transfopress-site": {
+      "type": "http",
+      "url": "https://transfopressbrasil.franca.unesp.br/_emdash/api/mcp"
+    }
+  }
+}

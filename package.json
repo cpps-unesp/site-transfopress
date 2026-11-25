@@ -1,0 +1,36 @@
+{
+  "name": "site-transfopress",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "typecheck": "astro check",
+    "seed:check": "emdash seed seed/seed.json --validate",
+    "ci": "npm run seed:check && astro sync && npm run typecheck && npm run build",
+    "astro": "astro",
+    "seed": "node seed/gerar-seed.mjs"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^14.4.8",
+    "@astrojs/react": "^7.1.9",
+    "@emdash-cms/cloudflare": "^1.5.0",
+    "astro": "^7.4.12",
+    "emdash": "^1.5.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.12",
+    "@cloudflare/workers-types": "^5.20261101.1",
+    "@emdash-cms/gutenberg-to-portable-text": "^1.5.0",
+    "@types/node": "^25.9.9",
+    "typescript": "^6.0.3",
+    "wrangler": "^4.163.0"
+  },
+  "emdash": {
+    "seed": "seed/seed.json"
+  }
+}
