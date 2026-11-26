@@ -1,0 +1,19 @@
+---
+// <head> comum às três alternativas. Protótipo: fora dos buscadores.
+interface Props {
+  titulo: string;
+  descricao: string;
+  css: string;
+  fontes: string[];
+}
+const { titulo, descricao, css, fontes } = Astro.props;
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{titulo}</title>
+<meta name="description" content={descricao} />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml" />
+{fontes.map((f) => <link rel="preload" href={`/static/fonts/${f}`} as="font" type="font/woff2" crossorigin />)}
+<link rel="stylesheet" href={`/static/css/${css}`} />

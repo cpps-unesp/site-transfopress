@@ -1,0 +1,62 @@
+/* Alternativa B, "Índice". Branco, texto quase preto, azul-marinho do tema antigo
+   como cor da marca (cabeçalho e links). Acento: a régua azul-clara do tema
+   (#73bfe5) só sob o cabeçalho. Uma família (Source Sans 3), a mesma do site
+   atual, para leitura longa sem ruído. */
+@import url('/static/css/prototipo-base.css');
+
+:root {
+  --fundo: #ffffff;
+  --tinta: #1b1f24;    /* 16:1 */
+  --suave: #4a5260;    /* 7,6:1 */
+  --linha: #c9ced6;
+  --marca: #152548;
+  --foco: #f2a900;
+  --acento: #73bfe5;
+  --largura: 1120px;
+}
+
+body { font: 1.125rem/1.65 'Source Sans 3', system-ui, sans-serif; }
+.envoltorio { max-width: var(--largura); margin: 0 auto; padding: 0 1.25rem; }
+.envoltorio-texto { max-width: 44rem; margin: 0 auto; padding: 0 1.25rem; }
+a { color: var(--marca); }
+
+.cabecalho { border-bottom: 6px solid var(--acento); }
+.cabecalho-interno { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; padding-top: 1rem; padding-bottom: 1rem; }
+.marca img { width: min(340px, 70vw); }
+.busca label { font-weight: 600; }
+.menu { background: var(--marca); }
+.menu ul { list-style: none; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 0; padding-top: 0; padding-bottom: 0; }
+.menu a { display: block; padding: 0.75rem 1rem; color: #fff; font-weight: 600; text-decoration: none; border-bottom: 4px solid transparent; }
+.menu a:hover { text-decoration: underline; }
+.menu a[aria-current='page'] { border-bottom-color: #fff; }
+
+.grade { display: grid; gap: 2.5rem; margin-top: 2.5rem; }
+@media (min-width: 960px) { .grade { grid-template-columns: minmax(0, 1fr) 20rem; gap: 4rem; } }
+.apresentacao h1 { font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.15; margin: 0 0 1.25rem; }
+.abertura { font-size: 1.35rem; line-height: 1.5; margin: 0 0 1.5rem; max-width: 40rem; }
+.apresentacao .prosa p { margin: 0 0 1.1rem; max-width: 40rem; }
+
+.indice h2, .recentes h2 { font-size: 1.35rem; margin: 0 0 1rem; padding-left: 0.75rem; border-left: 5px solid var(--marca); }
+.indice ul { list-style: none; margin: 0; padding: 0; }
+.indice li { padding: 0.9rem 0; border-top: 1px solid var(--linha); }
+.indice li:last-child { border-bottom: 1px solid var(--linha); }
+.indice a { font-weight: 700; font-size: 1.15rem; }
+.indice p { margin: 0.2rem 0 0; font-size: 1rem; color: var(--suave); }
+
+.recentes { margin-top: 3.5rem; }
+.recentes ul { list-style: none; margin: 0; padding: 0; }
+.recentes li { display: grid; grid-template-columns: 6rem minmax(0, 1fr); gap: 0.25rem 1rem; padding: 0.8rem 0; border-top: 1px solid var(--linha); }
+.recentes .tipo { font-size: 0.95rem; color: var(--suave); grid-row: span 2; }
+.recentes a { font-weight: 600; }
+.recentes time { font-size: 0.95rem; color: var(--suave); grid-column: 2; }
+
+.artigo { margin-top: 2.5rem; }
+.artigo-secao { margin: 0 0 0.5rem; font-weight: 600; }
+.artigo h1 { font-size: clamp(1.9rem, 4vw, 2.6rem); line-height: 1.15; margin: 0 0 0.75rem; }
+.artigo .prosa p { margin: 0 0 1.1rem; }
+
+.rodape { margin-top: 4rem; background: #f1f3f6; border-top: 1px solid var(--linha); padding: 2.5rem 0; font-size: 1rem; }
+.rodape-linha { display: flex; flex-wrap: wrap; gap: 1rem 3rem; align-items: flex-start; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--linha); }
+.rodape-linha p { margin: 0; }
+.redes a { color: var(--marca); }
+.links-linha .prosa p { margin: 0 0 1.5rem; font-size: 1rem; color: var(--suave); }

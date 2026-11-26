@@ -1,0 +1,73 @@
+---
+import LayoutC from '../../../prototipos/LayoutC.astro';
+import Prosa from '../../../components/Prosa.astro';
+import ImagemSite from '../../../components/ImagemSite.astro';
+import { dadosHome, separarApresentacao, urlVerbete, ano } from '../../../prototipos/dados';
+import { IDIOMAS } from '../../../lib/conteudo';
+
+const d = await dadosHome();
+const { links, abertura, resto } = separarApresentacao(d.apresentacao?.conteudo ?? []);
+const lang = (i: keyof typeof IDIOMAS) => (i === 'pt' ? undefined : IDIOMAS[i]);
+// Três páginas digitalizadas ao lado da abertura: as mais recentes em retrato.
+const retratos = d.verbetesComImagem.filter((v) => (v.imagem!.height ?? 0) > (v.imagem!.width ?? 1));
+const vitrine = retratos.slice(0, 3);
+const mural = d.verbetesComImagem;
+---
+
+<LayoutC descricao={d.apresentacao?.resumo}>
+  <section class="abertura" aria-labelledby="apresentacao-titulo">
+    <div class="envoltorio abertura-grade">
+      <div class="abertura-texto">
+        <h1 id="apresentacao-titulo">{d.apresentacao?.titulo || 'Apresentação'}</h1>
+        {abertura && <p class="lide">{abertura}</p>}
+        <a class="ler" href="#apresentacao-completa">Ler a apresentação completa</a>
+      </div>
+      <ul class="vitrine" aria-label="Periódicos estudados">
+        {vitrine.map((v, i) => (
+          <li>
+            <a href={urlVerbete('c', v)}>
+              <ImagemSite imagem={v.imagem!} alt="" carregar={i === 0 ? 'eager' : 'lazy'} />
+              <span lang={lang(v.idioma)}>{v.titulo}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section id="apresentacao-completa" class="texto-completo envoltorio" aria-label="Apresentação completa">
+    {links.length > 0 && <div class="links-linha"><Prosa conteudo={links} /></div>}
+    <Prosa conteudo={resto} />
+  </section>
+
+  <section class="mural envoltorio" aria-labelledby="mural-titulo">
+    <h2 id="mural-titulo">Periódicos estudados</h2>
+    <p class="mural-intro">Páginas digitalizadas que acompanham os verbetes. Cada uma leva ao texto do pesquisador.</p>
+    <ul class="mural-grade">
+      {mural.map((v) => (
+        <li>
+          <a href={urlVerbete('c', v)}>
+            <ImagemSite imagem={v.imagem!} alt="" />
+            <span class="mural-titulo" lang={lang(v.idioma)}>{v.titulo}</span>
+            {v.autoria && <span class="mural-autoria">{v.autoria}</span>}
+          </a>
+        </li>
+      ))}
+    </ul>
+    <a class="ler" href="/verbetes">Todos os {d.contagem.verbetes} verbetes, em ordem alfabética</a>
+  </section>
+
+  <section class="linha-tempo" aria-labelledby="tempo-titulo">
+    <div class="envoltorio">
+      <h2 id="tempo-titulo">Encontros e lançamentos</h2>
+      <ol>
+        {d.memoria.map((m) => (
+          <li>
+            <span class="ano">{ano(m.data)}</span>
+            <a href={m.url}>{m.titulo}</a>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+</LayoutC>

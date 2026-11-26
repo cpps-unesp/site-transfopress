@@ -1,0 +1,33 @@
+---
+import ImagemSite from '../components/ImagemSite.astro';
+import type { Parceiro } from '../lib/conteudo';
+
+// Logos das instituições parceiras, cada um com link e nome (no rodapé antigo
+// eram uma imagem só, sem texto alternativo).
+interface Props {
+  parceiros: Parceiro[];
+  titulo?: string;
+}
+const { parceiros, titulo = 'Instituições parceiras' } = Astro.props;
+---
+
+{
+  parceiros.length > 0 && (
+    <section class="parceiros-bloco" aria-labelledby="parceiros-titulo">
+      <h2 id="parceiros-titulo" class="parceiros-titulo">{titulo}</h2>
+      <ul class="parceiros-lista">
+        {parceiros.map((p) => (
+          <li>
+            {p.link ? (
+              <a href={p.link} rel="noopener" target="_blank" title={p.nome}>
+                <ImagemSite imagem={p.logo} alt={p.nome} />
+              </a>
+            ) : (
+              <ImagemSite imagem={p.logo} alt={p.nome} />
+            )}
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
+}

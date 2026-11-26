@@ -1,0 +1,14 @@
+---
+interface Props {
+  id: string;
+}
+const { id } = Astro.props;
+---
+
+<form class="busca" action="/busca" method="get" role="search">
+  <label for={id}>Buscar no site</label>
+  <span class="busca-campo">
+    <input id={id} type="search" name="q" autocomplete="off" />
+    <button type="submit">Buscar</button>
+  </span>
+</form>

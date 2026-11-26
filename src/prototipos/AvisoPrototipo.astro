@@ -1,0 +1,23 @@
+---
+import { ALTERNATIVAS, type Alternativa } from './dados';
+
+// Faixa que identifica o protótipo e leva às outras duas alternativas.
+interface Props {
+  alt: Alternativa;
+}
+const { alt } = Astro.props;
+const outras = (Object.keys(ALTERNATIVAS) as Alternativa[]).filter((k) => k !== alt);
+---
+
+<aside class="aviso-prototipo" aria-label="Sobre este protótipo">
+  <p>
+    Protótipo {alt.toUpperCase()} ({ALTERNATIVAS[alt].nome}), com o conteúdo real do site.{' '}
+    <a href="/prototipos">Comparar as três</a>
+    {outras.map((k) => (
+      <>
+        {' · '}
+        <a href={`/prototipos/${k}`}>{k.toUpperCase()} ({ALTERNATIVAS[k].nome})</a>
+      </>
+    ))}
+  </p>
+</aside>

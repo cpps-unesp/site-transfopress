@@ -1,0 +1,57 @@
+---
+import LayoutA from '../../../prototipos/LayoutA.astro';
+import Prosa from '../../../components/Prosa.astro';
+import { dadosHome, separarApresentacao, urlVerbete, ano } from '../../../prototipos/dados';
+import { dataLegivel, IDIOMAS } from '../../../lib/conteudo';
+
+const d = await dadosHome();
+const { links, corpo } = separarApresentacao(d.apresentacao?.conteudo ?? []);
+const lang = (i: keyof typeof IDIOMAS) => (i === 'pt' ? undefined : IDIOMAS[i]);
+---
+
+<LayoutA descricao={d.apresentacao?.resumo}>
+  <div class="capa">
+    <article class="materia-principal" aria-labelledby="apresentacao-titulo">
+      <h1 id="apresentacao-titulo">{d.apresentacao?.titulo || 'Apresentação'}</h1>
+      {links.length > 0 && <div class="links-linha"><Prosa conteudo={links} /></div>}
+      <div class="colunas"><Prosa conteudo={corpo} /></div>
+    </article>
+    <aside class="coluna-lateral" aria-label="Últimas publicações">
+      <section aria-labelledby="noticias-titulo">
+        <h2 id="noticias-titulo">Notícias</h2>
+        <ol class="manchetes">
+          {d.noticias.map((n) => (
+            <li>
+              <a href={n.url} lang={lang(n.idioma)}>{n.titulo}</a>
+              {n.data && <time datetime={n.data.toISOString()}>{dataLegivel(n.data)}</time>}
+            </li>
+          ))}
+        </ol>
+        <a class="mais" href="/noticias">Todas as {d.contagem.noticias} notícias</a>
+      </section>
+      <section aria-labelledby="verbetes-titulo">
+        <h2 id="verbetes-titulo">Verbetes recentes</h2>
+        <ol class="manchetes">
+          {d.verbetesRecentes.map((v) => (
+            <li>
+              <a href={urlVerbete('a', v)} lang={lang(v.idioma)}>{v.titulo}</a>
+              {v.autoria && <span class="autoria">{v.autoria}</span>}
+            </li>
+          ))}
+        </ol>
+        <a class="mais" href="/verbetes">Os {d.contagem.verbetes} verbetes</a>
+      </section>
+    </aside>
+  </div>
+  <section class="memoria" aria-labelledby="memoria-titulo">
+    <h2 id="memoria-titulo">Memória dos encontros</h2>
+    <ol class="memoria-lista">
+      {d.memoria.map((m) => (
+        <li>
+          <span class="ano">{ano(m.data)}</span>
+          <a href={m.url}>{m.titulo}</a>
+        </li>
+      ))}
+    </ol>
+  </section>
+</LayoutA>

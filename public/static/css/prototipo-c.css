@@ -1,0 +1,89 @@
+/* Alternativa C, "Acervo". Azul-marinho do tema antigo como superfície da
+   abertura e da linha do tempo (contraste com as páginas amareladas dos
+   periódicos); papel claro no resto. Acento: o azul-claro #73bfe5, só nos anos
+   da linha do tempo e no link de leitura, sobre o marinho (7,9:1). Títulos em
+   serifa (o assunto é imprensa), texto em Source Sans. */
+@import url('/static/css/prototipo-base.css');
+
+:root {
+  --fundo: #fbfaf7;
+  --tinta: #1d2330;   /* 15:1 */
+  --suave: #4d5566;   /* 7,3:1 */
+  --linha: #cfd3da;
+  --marca: #152548;
+  --acento: #73bfe5;  /* só sobre o marinho */
+  --foco: #e0a100;
+  --largura: 1240px;
+}
+
+body { font: 1.0625rem/1.65 'Source Sans 3', system-ui, sans-serif; }
+h1, h2 { font-family: 'Source Serif 4', Georgia, serif; }
+.envoltorio { max-width: var(--largura); margin: 0 auto; padding: 0 1.25rem; }
+.envoltorio-texto { max-width: 46rem; margin: 0 auto; padding: 0 1.25rem; }
+
+.cabecalho { background: var(--marca); color: #fff; }
+.cabecalho-interno { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: 0.9rem; padding-bottom: 0.9rem; }
+.marca { color: #fff; text-decoration: none; display: grid; }
+.marca-nome { font: 700 1.6rem/1.1 'Source Serif 4', Georgia, serif; }
+.marca-sub { font-size: 0.9rem; color: #d5dceb; }
+.menu-largo ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
+.menu-largo a, .menu-movel a { color: #fff; text-decoration: none; padding: 0.4rem 0; display: inline-block; font-weight: 600; }
+.menu-largo a:hover, .menu-largo a[aria-current='page'] { text-decoration: underline; text-decoration-thickness: 2px; }
+.menu-movel { display: none; }
+.menu-movel summary { cursor: pointer; padding: 0.5rem 0.9rem; border: 1px solid #fff; border-radius: 2px; font-weight: 600; list-style: none; }
+.menu-movel summary::-webkit-details-marker { display: none; }
+.menu-movel nav { position: absolute; right: 0; left: 0; background: var(--marca); padding: 1rem 1.25rem 1.5rem; z-index: 5; }
+.menu-movel ul { list-style: none; margin: 0 0 1rem; padding: 0; }
+.menu-movel .busca label { color: #fff; }
+@media (max-width: 960px) { .menu-largo { display: none; } .menu-movel { display: block; } .cabecalho { position: relative; } }
+
+.abertura { background: var(--marca); color: #fff; padding: 3rem 0 3.5rem; }
+.abertura-grade { display: grid; gap: 2.5rem; align-items: center; }
+@media (min-width: 900px) { .abertura-grade { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 3.5rem; } }
+.abertura h1 { font-size: 1.1rem; font-family: 'Source Sans 3', system-ui, sans-serif; font-weight: 600; color: #d5dceb; margin: 0 0 1rem; }
+.lide { font: 400 clamp(1.3rem, 2.2vw, 1.75rem)/1.4 'Source Serif 4', Georgia, serif; margin: 0 0 1.75rem; }
+.ler { color: var(--acento); font-weight: 600; font-size: 1.05rem; }
+.texto-completo .ler, .mural .ler { color: var(--marca); }
+.vitrine { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; align-items: start; }
+.vitrine li:nth-child(2) { margin-top: 2rem; }
+.vitrine li:nth-child(3) { margin-top: 4rem; }
+.vitrine a { color: #fff; text-decoration: none; display: block; }
+.vitrine img { aspect-ratio: 3 / 4; width: 100%; object-fit: cover; object-position: top; background: #e9e3d6; }
+.vitrine span { display: block; margin-top: 0.5rem; font-size: 0.9rem; line-height: 1.3; }
+.vitrine a:hover span { text-decoration: underline; }
+
+.texto-completo { max-width: 46rem; margin: 3rem auto 0; }
+.texto-completo .prosa p { margin: 0 0 1.1rem; }
+
+.mural { margin-top: 4rem; }
+.mural h2, .linha-tempo h2 { font-size: clamp(1.8rem, 3.5vw, 2.5rem); line-height: 1.15; margin: 0 0 0.5rem; }
+.mural-intro { color: var(--suave); margin: 0 0 1.75rem; max-width: 40rem; }
+.mural-grade { list-style: none; margin: 0 0 1.5rem; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.75rem 1.25rem; }
+@media (min-width: 700px) { .mural-grade { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { .mural-grade { grid-template-columns: repeat(6, minmax(0, 1fr)); } .mural-grade li:first-child { grid-column: span 2; grid-row: span 2; } }
+.mural-grade a { text-decoration: none; display: block; }
+.mural-grade img { aspect-ratio: 3 / 4; width: 100%; object-fit: cover; object-position: top; background: #e9e3d6; border: 1px solid var(--linha); }
+.mural-titulo { display: block; margin-top: 0.5rem; font-weight: 600; line-height: 1.3; }
+.mural-autoria { display: block; font-size: 0.88rem; color: var(--suave); line-height: 1.35; margin-top: 0.2rem; }
+.mural-grade a:hover .mural-titulo { text-decoration: underline; }
+
+.linha-tempo { margin-top: 4.5rem; background: var(--marca); color: #fff; padding: 3rem 0; }
+.linha-tempo ol { list-style: none; margin: 1.5rem 0 0; padding: 0; border-left: 2px solid var(--acento); }
+.linha-tempo li { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: 1rem; padding: 0.55rem 0 0.55rem 1.25rem; }
+.linha-tempo .ano { color: var(--acento); font-weight: 700; }
+.linha-tempo a { color: #fff; }
+@media (min-width: 900px) { .linha-tempo ol { columns: 2; column-gap: 3rem; } .linha-tempo li { break-inside: avoid; } }
+
+.artigo { margin-top: 2.5rem; }
+.artigo-secao { margin: 0 0 0.5rem; font-weight: 600; }
+.artigo-secao a { color: var(--marca); }
+.artigo h1 { font-size: clamp(2rem, 4.5vw, 3rem); line-height: 1.12; margin: 0 0 0.75rem; }
+.artigo .prosa p { margin: 0 0 1.1rem; }
+.artigo-figura img { border: 1px solid var(--linha); }
+
+.rodape { margin-top: 0; padding: 2.5rem 0; border-top: 1px solid var(--linha); }
+.linha-tempo + .rodape, main + .rodape { margin-top: 0; }
+.rodape-linha { display: flex; flex-wrap: wrap; gap: 1rem 2.5rem; align-items: center; margin-top: 2rem; color: var(--suave); }
+.rodape-linha p { margin: 0; }
+.rodape-busca { margin-left: auto; }
+.links-linha .prosa p { margin: 0 0 1.5rem; font-size: 0.98rem; color: var(--suave); }

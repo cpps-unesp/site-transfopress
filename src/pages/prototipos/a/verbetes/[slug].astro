@@ -1,0 +1,28 @@
+---
+import LayoutA from '../../../../prototipos/LayoutA.astro';
+import Prosa from '../../../../components/Prosa.astro';
+import ImagemSite from '../../../../components/ImagemSite.astro';
+import { getTexto, dataLegivel, IDIOMAS } from '../../../../lib/conteudo';
+
+// Um verbete no estilo da alternativa A.
+const texto = Astro.params.slug ? await getTexto('verbetes', Astro.params.slug) : null;
+if (!texto) return new Response(null, { status: 404 });
+const lang = texto.idioma === 'pt' ? undefined : IDIOMAS[texto.idioma];
+---
+
+<LayoutA titulo={texto.titulo} descricao={texto.resumo}>
+  <article class="artigo envoltorio-texto">
+    <p class="artigo-secao"><a href="/verbetes">Verbetes</a></p>
+    <h1 lang={lang}>{texto.titulo}</h1>
+    <p class="artigo-meta">
+      {texto.autoria && <span>{texto.autoria}</span>}
+      {texto.data && <time datetime={texto.data.toISOString()}>{dataLegivel(texto.data)}</time>}
+    </p>
+    {texto.imagem && (
+      <figure class="artigo-figura">
+        <ImagemSite imagem={texto.imagem} alt={texto.imagem.alt ?? ''} carregar="eager" />
+      </figure>
+    )}
+    <Prosa conteudo={texto.conteudo} idioma={texto.idioma} />
+  </article>
+</LayoutA>

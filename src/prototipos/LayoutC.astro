@@ -1,0 +1,79 @@
+---
+import Cabeca from './Cabeca.astro';
+import Busca from './Busca.astro';
+import Parceiros from './Parceiros.astro';
+import AvisoPrototipo from './AvisoPrototipo.astro';
+import Redes from '../components/Redes.astro';
+import { dadosComuns } from './dados';
+
+// Alternativa C, "Acervo". Design Read: vitrine de um grupo que estuda jornais
+// e revistas, para público acadêmico e curioso, em linguagem editorial de
+// arquivo (páginas digitalizadas como protagonistas); dial ENERGY 3 / RHYTHM 3 /
+// MOTION 1. Motivo de identidade: as próprias capas dos periódicos estudados,
+// sempre em retrato 3:4, como fichas de acervo.
+interface Props {
+  titulo?: string;
+  descricao?: string;
+}
+const { aparencia, menu, parceiros } = await dadosComuns();
+const { titulo, descricao = aparencia.subtitulo } = Astro.props;
+const caminho = Astro.url.pathname;
+const atual = (url: string) => (url === '/' ? caminho === '/prototipos/c' || caminho === '/prototipos/c/' : caminho.startsWith(url));
+const urlMenu = (url: string) => (url === '/' ? '/prototipos/c' : url);
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <Cabeca
+      titulo={titulo ? `${titulo} · ${aparencia.nome}` : aparencia.nome}
+      descricao={descricao}
+      css="prototipo-c.css"
+      fontes={['source-serif-4-latin-700-normal.woff2', 'source-sans-3-latin-400-normal.woff2']}
+    />
+  </head>
+  <body>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+    <AvisoPrototipo alt="c" />
+    <header class="cabecalho">
+      <div class="envoltorio cabecalho-interno">
+        <a class="marca" href="/prototipos/c">
+          <span class="marca-nome">{aparencia.nome}</span>
+          <span class="marca-sub">{aparencia.subtitulo}</span>
+        </a>
+        <details class="menu-movel">
+          <summary>Menu</summary>
+          <nav aria-label="Menu principal (celular)">
+            <ul>
+              {menu.map((item) => (
+                <li><a href={urlMenu(item.url)} aria-current={atual(item.url) ? 'page' : undefined}>{item.rotulo}</a></li>
+              ))}
+            </ul>
+            <Busca id="busca-c-movel" />
+          </nav>
+        </details>
+        <nav aria-label="Menu principal" class="menu-largo">
+          <ul>
+            {menu.map((item) => (
+              <li><a href={urlMenu(item.url)} aria-current={atual(item.url) ? 'page' : undefined}>{item.rotulo}</a></li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="conteudo">
+      <slot />
+    </main>
+    <footer class="rodape">
+      <div class="envoltorio">
+        <Parceiros parceiros={parceiros} />
+        <div class="rodape-linha">
+          <p><strong>{aparencia.nome}</strong> · {aparencia.subtitulo}</p>
+          {aparencia.email && <p><a href={`mailto:${aparencia.email}`}>{aparencia.email}</a></p>}
+          <Redes redes={aparencia.redes} nome={aparencia.nome} />
+          <div class="rodape-busca"><Busca id="busca-c" /></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+---
+import Cabeca from './Cabeca.astro';
+import Busca from './Busca.astro';
+import Parceiros from './Parceiros.astro';
+import AvisoPrototipo from './AvisoPrototipo.astro';
+import Redes from '../components/Redes.astro';
+import { dadosComuns } from './dados';
+
+// Alternativa A, "Jornal". Design Read: site de grupo de pesquisa em história
+// da imprensa, para pesquisadores e estudantes, em linguagem de página de jornal
+// impresso; dial ENERGY 2 / RHYTHM 2 / MOTION 1. Motivo de identidade: o fio
+// duplo sob o cabeçalho e entre seções, como nos jornais que o grupo estuda.
+interface Props {
+  titulo?: string;
+  descricao?: string;
+}
+const { aparencia, menu, parceiros } = await dadosComuns();
+const { titulo, descricao = aparencia.subtitulo } = Astro.props;
+const caminho = Astro.url.pathname;
+const atual = (url: string) => (url === '/' ? caminho === '/prototipos/a' || caminho === '/prototipos/a/' : caminho.startsWith(url));
+const urlMenu = (url: string) => (url === '/' ? '/prototipos/a' : url);
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <Cabeca
+      titulo={titulo ? `${titulo} · ${aparencia.nome}` : aparencia.nome}
+      descricao={descricao}
+      css="prototipo-a.css"
+      fontes={['source-serif-4-latin-700-normal.woff2', 'source-serif-4-latin-400-normal.woff2']}
+    />
+  </head>
+  <body>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+    <AvisoPrototipo alt="a" />
+    <header class="cabecalho">
+      <div class="faixa-superior envoltorio">
+        <a href="https://www.unesp.br" rel="noopener" target="_blank">Unesp</a>
+        <span>Grupo de Pesquisa CNPq</span>
+        <Busca id="busca-a" />
+      </div>
+      <a class="nome-jornal" href="/prototipos/a">{aparencia.nome}</a>
+      <p class="subtitulo">{aparencia.subtitulo}</p>
+      <nav aria-label="Menu principal" class="menu envoltorio">
+        <ul>
+          {menu.map((item) => (
+            <li>
+              <a href={urlMenu(item.url)} aria-current={atual(item.url) ? 'page' : undefined}>{item.rotulo}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header>
+    <main id="conteudo" class="envoltorio">
+      <slot />
+    </main>
+    <footer class="rodape envoltorio">
+      <Parceiros parceiros={parceiros} />
+      <div class="rodape-linha">
+        <p><strong>{aparencia.nome}</strong>. {aparencia.subtitulo}.</p>
+        {aparencia.email && <p><a href={`mailto:${aparencia.email}`}>{aparencia.email}</a></p>}
+        <Redes redes={aparencia.redes} nome={aparencia.nome} />
+      </div>
+    </footer>
+  </body>
+</html>

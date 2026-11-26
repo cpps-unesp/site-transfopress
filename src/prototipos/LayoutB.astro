@@ -1,0 +1,73 @@
+---
+import Cabeca from './Cabeca.astro';
+import Busca from './Busca.astro';
+import Parceiros from './Parceiros.astro';
+import AvisoPrototipo from './AvisoPrototipo.astro';
+import Redes from '../components/Redes.astro';
+import { dadosComuns } from './dados';
+
+// Alternativa B, "Índice". Design Read: site institucional de grupo de
+// pesquisa, para quem chega procurando um verbete ou um contato, em linguagem
+// de serviço público (clara, previsível); dial ENERGY 1 / RHYTHM 1 / MOTION 1.
+// Motivo de identidade: a régua azul-marinho do tema original, à esquerda dos
+// títulos de seção, marcando onde começa cada parte.
+interface Props {
+  titulo?: string;
+  descricao?: string;
+}
+const { aparencia, menu, parceiros } = await dadosComuns();
+const { titulo, descricao = aparencia.subtitulo } = Astro.props;
+const caminho = Astro.url.pathname;
+const atual = (url: string) => (url === '/' ? caminho === '/prototipos/b' || caminho === '/prototipos/b/' : caminho.startsWith(url));
+const urlMenu = (url: string) => (url === '/' ? '/prototipos/b' : url);
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <Cabeca
+      titulo={titulo ? `${titulo} · ${aparencia.nome}` : aparencia.nome}
+      descricao={descricao}
+      css="prototipo-b.css"
+      fontes={['source-sans-3-latin-400-normal.woff2', 'source-sans-3-latin-700-normal.woff2']}
+    />
+  </head>
+  <body>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+    <AvisoPrototipo alt="b" />
+    <header class="cabecalho">
+      <div class="envoltorio cabecalho-interno">
+        <a class="marca" href="/prototipos/b">
+          <img src="/static/img/logo-transfopress-brasil.png" alt={aparencia.nome} width="564" height="93" />
+        </a>
+        <Busca id="busca-b" />
+      </div>
+      <nav aria-label="Menu principal" class="menu">
+        <ul class="envoltorio">
+          {menu.map((item) => (
+            <li>
+              <a href={urlMenu(item.url)} aria-current={atual(item.url) ? 'page' : undefined}>{item.rotulo}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header>
+    <main id="conteudo" class="envoltorio">
+      <slot />
+    </main>
+    <footer class="rodape">
+      <div class="envoltorio">
+        <Parceiros parceiros={parceiros} />
+        <div class="rodape-linha">
+          <p>
+            <strong>{aparencia.nome}</strong><br />{aparencia.subtitulo}
+          </p>
+          <p>
+            {aparencia.email && <a href={`mailto:${aparencia.email}`}>{aparencia.email}</a>}
+          </p>
+          <Redes redes={aparencia.redes} nome={aparencia.nome} />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

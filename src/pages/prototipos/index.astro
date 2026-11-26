@@ -1,0 +1,39 @@
+---
+import { ALTERNATIVAS, type Alternativa } from '../../prototipos/dados';
+
+// Página de comparação das três alternativas de front-end.
+const lista = Object.entries(ALTERNATIVAS) as [Alternativa, (typeof ALTERNATIVAS)[Alternativa]][];
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Alternativas de front-end · Transfopress Brasil</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="stylesheet" href="/static/css/prototipos.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Três alternativas para o front-end do Transfopress Brasil</h1>
+      <p>
+        Protótipos com o conteúdo real do site. Cada um tem a página inicial (que abre direto na apresentação) e a página de um
+        verbete. Os demais links do menu levam às páginas atuais. A justificativa de cada um está em
+        <code>docs/prototipos.md</code> no repositório.
+      </p>
+      <ol class="alternativas">
+        {lista.map(([k, a]) => (
+          <li>
+            <h2><a href={`/prototipos/${k}`}>{k.toUpperCase()}. {a.nome}</a></h2>
+            <p>{a.resumo}</p>
+            <p>
+              <a href={`/prototipos/${k}`}>Página inicial</a> · <a href={`/prototipos/${k}/verbetes/fanfulla`}>Verbete (O jornal Fanfulla)</a>
+            </p>
+          </li>
+        ))}
+      </ol>
+      <p><a href="/">Voltar ao site atual</a></p>
+    </main>
+  </body>
+</html>

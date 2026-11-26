@@ -1,0 +1,68 @@
+/* Alternativa A, "Jornal". Papel, tinta preta e o azul-marinho do tema antigo
+   só no nome do jornal e nos fios (acento único). Serifa (Source Serif 4) porque
+   o assunto do grupo é o jornal impresso; Source Sans fica para metadados. */
+@import url('/static/css/prototipo-base.css');
+
+:root {
+  --fundo: #f7f4ec;        /* papel */
+  --tinta: #1c1c1a;        /* 16,3:1 sobre o papel */
+  --suave: #555249;        /* 7,1:1 */
+  --linha: #8a857a;
+  --marca: #152548;        /* azul-marinho do tema original */
+  --foco: #b5651d;
+  --largura: 1180px;
+}
+
+body { font: 1.0625rem/1.65 'Source Serif 4', Georgia, serif; }
+.envoltorio { max-width: var(--largura); margin: 0 auto; padding: 0 1.25rem; }
+.envoltorio-texto { max-width: 46rem; margin: 0 auto; padding: 0 1.25rem; }
+
+/* Cabeçalho como o de um jornal: faixa de serviço, nome em destaque, fio duplo. */
+.cabecalho { text-align: center; padding-bottom: 0.25rem; }
+.faixa-superior { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.5rem 1rem; padding-top: 0.75rem; padding-bottom: 0.75rem; font: 0.9rem/1.4 'Source Sans 3', system-ui, sans-serif; color: var(--suave); border-bottom: 1px solid var(--linha); }
+.faixa-superior .busca { margin-left: auto; }
+.nome-jornal { display: inline-block; margin-top: 1.5rem; font-weight: 700; font-size: clamp(2.4rem, 7vw, 4.6rem); line-height: 1; letter-spacing: -0.01em; color: var(--marca); text-decoration: none; }
+.subtitulo { margin: 0.6rem auto 1.1rem; max-width: 40rem; font-style: italic; color: var(--suave); padding: 0 1rem; }
+.menu { border-top: 3px solid var(--tinta); border-bottom: 1px solid var(--tinta); padding-top: 2px; position: relative; }
+.menu::before { content: ''; position: absolute; left: 1.25rem; right: 1.25rem; top: 2px; border-top: 1px solid var(--tinta); }
+.menu ul { list-style: none; margin: 0; padding: 0.5rem 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.25rem 1.5rem; font: 600 0.98rem/1.4 'Source Sans 3', system-ui, sans-serif; }
+.menu a { text-decoration: none; padding: 0.35rem 0.1rem; display: inline-block; }
+.menu a:hover, .menu a[aria-current='page'] { text-decoration: underline; text-decoration-thickness: 2px; }
+
+/* Capa: a apresentação é a matéria principal, em duas colunas no computador. */
+.capa { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2rem; margin-top: 2rem; }
+@media (min-width: 960px) { .capa { grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr); } .coluna-lateral { border-left: 1px solid var(--linha); padding-left: 1.75rem; } }
+.materia-principal h1 { font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.1; margin: 0 0 1rem; }
+.colunas .prosa { hyphens: auto; }
+.links-linha .prosa p { margin: 0 0 1.25rem; font: 0.95rem/1.5 'Source Sans 3', system-ui, sans-serif; color: var(--suave); }
+@media (min-width: 760px) { .colunas .prosa { columns: 2; column-gap: 2.25rem; column-rule: 1px solid var(--linha); } }
+.colunas .prosa p { margin: 0 0 0.9rem; max-width: none; }
+.colunas .prosa > p:first-of-type::first-letter { float: left; font-size: 3.4em; line-height: 0.85; padding: 0.06em 0.08em 0 0; font-weight: 700; color: var(--marca); }
+
+.coluna-lateral h2, .memoria h2 { font-size: 1.25rem; margin: 0 0 0.5rem; padding-bottom: 0.35rem; border-bottom: 3px double var(--tinta); }
+.coluna-lateral section + section { margin-top: 2rem; }
+.manchetes { list-style: none; margin: 0; padding: 0; }
+.manchetes li { padding: 0.7rem 0; border-bottom: 1px solid var(--linha); }
+.manchetes a { font-weight: 600; text-decoration: none; display: block; line-height: 1.3; }
+.manchetes a:hover { text-decoration: underline; }
+.manchetes time, .manchetes .autoria { display: block; margin-top: 0.25rem; font: 0.88rem/1.4 'Source Sans 3', system-ui, sans-serif; color: var(--suave); }
+.mais { display: inline-block; margin-top: 0.75rem; font: 600 0.95rem/1.4 'Source Sans 3', system-ui, sans-serif; color: var(--marca); }
+
+.memoria { margin-top: 3rem; }
+.memoria-lista { list-style: none; margin: 0; padding: 0; columns: 1; }
+@media (min-width: 760px) { .memoria-lista { columns: 2; column-gap: 2.5rem; } }
+.memoria-lista li { break-inside: avoid; display: flex; gap: 0.9rem; padding: 0.45rem 0; border-bottom: 1px dotted var(--linha); }
+.ano { font: 600 0.95rem/1.6 'Source Sans 3', system-ui, sans-serif; color: var(--suave); min-width: 2.8rem; }
+
+/* Verbete */
+.artigo { margin-top: 2rem; }
+.artigo-secao { font: 600 0.95rem/1.4 'Source Sans 3', system-ui, sans-serif; margin: 0 0 0.5rem; }
+.artigo h1 { font-size: clamp(2rem, 4.5vw, 3rem); line-height: 1.1; margin: 0 0 0.75rem; }
+.artigo-meta { font: 0.95rem/1.4 'Source Sans 3', system-ui, sans-serif; padding-bottom: 1rem; border-bottom: 3px double var(--tinta); }
+.artigo .prosa { hyphens: auto; }
+
+.rodape { margin-top: 4rem; padding-top: 1.5rem; padding-bottom: 2rem; border-top: 3px double var(--tinta); font: 0.95rem/1.5 'Source Sans 3', system-ui, sans-serif; }
+.rodape-linha { display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; align-items: center; margin-top: 2rem; color: var(--suave); }
+.rodape-linha p { margin: 0; }
+.parceiros-lista img { filter: grayscale(1); }
+.parceiros-lista a:hover img { filter: none; }

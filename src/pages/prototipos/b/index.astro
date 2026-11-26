@@ -1,0 +1,59 @@
+---
+import LayoutB from '../../../prototipos/LayoutB.astro';
+import Prosa from '../../../components/Prosa.astro';
+import { dadosHome, separarApresentacao, urlVerbete } from '../../../prototipos/dados';
+import { dataLegivel, IDIOMAS, type Texto } from '../../../lib/conteudo';
+
+const d = await dadosHome();
+const { links, abertura, resto } = separarApresentacao(d.apresentacao?.conteudo ?? []);
+const lang = (i: keyof typeof IDIOMAS) => (i === 'pt' ? undefined : IDIOMAS[i]);
+// Atualizações: notícias e verbetes juntos, por data.
+const recentes: Texto[] = [...d.noticias, ...d.verbetesRecentes]
+  .filter((t) => t.data)
+  .sort((a, b) => b.data!.getTime() - a.data!.getTime())
+  .slice(0, 6);
+const secoes = [
+  { url: '/verbetes', nome: 'Verbetes', texto: `${d.contagem.verbetes} textos sobre periódicos em língua estrangeira publicados no Brasil, cada um escrito por um pesquisador do grupo.` },
+  { url: '/pesquisadores', nome: 'Pesquisadores', texto: 'Quem faz parte do grupo, com instituição, tema de pesquisa e currículo Lattes.' },
+  { url: '/publicacoes', nome: 'Publicações', texto: 'Livros, dossiês e artigos do grupo.' },
+  { url: '/memoria', nome: 'Memória', texto: `Registro dos encontros nacionais e internacionais e dos lançamentos (${d.contagem.memoria} registros).` },
+  { url: '/noticias', nome: 'Notícias', texto: `Chamadas, eventos e lançamentos (${d.contagem.noticias} notícias).` },
+  { url: '/downloads', nome: 'Downloads', texto: `Programas de encontros e textos em PDF (${d.contagem.downloads} arquivos).` },
+];
+const tipo = (t: Texto) => (t.colecao === 'verbetes' ? 'Verbete' : 'Notícia');
+const link = (t: Texto) => (t.colecao === 'verbetes' ? urlVerbete('b', t) : t.url);
+---
+
+<LayoutB descricao={d.apresentacao?.resumo}>
+  <div class="grade">
+    <article class="apresentacao" aria-labelledby="apresentacao-titulo">
+      <h1 id="apresentacao-titulo">{d.apresentacao?.titulo || 'Apresentação'}</h1>
+      {abertura && <p class="abertura">{abertura}</p>}
+      {links.length > 0 && <div class="links-linha"><Prosa conteudo={links} /></div>}
+      <Prosa conteudo={resto} />
+    </article>
+    <nav class="indice" aria-labelledby="indice-titulo">
+      <h2 id="indice-titulo">Neste site</h2>
+      <ul>
+        {secoes.map((s) => (
+          <li>
+            <a href={s.url}>{s.nome}</a>
+            <p>{s.texto}</p>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+  <section class="recentes" aria-labelledby="recentes-titulo">
+    <h2 id="recentes-titulo">Publicado recentemente</h2>
+    <ul>
+      {recentes.map((t) => (
+        <li>
+          <span class="tipo">{tipo(t)}</span>
+          <a href={link(t)} lang={lang(t.idioma)}>{t.titulo}</a>
+          <time datetime={t.data!.toISOString()}>{dataLegivel(t.data)}</time>
+        </li>
+      ))}
+    </ul>
+  </section>
+</LayoutB>
