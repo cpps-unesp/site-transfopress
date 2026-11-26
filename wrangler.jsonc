@@ -10,14 +10,14 @@
   // workers.dev para transfopressbrasil.franca.unesp.br é feita pelo admin
   // (Settings → General → Change domain). Ver docs/deploy.md.
 
-  // Banco do EmDash. Ao criar o banco (`npx wrangler d1 create transfopress-site`),
-  // copie o database_id para cá: o deploy a partir do build do Astro não grava o
-  // ID de volta neste arquivo.
+  // Banco do EmDash, criado em 26/11/2026 na conta do CPPS, região ENAM. Um banco
+  // novo precisa ter o database_id copiado para cá: o deploy a partir do build do
+  // Astro não grava o ID de volta neste arquivo.
   "d1_databases": [
     {
       "binding": "DB",
       "database_name": "transfopress-site",
-      "database_id": "00000000-0000-0000-0000-000000000000",
+      "database_id": "9c631d6f-a334-4f45-9bfe-328b61cd8f9e",
     },
   ],
 

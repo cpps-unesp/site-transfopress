@@ -12,13 +12,13 @@ O site roda inteiro na Cloudflare, como um **Worker**, na conta do CPPS e com a 
 | Cron (a cada minuto) | — | — | Publicação agendada e manutenção do EmDash |
 | Arquivos estáticos | — | — | Visual, imagens (`/wp-content/uploads/...`) e PDFs (`/arquivos/...`) do site antigo |
 
-Os limites do plano gratuito são por conta: 5 crons, 10 bancos D1 e 10 ms de CPU por requisição. Na conta do CPPS, este site usa o terceiro cron e o terceiro banco (depois do site do CPPS e do ambiente de teste dele).
+Os limites do plano gratuito são por conta: 5 crons, 10 bancos D1 e 10 ms de CPU por requisição. Em 26/11/2026 a conta do CPPS tinha 5 bancos (com este) e outros 5 Workers (`cpps-site`, `cpps-site-teste`, `uptimeflare_worker`, `colabhd-deadman` e `vssh-repo`). Antes do primeiro deploy, confira em cada um (Settings → Triggers) quantos crons já existem: se forem 5, o deploy deste falha ao criar o cron. Aí há três saídas: tirar o cron de outro Worker (o do ambiente de teste do CPPS, por exemplo), passar a conta para o Workers Paid (US$ 5/mês) ou publicar este sem cron, trocando `"crons": ["* * * * *"]` por `"crons": []` no `wrangler.jsonc`. Sem cron, a publicação agendada e a limpeza do EmDash não rodam sozinhas; o resto do site funciona.
 
 ## Primeira publicação
 
 Num terminal com o repositório, logado na conta do CPPS (`npx wrangler login`):
 
-1. Crie o banco e copie o `database_id` para o `wrangler.jsonc`, com commit (não é segredo):
+1. O banco `transfopress-site` já existe (criado em 26/11/2026, região ENAM) e o `database_id` dele está no `wrangler.jsonc`. Para recriar do zero, apague-o e rode o comando abaixo, copiando o novo `database_id` para o `wrangler.jsonc`, com commit (não é segredo):
    ```bash
    npx wrangler d1 create transfopress-site --location enam
    ```
@@ -55,7 +55,7 @@ Hoje o nome aponta para um servidor dentro da unespNET, por isso o site só abre
      printf '%s ' "$u"; curl -s -o /dev/null -L -w '%{http_code}\n' "https://transfopressbrasil.franca.unesp.br$u"
    done | grep -v ' 200$'
    ```
-   Só devem sobrar os 4 downloads sem arquivo (ver [conteudo.md](conteudo.md#downloads)).
+   Só devem sobrar 7 endereços, todos dos 4 downloads sem arquivo: os 4 `/download/...` e 3 `/?wpdmdl=...` (ver [conteudo.md](conteudo.md#downloads)).
 
 ## Deploys seguintes (Workers Builds)
 
