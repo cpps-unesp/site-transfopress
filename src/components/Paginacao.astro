@@ -1,11 +1,12 @@
 ---
-// Navegação entre páginas de uma lista (?pagina=2).
+// Navegação entre páginas de uma lista (?pagina=2). A lista lê só a página
+// pedida, então se sabe se há uma seguinte, mas não quantas são.
 interface Props {
   atual: number;
-  total: number;
+  temMais: boolean;
   base: string;
 }
-const { atual, total, base } = Astro.props;
+const { atual, temMais, base } = Astro.props;
 const link = (n: number) => {
   const url = new URL(base, 'http://x');
   if (n > 1) url.searchParams.set('pagina', String(n));
@@ -15,13 +16,11 @@ const link = (n: number) => {
 ---
 
 {
-  total > 1 && (
+  (atual > 1 || temMais) && (
     <nav class="paginacao" aria-label="Páginas da lista">
-      {atual > 1 ? <a href={link(atual - 1)} rel="prev">← Anteriores</a> : <span />}
-      <span>
-        Página {atual} de {total}
-      </span>
-      {atual < total ? <a href={link(atual + 1)} rel="next">Seguintes →</a> : <span />}
+      {atual > 1 ? <a href={link(atual - 1)} rel="prev">← Mais recentes</a> : <span />}
+      <span>Página {atual}</span>
+      {temMais ? <a href={link(atual + 1)} rel="next">Mais antigas →</a> : <span />}
     </nav>
   )
 }

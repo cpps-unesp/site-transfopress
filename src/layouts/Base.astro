@@ -1,7 +1,7 @@
 ---
 import Redes from '../components/Redes.astro';
 import ImagemSite from '../components/ImagemSite.astro';
-import { cssAparencia, getAparencia, getMenuPrincipal, getParceiros } from '../lib/conteudo';
+import { cssAparencia, getAparencia, getMenuPrincipal, getParceiros, srcImagem } from '../lib/conteudo';
 
 interface Props {
   // Título da página; sem ele, o do site.
@@ -22,7 +22,8 @@ const caminho = Astro.url.pathname;
 const urlCanonica = new URL(canonico ?? caminho, Astro.site).toString();
 const imagem = new URL(ogImagem || '/static/img/compartilhar.jpg', Astro.site).toString();
 const ativo = (url: string) => (url === '/' ? caminho === '/' : caminho === url || caminho.startsWith(`${url}/`));
-const fundoTopo = aparencia.imagemTopo?.src && /^\/|^https:/.test(aparencia.imagemTopo.src) ? aparencia.imagemTopo.src : '/static/img/bg_topo.jpg';
+const topo = srcImagem(aparencia.imagemTopo);
+const fundoTopo = /^\/(?!\/)|^https:/.test(topo) ? topo : '/static/img/bg_topo.jpg';
 ---
 
 <!doctype html>

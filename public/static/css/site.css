@@ -83,8 +83,11 @@ a:hover {
   color: var(--primaria-clara);
 }
 
+/* Contorno de foco em duas cores: o azul-marinho aparece no fundo claro e o
+   anel branco, nas faixas azul-marinho (menu ativo, busca, rodapé). */
 :focus-visible {
-  outline: 3px solid var(--destaque);
+  outline: 3px solid var(--primaria);
+  box-shadow: 0 0 0 2px #fff;
   outline-offset: 2px;
 }
 
@@ -186,7 +189,8 @@ a:hover {
   outline: none;
 }
 .busca:focus-within {
-  outline: 3px solid var(--destaque);
+  outline: 3px solid var(--primaria);
+  box-shadow: 0 0 0 2px #fff;
   outline-offset: 2px;
 }
 
@@ -355,6 +359,28 @@ a:hover {
 .prosa iframe {
   max-width: 100%;
 }
+/* Galerias do site antigo: miniaturas com link para a foto grande. */
+.prosa .galeria {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.prosa .galeria li {
+  margin: 0;
+  padding: 0;
+}
+.prosa .galeria li::before {
+  content: none;
+}
+.prosa .galeria img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+}
 
 /* ---------- Listas ---------- */
 
@@ -399,7 +425,8 @@ a:hover {
   text-decoration: underline;
 }
 .cartao:focus-within {
-  outline: 3px solid var(--destaque);
+  outline: 3px solid var(--primaria);
+  box-shadow: 0 0 0 2px #fff;
 }
 .cartao-titulo a:focus-visible {
   outline: none;

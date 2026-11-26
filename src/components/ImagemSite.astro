@@ -1,7 +1,7 @@
 ---
 import { Image } from 'emdash/ui';
 import type { ImageValue } from 'emdash';
-import { ehImagemLegado } from '../lib/conteudo';
+import { ehImagemLegado, srcImagem } from '../lib/conteudo';
 
 // Imagem de um campo do EmDash. As do site antigo (public/wp-content e
 // public/static) saem como <img> simples; as enviadas pelo admin passam pelo
@@ -18,7 +18,7 @@ const texto = alt ?? imagem.alt ?? '';
 
 {
   ehImagemLegado(imagem) ? (
-    <img class={classe} src={imagem.src} alt={texto} width={imagem.width} height={imagem.height} loading={carregar} decoding="async" />
+    <img class={classe} src={srcImagem(imagem)} alt={texto} width={imagem.width} height={imagem.height} loading={carregar} decoding="async" />
   ) : (
     <Image image={imagem} alt={texto} class={classe} />
   )

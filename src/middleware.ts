@@ -51,6 +51,7 @@ export const onRequest = defineMiddleware((context, next) => {
   const { pathname } = context.url;
   if (INTOCADO.test(pathname)) return next();
   const novo = destino(context.url);
-  if (novo && novo !== `${pathname}${context.url.search}`) return context.redirect(novo, 301);
+  // Destino sempre no próprio site: nunca "//outro-dominio".
+  if (novo && !novo.startsWith('//') && novo !== `${pathname}${context.url.search}`) return context.redirect(novo, 301);
   return next();
 });

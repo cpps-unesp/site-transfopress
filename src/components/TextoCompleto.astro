@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Prosa from './Prosa.astro';
-import { IDIOMAS, dataLegivel, type Texto } from '../lib/conteudo';
+import { IDIOMAS, dataLegivel, srcImagem, type Texto } from '../lib/conteudo';
 
 // Página de uma notícia, verbete ou registro de memória.
 interface Props {
@@ -10,7 +10,8 @@ interface Props {
 }
 const { texto, voltar } = Astro.props;
 const lang = texto.idioma === 'pt' ? undefined : IDIOMAS[texto.idioma];
-const og = texto.imagem?.src && texto.imagem.src.startsWith('/') ? texto.imagem.src : null;
+const imagem = srcImagem(texto.imagem);
+const og = imagem.startsWith('/') ? imagem : null;
 ---
 
 <Base titulo={texto.titulo} descricao={texto.resumo} ogImagem={og}>

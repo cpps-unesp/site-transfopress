@@ -31,10 +31,22 @@ export function temImagem(valor: unknown): valor is ImageValue {
   return !!valor && typeof valor === 'object' && !!((valor as ImageValue).id || (valor as ImageValue).src);
 }
 
-// Imagens do site antigo ficam em public/ (src começa com /wp-content ou
-// /static) e são servidas direto; as enviadas pelo admin passam pelo EmDash.
+// Endereço de uma imagem de campo. A mídia enviada pelo admin é guardada sem
+// `src` (o EmDash o deriva da chave no R2), e uma imagem antiga salva no admin
+// antes de ganhar provider "external" também perdia o `src`: o caminho volta do
+// id `legado:/wp-content/...`.
+export function srcImagem(valor: ImageValue | null | undefined): string {
+  if (!valor) return '';
+  if (typeof valor.src === 'string' && valor.src) return valor.src;
+  if (typeof valor.id === 'string' && valor.id.startsWith('legado:')) return encodeURI(valor.id.slice('legado:'.length));
+  const chave = (valor as { meta?: { storageKey?: unknown } }).meta?.storageKey;
+  return typeof chave === 'string' && chave ? `/_emdash/api/media/file/${chave}` : '';
+}
+
+// Imagens do site antigo ficam em public/ (/wp-content ou /static) e são
+// servidas direto; as enviadas pelo admin passam pelo EmDash.
 export function ehImagemLegado(valor: ImageValue): boolean {
-  return typeof valor.src === 'string' && /^\/(wp-content|static)\//.test(valor.src);
+  return /^\/(wp-content|static)\//.test(srcImagem(valor));
 }
 
 export function tamanhoLegivel(bytes?: number): string {
@@ -280,6 +292,22 @@ export async function getTextos(colecao: Colecao): Promise<Texto[]> {
   return lista;
 }
 
+// Uma página de uma lista, sem ler a coleção inteira: notícias em ordem de
+// data, com filtro opcional por tag (o EmDash filtra a taxonomia no banco).
+export async function getTextosPagina(
+  colecao: Colecao,
+  { limite, deslocamento = 0, tag }: { limite: number; deslocamento?: number; tag?: string },
+): Promise<{ itens: Texto[]; temMais: boolean }> {
+  const { entries, hasMore, error } = await getEmDashCollection<string, Dados>(colecao, {
+    orderBy: { data: 'desc' },
+    limit: limite,
+    ...(deslocamento > 0 ? { offset: deslocamento } : {}),
+    ...(tag ? { where: { tag } } : {}),
+  });
+  if (error) throw error;
+  return { itens: (entries as unknown as Entrada[]).map((e) => paraTexto(colecao, e)), temMais: !!hasMore };
+}
+
 export async function getTexto(colecao: Colecao, slug: string): Promise<Texto | null> {
   const e = await buscar(colecao, slug);
   return e ? paraTexto(colecao, e) : null;
@@ -345,31 +373,60 @@ const ROTULO: Record<string, string> = { noticias: 'Notícia', verbetes: 'Verbet
 
 const escapaHtml = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-// Resumo com as palavras buscadas em <mark>. O texto é escapado antes.
+// Resumo com as palavras buscadas em <mark>, ignorando acentos e maiúsculas
+// como a busca. As posições são achadas no texto cru e cada pedaço é escapado
+// depois, para o destaque nunca cair no meio de uma entidade HTML.
 function destaca(texto: string, termos: string[]): string {
-  const seguro = escapaHtml(texto);
-  const partes = termos.map((t) => escapaHtml(t).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).filter(Boolean);
-  if (!partes.length) return seguro;
-  return seguro.replace(new RegExp(`(${partes.join('|')})`, 'gi'), '<mark>$1</mark>');
+  let plano = '';
+  const origem: number[] = [];
+  for (let i = 0; i < texto.length; i++) {
+    const c = texto[i].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    for (const _ of c) origem.push(i);
+    plano += c;
+  }
+  const alvos = termos.map((t) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()).filter(Boolean);
+  const marcado = new Array<boolean>(texto.length).fill(false);
+  for (const alvo of alvos) {
+    for (let p = plano.indexOf(alvo); p !== -1; p = plano.indexOf(alvo, p + alvo.length)) {
+      for (let k = p; k < p + alvo.length; k++) marcado[origem[k]] = true;
+    }
+  }
+  let html = '';
+  let i = 0;
+  while (i < texto.length) {
+    let j = i;
+    while (j < texto.length && marcado[j] === marcado[i]) j++;
+    const pedaco = escapaHtml(texto.slice(i, j));
+    html += marcado[i] ? `<mark>${pedaco}</mark>` : pedaco;
+    i = j;
+  }
+  return html;
 }
 
-export async function buscarNoSite(q: string): Promise<Resultado[]> {
+export const MAX_RESULTADOS = 20;
+
+export async function buscarNoSite(q: string): Promise<{ resultados: Resultado[]; temMais: boolean }> {
   const termos = q.replace(/["*^():]/g, ' ').split(/\s+/).filter(Boolean);
   // Termos entre aspas: a busca do EmDash (FTS5) trata cada um como texto.
   const consulta = termos.map((t) => `"${t}"*`).join(' ');
-  if (!consulta) return [];
-  const { items } = await search(consulta, { collections: Object.keys(ROTULO), limit: 50 });
+  if (!consulta) return { resultados: [], temMais: false };
+  const { items } = await search(consulta, { collections: Object.keys(ROTULO), limit: MAX_RESULTADOS + 1 });
+  const achados = items.slice(0, MAX_RESULTADOS);
 
   // O trecho que o EmDash devolve sai só do título; o resumo de cada item diz
-  // mais. Uma leitura por coleção encontrada, não uma por resultado.
+  // mais. Uma leitura por coleção, só dos itens encontrados.
   const resumos = new Map<string, string>();
+  const porColecao = new Map<string, string[]>();
+  for (const r of achados) if (r.slug) porColecao.set(r.collection, [...(porColecao.get(r.collection) ?? []), r.slug]);
   await Promise.all(
-    [...new Set(items.map((r) => r.collection))].map(async (c) => {
-      for (const e of await listar(c, {})) resumos.set(`${c}/${slugDe(e)}`, str(e.data.resumo));
+    [...porColecao].map(async ([c, slugs]) => {
+      const { entries, error } = await getEmDashCollection<string, Dados>(c, { where: { slug: slugs }, limit: slugs.length });
+      if (error) throw error;
+      for (const e of entries as unknown as Entrada[]) resumos.set(`${c}/${slugDe(e)}`, str(e.data.resumo));
     }),
   );
 
-  return items.map((r) => {
+  const resultados = achados.map((r) => {
     const slug = r.slug ?? '';
     const url = r.collection === 'paginas' ? (slug === 'apresentacao' ? '/' : `/${slug}`) : `/${r.collection}/${encodeURIComponent(slug)}`;
     return {
@@ -379,4 +436,5 @@ export async function buscarNoSite(q: string): Promise<Resultado[]> {
       tipo: ROTULO[r.collection] ?? '',
     };
   });
+  return { resultados, temMais: items.length > MAX_RESULTADOS };
 }

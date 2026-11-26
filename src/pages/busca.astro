@@ -1,13 +1,14 @@
 ---
 import Base from '../layouts/Base.astro';
-import { buscarNoSite, type Resultado } from '../lib/conteudo';
+import { MAX_RESULTADOS, buscarNoSite, type Resultado } from '../lib/conteudo';
 
 const q = (Astro.url.searchParams.get('q') ?? '').trim().slice(0, 100);
 let resultados: Resultado[] = [];
+let temMais = false;
 let falhou = false;
 if (q.length >= 2) {
   try {
-    resultados = await buscarNoSite(q);
+    ({ resultados, temMais } = await buscarNoSite(q));
   } catch (erro) {
     console.error('busca', erro);
     falhou = true;
@@ -32,7 +33,15 @@ if (q.length >= 2) {
     ) : (
       <>
         <p role="status">
-          {resultados.length} {resultados.length === 1 ? 'resultado' : 'resultados'} para <strong>{q}</strong>
+          {temMais ? (
+            <>
+              Os {MAX_RESULTADOS} resultados mais próximos de <strong>{q}</strong>. Há mais: acrescente palavras para refinar a busca.
+            </>
+          ) : (
+            <>
+              {resultados.length} {resultados.length === 1 ? 'resultado' : 'resultados'} para <strong>{q}</strong>
+            </>
+          )}
         </p>
         <ol class="resultados">
           {resultados.map((r) => (

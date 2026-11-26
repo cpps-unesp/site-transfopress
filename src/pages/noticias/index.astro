@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import Cartao from '../../components/Cartao.astro';
 import Paginacao from '../../components/Paginacao.astro';
-import { getTag, getTextos } from '../../lib/conteudo';
+import { getTag, getTextosPagina } from '../../lib/conteudo';
 
 const POR_PAGINA = 12;
 const tagPedida = (Astro.url.searchParams.get('tag') ?? '').trim();
@@ -10,20 +10,31 @@ const tag = tagPedida ? await getTag(tagPedida) : null;
 // Tag que não existe (ou categoria antiga): a lista completa.
 if (tagPedida && !tag) return Astro.redirect('/noticias', 302);
 
-const todas = await getTextos('noticias');
-const lista = tag ? todas.filter((n) => n.tags.some((t) => t.slug === tag.slug)) : todas;
-const total = Math.max(1, Math.ceil(lista.length / POR_PAGINA));
-const pagina = Math.min(total, Math.max(1, Number(Astro.url.searchParams.get('pagina')) || 1));
-const itens = lista.slice((pagina - 1) * POR_PAGINA, pagina * POR_PAGINA);
+// Só a página pedida sai do banco (?pagina=2, a partir da 2).
+const pedida = Math.trunc(Number(Astro.url.searchParams.get('pagina')));
+const pagina = Number.isFinite(pedida) && pedida > 1 ? pedida : 1;
+const { itens, temMais } = await getTextosPagina('noticias', {
+  limite: POR_PAGINA,
+  deslocamento: (pagina - 1) * POR_PAGINA,
+  tag: tag?.slug,
+});
+if (pagina > 1 && itens.length === 0) return new Response(null, { status: 404 });
+
 const base = tag ? `/noticias?tag=${encodeURIComponent(tag.slug)}` : '/noticias';
+const canonico = pagina > 1 ? `/noticias?pagina=${pagina}` : '/noticias';
 const titulo = tag ? `Notícias: ${tag.rotulo}` : 'Notícias';
 ---
 
-<Base titulo={pagina > 1 ? `${titulo} (página ${pagina})` : titulo} descricao="Notícias, chamadas e eventos do Transfopress Brasil." naoIndexar={!!tag}>
+<Base
+  titulo={pagina > 1 ? `${titulo} (página ${pagina})` : titulo}
+  descricao="Notícias, chamadas e eventos do Transfopress Brasil."
+  naoIndexar={!!tag}
+  canonico={tag ? undefined : canonico}
+>
   <h1 class="titulo-pagina">{titulo}</h1>
-  {tag && <p class="filtro">{lista.length} {lista.length === 1 ? 'notícia' : 'notícias'} com a tag <strong>{tag.rotulo}</strong>. <a href="/noticias">Ver todas</a></p>}
+  {tag && <p class="filtro">Notícias com a tag <strong>{tag.rotulo}</strong>. <a href="/noticias">Ver todas</a></p>}
   <div class="lista">
     {itens.map((n) => <Cartao texto={n} />)}
   </div>
-  <Paginacao atual={pagina} total={total} base={base} />
+  <Paginacao atual={pagina} temMais={temMais} base={base} />
 </Base>
