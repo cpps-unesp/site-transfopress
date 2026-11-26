@@ -48,7 +48,7 @@ Hoje o nome aponta para um servidor dentro da unespNET, por isso o site só abre
    "routes": [{ "pattern": "transfopressbrasil.franca.unesp.br/*", "zone_name": "cppsunesp.org" }],
    ```
 5. No admin: Settings → General → **Change domain** → `transfopressbrasil.franca.unesp.br`. Com rota, a verificação automática falha (o Worker não atende a uma requisição dele mesmo para a própria rota): use **Use … anyway**. Cada pessoa, ainda logada no workers.dev, usa **Continue on transfopressbrasil.franca.unesp.br** e cadastra uma passkey no domínio.
-6. Quando todos entrarem pelo domínio, acrescente `"workers_dev": false` ao `wrangler.jsonc`.
+6. Quando todos entrarem pelo domínio, acrescente `"workers_dev": false` ao `wrangler.jsonc` e troque o endereço do servidor `transfopress-site` no `.mcp.json` pelo do domínio (ver [mcp-e-skills.md](mcp-e-skills.md)).
 7. Confira os endereços antigos: `legado/redirects.txt` tem os 422 endereços do site WordPress e o destino de cada um.
    ```bash
    awk '{print $1}' legado/redirects.txt | while read -r u; do

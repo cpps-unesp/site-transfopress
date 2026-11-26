@@ -1,8 +1,12 @@
 {
   "mcpServers": {
+    "emdash-docs": {
+      "type": "http",
+      "url": "https://docs.emdashcms.com/mcp"
+    },
     "transfopress-site": {
       "type": "http",
-      "url": "https://transfopressbrasil.franca.unesp.br/_emdash/api/mcp"
+      "url": "https://transfopress-site.cpps-franca.workers.dev/_emdash/api/mcp"
     }
   }
 }

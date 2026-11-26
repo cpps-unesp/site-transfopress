@@ -32,4 +32,4 @@ No primeiro `npm run dev` o banco local é criado com os modelos de `seed/seed.j
 
 O CI confere que `seed/seed.json`, `src/lib/redirecionamentos.json` e `src/lib/imagens-ampliadas.json` são exatamente o que o script gera: depois de mudar o script ou `legado/`, rode `npm run seed` e faça commit dos três.
 
-Deploy, domínio e atualização do EmDash: [docs/deploy.md](docs/deploy.md).
+Deploy, domínio e atualização do EmDash: [docs/deploy.md](docs/deploy.md). Assistentes de IA: o `AGENTS.md` tem as regras do repositório, e [docs/mcp-e-skills.md](docs/mcp-e-skills.md) explica o MCP da documentação do EmDash, o MCP do site e as skills.
