@@ -1,0 +1,20 @@
+---
+import Base from '../../layouts/Base.astro';
+import { dataLegivel, getDownloads } from '../../lib/conteudo';
+
+const downloads = (await getDownloads()).filter((d) => d.arquivo);
+---
+
+<Base titulo="Downloads" descricao="Programas, editais e verbetes em PDF do Transfopress Brasil.">
+  <h1 class="titulo-pagina">Downloads</h1>
+  <ul class="downloads">
+    {
+      downloads.map((d) => (
+        <li>
+          <a href={`/downloads/${encodeURIComponent(d.slug)}`}>{d.titulo}</a>
+          {d.data && <time datetime={d.data.toISOString()}>{dataLegivel(d.data)}</time>}
+        </li>
+      ))
+    }
+  </ul>
+</Base>

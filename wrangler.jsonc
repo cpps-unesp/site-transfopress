@@ -1,0 +1,37 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "transfopress-site",
+  "main": "./src/worker.ts",
+  "compatibility_date": "2026-11-01",
+  "compatibility_flags": ["nodejs_compat"],
+
+  // Endereço do site: sem EMDASH_SITE_URL fixo, como no CPPS. A passkey de quem
+  // entra no admin fica presa ao endereço em que foi criada; a troca do
+  // workers.dev para transfopressbrasil.franca.unesp.br é feita pelo admin
+  // (Settings → General → Change domain). Ver docs/deploy.md.
+
+  // Banco do EmDash, criado em 26/11/2026 na conta do CPPS, região ENAM. Um banco
+  // novo precisa ter o database_id copiado para cá: o deploy a partir do build do
+  // Astro não grava o ID de volta neste arquivo.
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "transfopress-site",
+      "database_id": "9c631d6f-a334-4f45-9bfe-328b61cd8f9e",
+    },
+  ],
+
+  // Imagens e PDFs enviados pelo admin. As imagens do site antigo ficam em
+  // public/wp-content/uploads e são servidas como arquivos estáticos.
+  "r2_buckets": [{ "binding": "MEDIA", "bucket_name": "transfopress-site-media" }],
+
+  // Publicação agendada, backups e manutenção do EmDash.
+  "triggers": { "crons": ["* * * * *"] },
+
+  // Logs e tempo de CPU por requisição (o plano gratuito tem limite de 10 ms).
+  "observability": { "enabled": true },
+
+  // Roda o Worker perto do banco D1 (crie o banco na região ENAM). Sem isto,
+  // cada uma das dezenas de consultas por página vai e volta de São Paulo.
+  "placement": { "mode": "targeted", "region": "aws:us-east-1" },
+}

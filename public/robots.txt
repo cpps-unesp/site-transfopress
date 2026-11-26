@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /_emdash/
+Sitemap: https://transfopressbrasil.franca.unesp.br/sitemap.xml

@@ -1,0 +1,15 @@
+---
+import Base from '../../layouts/Base.astro';
+import Cartao from '../../components/Cartao.astro';
+import { getTextos } from '../../lib/conteudo';
+
+const verbetes = await getTextos('verbetes');
+---
+
+<Base titulo="Verbetes" descricao="Verbetes sobre periódicos em língua estrangeira publicados no Brasil e sobre os acervos que os guardam.">
+  <h1 class="titulo-pagina">Verbetes</h1>
+  <p class="introducao">Textos sobre periódicos em língua estrangeira publicados no Brasil e sobre os acervos que os guardam, em ordem alfabética.</p>
+  <div class="lista">
+    {verbetes.map((v) => <Cartao texto={v} mostrarData={false} />)}
+  </div>
+</Base>

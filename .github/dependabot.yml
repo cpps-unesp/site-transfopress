@@ -1,0 +1,36 @@
+version: 2
+updates:
+  # Um PR por dependência, revisado antes do merge. EmDash, Astro e Wrangler
+  # pedem cuidado extra: atualize o EmDash com `npx upgrade-emdash@latest`
+  # (ver docs/deploy.md). Sem `groups` de propósito (dependabot-core#14202).
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    open-pull-requests-limit: 10
+    labels:
+      - 'dependencies'
+    # Espera para dar tempo de detectar uma release comprometida. Não vale
+    # para security updates.
+    cooldown:
+      default-days: 7
+      semver-patch-days: 3
+    ignore:
+      # @astrojs/check só aceita typescript ^5 || ^6.
+      - dependency-name: 'typescript'
+        versions:
+          - '>=7'
+      # Acompanha o Node LTS (.nvmrc = lts/*): atualizar junto com a troca de LTS.
+      - dependency-name: '@types/node'
+        update-types:
+          - 'version-update:semver-major'
+
+  # Mantém atualizados os SHAs das actions.
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    labels:
+      - 'dependencies'
+    cooldown:
+      default-days: 7

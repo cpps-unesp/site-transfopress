@@ -1,0 +1,26 @@
+---
+import Base from '../../layouts/Base.astro';
+import { dataLegivel, getDownload, tamanhoLegivel } from '../../lib/conteudo';
+
+const d = Astro.params.slug ? await getDownload(Astro.params.slug) : null;
+if (!d) return new Response(null, { status: 404 });
+const extensao = d.arquivo?.url.match(/\.(\w+)(?:$|\?)/)?.[1]?.toUpperCase() ?? '';
+---
+
+<Base titulo={d.titulo} descricao={d.descricao || `Arquivo para baixar: ${d.titulo}`}>
+  <p class="trilha"><a href="/downloads">Downloads</a></p>
+  <h1 class="titulo-pagina" {...d.edit.title}>{d.titulo}</h1>
+  {d.data && <p class="texto-meta">Publicado em <time datetime={d.data.toISOString()}>{dataLegivel(d.data)}</time></p>}
+  {d.descricao && <p {...d.edit.descricao}>{d.descricao}</p>}
+  {
+    d.arquivo ? (
+      <p>
+        <a class="botao" href={d.arquivo.url} download>
+          Baixar o arquivo{extensao && ` (${[extensao, tamanhoLegivel(d.arquivo.tamanho)].filter(Boolean).join(', ')})`}
+        </a>
+      </p>
+    ) : (
+      <p>O arquivo ainda não está disponível.</p>
+    )
+  }
+</Base>

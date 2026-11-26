@@ -1,0 +1,14 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base titulo="Página não encontrada" naoIndexar>
+  <h1 class="titulo-pagina">Página não encontrada</h1>
+  <p>O endereço pode ter mudado com o novo site. Tente a busca ou volte para a página inicial.</p>
+  <form class="busca-pagina" action="/busca" method="get" role="search">
+    <label for="busca-404">Buscar no site</label>
+    <input id="busca-404" type="search" name="q" />
+    <button class="botao" type="submit">Buscar</button>
+  </form>
+  <p><a href="/">Página inicial</a></p>
+</Base>

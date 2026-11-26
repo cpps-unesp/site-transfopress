@@ -1,0 +1,365 @@
+{
+ "site": {
+  "nome": "Transfopress Brasil",
+  "subtitulo_logo": "Transnational network for the study of foreign language press (XVIIIth-XXth century)",
+  "descricao": "Grupo de Estudos da Imprensa em língua estrangeira no Brasil (UNESP, Grupo de Pesquisa CNPq)"
+ },
+ "menu": [
+  {
+   "rotulo": "Apresentação",
+   "url_antiga": "/"
+  },
+  {
+   "rotulo": "Pesquisadores",
+   "url_antiga": "/pesquisadores/"
+  },
+  {
+   "rotulo": "Verbetes",
+   "url_antiga": "/verbetes/"
+  },
+  {
+   "rotulo": "Notícias",
+   "url_antiga": "/noticias/"
+  },
+  {
+   "rotulo": "Memória",
+   "url_antiga": "/memoria/"
+  },
+  {
+   "rotulo": "Publicações",
+   "url_antiga": "/publicacoes/"
+  },
+  {
+   "rotulo": "Contato",
+   "url_antiga": "/contato/"
+  }
+ ],
+ "busca": {
+  "presente": true,
+  "parametro": "s",
+  "placeholder": "Buscar..."
+ },
+ "links_topo_home": [
+  {
+   "rotulo": "Grupo CNPq",
+   "url": "http://dgp.cnpq.br/dgp/espelhogrupo/3549766137663642"
+  },
+  {
+   "rotulo": "Transfopress Internacional",
+   "url": "https://uvsq.academia.edu/TRANSFOPRESSNetwork",
+   "status_25nov2026": "403 para robôs"
+  },
+  {
+   "rotulo": "JFB",
+   "url": "http://jfb.franca.unesp.br"
+  },
+  {
+   "rotulo": "Transfopress Brasil (Facebook)",
+   "url": "https://www.facebook.com/transfopressbrasil"
+  }
+ ],
+ "redes_sociais": [
+  {
+   "rede": "facebook",
+   "url": "https://www.facebook.com/transfopressbrasil",
+   "onde": "home"
+  },
+  {
+   "rede": "youtube",
+   "url": "https://www.youtube.com/@midiacult",
+   "onde": "notícias (canal Midiacult, não é do grupo)"
+  },
+  {
+   "rede": "academia.edu",
+   "url": "https://uvsq.academia.edu/TRANSFOPRESSNetwork",
+   "onde": "home (rede internacional)"
+  }
+ ],
+ "email": {
+  "atual": "brasiltransfopress@gmail.com",
+  "onde": "/contato/",
+  "antigo_comentado_no_rodape": "transfopress@uol.com.br (também citado em notícias de 2015)"
+ },
+ "formulario_contato": {
+  "plugin": "Ninja Forms 2.9.27",
+  "campos": [
+   "Nome *",
+   "Email *",
+   "Mensagem *"
+  ],
+  "anti_spam": "honeypot"
+ },
+ "rodape": {
+  "texto_visivel": null,
+  "nota": "o rodapé visível é só a imagem de logos (uploads/2019/10/rodapé.png, 1002x47, alt vazio, sem links). Existe um bloco comentado no HTML, invisível:",
+  "texto_comentado": "UNESP   Av. Eufrásia Monteiro Petráglia, 900 14409-160 - Franca, SP   +55 (16) 3706-8806   transfopress@uol.com.br",
+  "credito_desenvolvimento": "Site desenvolvido por Lygia Moritz Design (aparece em /contato/)",
+  "logos_ordem": [
+   "Unesp",
+   "CHCSC (Centre d'Histoire Culturelle des Sociétés Contemporaines, UVSQ)",
+   "Università degli Studi di Napoli \"L'Orientale\"",
+   "UNICAMP",
+   "UFPR",
+   "UFSCar",
+   "FCRB (Fundação Casa de Rui Barbosa / Ministério da Cultura)",
+   "UFRGS",
+   "UFMA",
+   "UNISINOS",
+   "UCS (Universidade de Caxias do Sul)",
+   "JFB (jfb.franca.unesp.br)",
+   "UNIFESP",
+   "Biblioteca Digital (Unesp)",
+   "FAPESP",
+   "CNPq"
+  ]
+ },
+ "taxonomias": {
+  "nota": "só nomes: o HTML não diz quais posts têm cada termo (arquivos do tema ignoram o filtro). \"topicos\" é a contagem da nuvem de tags.",
+  "categorias": [
+   {
+    "nome": "Notícias",
+    "url_antiga": "/noticias/"
+   },
+   {
+    "nome": "Encontro Transfopress",
+    "url_antiga": "/noticias/encontro-transfopress/"
+   },
+   {
+    "nome": "Seminários Transfopress Europa",
+    "url_antiga": "/noticias/seminarios-transfopress-europa/"
+   },
+   {
+    "nome": "Verbetes",
+    "url_antiga": "/verbetes/"
+   }
+  ],
+  "tags_nuvem": [
+   {
+    "nome": "Antonio de Ruggiero",
+    "slug": "antonio-de-ruggiero",
+    "topicos": 2
+   },
+   {
+    "nome": "call for papers",
+    "slug": "call-for-papers",
+    "topicos": 2
+   },
+   {
+    "nome": "Casa de Rui Barbosa",
+    "slug": "casa-de-rui-barbosa",
+    "topicos": 2
+   },
+   {
+    "nome": "congresso internacional A Imprensa francófona das Américas",
+    "slug": "congresso-internacional-a-imprensa-francofona-das-americas",
+    "topicos": 3
+   },
+   {
+    "nome": "Di Idiche Tzukunft",
+    "slug": "di-idiche-tzukunft",
+    "topicos": 2
+   },
+   {
+    "nome": "Di Menscheit",
+    "slug": "di-menscheit",
+    "topicos": 2
+   },
+   {
+    "nome": "Dossiê II Encontro Internacional Transfopress",
+    "slug": "dossie-ii-encontro-internacional-transfopress",
+    "topicos": 2
+   },
+   {
+    "nome": "Encontro Transfopress",
+    "slug": "encontro-transfopress",
+    "topicos": 10
+   },
+   {
+    "nome": "Fanfulla",
+    "slug": "",
+    "topicos": 1
+   },
+   {
+    "nome": "Fundação Casa de Rui Barbosa",
+    "slug": "fundacao-casa-de-rui-barbosa",
+    "topicos": 2
+   },
+   {
+    "nome": "Gisele Batista da Silva",
+    "slug": "gisele-batista-da-silva",
+    "topicos": 2
+   },
+   {
+    "nome": "História da Imprensa no Brasil",
+    "slug": "historia-da-imprensa-no-brasil",
+    "topicos": 2
+   },
+   {
+    "nome": "III Encontro Transfopress",
+    "slug": "iii-encontro-transfopress",
+    "topicos": 2
+   },
+   {
+    "nome": "III Encontro Transfopress Brasil",
+    "slug": "iii-encontro-transfopress-brasil",
+    "topicos": 3
+   },
+   {
+    "nome": "imprensa em língua estrangeira",
+    "slug": "imprensa-em-lingua-estrangeira",
+    "topicos": 2
+   },
+   {
+    "nome": "Imprensa em língua francesa",
+    "slug": "imprensa-em-lingua-francesa",
+    "topicos": 7
+   },
+   {
+    "nome": "Imprensa em língua italiana",
+    "slug": "imprensa-em-lingua-italiana",
+    "topicos": 6
+   },
+   {
+    "nome": "Imprensa em língua Iídiche",
+    "slug": "imprensa-em-lingua-iidiche",
+    "topicos": 4
+   },
+   {
+    "nome": "Imprensa em língua japonesa",
+    "slug": "imprensa-em-lingua-japonesa",
+    "topicos": 3
+   },
+   {
+    "nome": "Imprensa estrangeira",
+    "slug": "imprensa-estrangeira",
+    "topicos": 4
+   },
+   {
+    "nome": "Imprensa francesa",
+    "slug": "imprensa-francesa",
+    "topicos": 5
+   },
+   {
+    "nome": "Imprensa italiana",
+    "slug": "imprensa-italiana",
+    "topicos": 5
+   },
+   {
+    "nome": "Imprensa japonesa",
+    "slug": "imprensa-japonesa",
+    "topicos": 2
+   },
+   {
+    "nome": "Imprensa Judaica",
+    "slug": "imprensa-judaica",
+    "topicos": 2
+   },
+   {
+    "nome": "Isabel Arendt",
+    "slug": "isabel-arendt",
+    "topicos": 2
+   },
+   {
+    "nome": "Isabel Lustosa",
+    "slug": "isabel-lustosa",
+    "topicos": 2
+   },
+   {
+    "nome": "Josef Halevi",
+    "slug": "josef-halevi",
+    "topicos": 3
+   },
+   {
+    "nome": "José Ferreira Junior",
+    "slug": "jose-ferreira-junior",
+    "topicos": 2
+   },
+   {
+    "nome": "L'Écho français",
+    "slug": "lecho-francais",
+    "topicos": 1
+   },
+   {
+    "nome": "La Settimana del Fanfulla",
+    "slug": "la-settimana-del-fanfulla",
+    "topicos": 1
+   },
+   {
+    "nome": "Le Gil Blas",
+    "slug": "le-gil-blas",
+    "topicos": 4
+   },
+   {
+    "nome": "Le Messager",
+    "slug": "le-messager",
+    "topicos": 1
+   },
+   {
+    "nome": "Le Messager de St. Paul",
+    "slug": "le-messager-de-st-paul",
+    "topicos": 2
+   },
+   {
+    "nome": "Le Messager du Brésil",
+    "slug": "le-messager-du-bresil",
+    "topicos": 1
+   },
+   {
+    "nome": "Lucia Chermont",
+    "slug": "lucia-chermont",
+    "topicos": 5
+   },
+   {
+    "nome": "Maria Stephanou",
+    "slug": "maria-stephanou",
+    "topicos": 2
+   },
+   {
+    "nome": "Monica Okamoto",
+    "slug": "monica-okamoto",
+    "topicos": 2
+   },
+   {
+    "nome": "Monica Setuyo Okamoto",
+    "slug": "monica-setuyo-okamoto",
+    "topicos": 4
+   },
+   {
+    "nome": "Priscila Gimenez",
+    "slug": "priscila-gimenez",
+    "topicos": 2
+   },
+   {
+    "nome": "Revista Escritos",
+    "slug": "revista-escritos",
+    "topicos": 2
+   },
+   {
+    "nome": "Shûkan Nambei",
+    "slug": "shukan-nambei",
+    "topicos": 1
+   },
+   {
+    "nome": "Tania Regina de Luca",
+    "slug": "tania-regina-de-luca",
+    "topicos": 5
+   },
+   {
+    "nome": "Transfopress Brasil",
+    "slug": "transfopress-brasil",
+    "topicos": 4
+   },
+   {
+    "nome": "Valéria Guimarães",
+    "slug": "valeria-guimaraes",
+    "topicos": 8
+   },
+   {
+    "nome": "V Encontro Internacional Transfopress",
+    "slug": "v-encontro-internacional-transfopress",
+    "topicos": 2
+   }
+  ],
+  "tags_total_sitemap": 146
+ }
+}

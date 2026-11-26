@@ -1,0 +1,31 @@
+---
+import Base from '../layouts/Base.astro';
+import Prosa from '../components/Prosa.astro';
+import Cartao from '../components/Cartao.astro';
+import { getAparencia, getPagina, getTextosPagina } from '../lib/conteudo';
+
+// Página inicial: o texto de Apresentação (página "apresentacao") e as
+// notícias mais recentes (quantas, em Aparência).
+const [pagina, aparencia] = await Promise.all([getPagina('apresentacao'), getAparencia()]);
+const noticias = aparencia.noticiasHome > 0 ? (await getTextosPagina('noticias', { limite: aparencia.noticiasHome })).itens : [];
+---
+
+<Base descricao={pagina?.resumo}>
+  <h1 class="titulo-pagina" {...pagina?.edit.title}>{pagina?.titulo || 'Apresentação'}</h1>
+  {pagina && <Prosa conteudo={pagina.conteudo} edit={pagina.edit.conteudo} />}
+  {
+    noticias.length > 0 && (
+      <section class="recentes" aria-labelledby="recentes-titulo">
+        <h2 id="recentes-titulo">Notícias recentes</h2>
+        <div class="lista">
+          {noticias.map((n) => (
+            <Cartao texto={n} nivel="h3" />
+          ))}
+        </div>
+        <p>
+          <a class="botao" href="/noticias">Todas as notícias</a>
+        </p>
+      </section>
+    )
+  }
+</Base>
