@@ -2,30 +2,167 @@
 import Base from '../layouts/Base.astro';
 import Prosa from '../components/Prosa.astro';
 import Cartao from '../components/Cartao.astro';
-import { getAparencia, getPagina, getTextosPagina } from '../lib/conteudo';
+import { IDIOMAS, dataLegivel, getAparencia, getPagina, getTextosPagina, separarLigacoes, type Texto } from '../lib/conteudo';
+import { temaDe } from '../lib/tema';
 
 // Página inicial: o texto de Apresentação (página "apresentacao") e as
 // notícias mais recentes (quantas, em Aparência).
 const [pagina, aparencia] = await Promise.all([getPagina('apresentacao'), getAparencia()]);
 const noticias = aparencia.noticiasHome > 0 ? (await getTextosPagina('noticias', { limite: aparencia.noticiasHome })).itens : [];
+
+// Propostas de interface (só nesta branch): a linha de links do começo da
+// Apresentação sai do texto e vira uma lista à parte. Como o texto mostrado
+// não é mais o campo inteiro, a edição na própria página fica desligada.
+const tema = temaDe(Astro.cookies);
+const { ligacoes, resto } = tema === 'atual' ? { ligacoes: [], resto: pagina?.conteudo ?? [] } : separarLigacoes(pagina?.conteudo ?? []);
+const editTexto = ligacoes.length ? undefined : pagina?.edit.conteudo;
+const tituloInicio = pagina?.titulo || 'Apresentação';
+const lang = (n: Texto) => (n.idioma === 'pt' ? undefined : IDIOMAS[n.idioma]);
 ---
 
 <Base descricao={pagina?.resumo}>
-  <h1 class="titulo-pagina" {...pagina?.edit.title}>{pagina?.titulo || 'Apresentação'}</h1>
-  {pagina && <Prosa conteudo={pagina.conteudo} edit={pagina.edit.conteudo} />}
   {
-    noticias.length > 0 && (
-      <section class="recentes" aria-labelledby="recentes-titulo">
-        <h2 id="recentes-titulo">Notícias recentes</h2>
-        <div class="lista">
-          {noticias.map((n) => (
-            <Cartao texto={n} nivel="h3" />
-          ))}
+    tema === 'atual' && (
+      <>
+        <h1 class="titulo-pagina" {...pagina?.edit.title}>{tituloInicio}</h1>
+        {pagina && <Prosa conteudo={pagina.conteudo} edit={pagina.edit.conteudo} />}
+        {noticias.length > 0 && (
+          <section class="recentes" aria-labelledby="recentes-titulo">
+            <h2 id="recentes-titulo">Notícias recentes</h2>
+            <div class="lista">
+              {noticias.map((n) => (
+                <Cartao texto={n} nivel="h3" />
+              ))}
+            </div>
+            <p>
+              <a class="botao" href="/noticias">Todas as notícias</a>
+            </p>
+          </section>
+        )}
+      </>
+    )
+  }
+  {
+    tema === 'a' && (
+      <div class="inicio inicio-a">
+        <h1 class="titulo-pagina" {...pagina?.edit.title}>{tituloInicio}</h1>
+        {ligacoes.length > 0 && (
+          <ul class="ligacoes-linha" aria-label="Ligações">
+            {ligacoes.map((l) => (
+              <li>
+                <a href={l.href} rel="noopener" target="_blank">{l.rotulo}</a>
+              </li>
+            ))}
+          </ul>
+        )}
+        <div class="abertura">
+          <Prosa conteudo={resto} edit={editTexto} />
         </div>
-        <p>
-          <a class="botao" href="/noticias">Todas as notícias</a>
-        </p>
-      </section>
+        {noticias.length > 0 && (
+          <section class="recentes" aria-labelledby="recentes-titulo">
+            <h2 id="recentes-titulo">Notícias recentes</h2>
+            <div class="lista lista-linhas">
+              {noticias.map((n) => (
+                <Cartao texto={n} nivel="h3" />
+              ))}
+            </div>
+            <p>
+              <a class="botao" href="/noticias">Todas as notícias</a>
+            </p>
+          </section>
+        )}
+      </div>
+    )
+  }
+  {
+    tema === 'b' && (
+      <div class="inicio inicio-b">
+        <article class="inicio-texto">
+          <h1 class="secao" {...pagina?.edit.title}>{tituloInicio}</h1>
+          <div class="abertura">
+            <Prosa conteudo={resto} edit={editTexto} />
+          </div>
+        </article>
+        <aside class="inicio-coluna" aria-label="Notícias e ligações">
+          {noticias.length > 0 && (
+            <section aria-labelledby="recentes-titulo">
+              <h2 id="recentes-titulo" class="secao">Notícias</h2>
+              <ol class="manchetes">
+                {noticias.map((n) => (
+                  <li>
+                    <a href={n.url}>
+                      {n.data && <time datetime={n.data.toISOString()}>{dataLegivel(n.data)}</time>}
+                      <span lang={lang(n)}>{n.titulo}</span>
+                    </a>
+                  </li>
+                ))}
+              </ol>
+              <p class="mais">
+                <a href="/noticias">Todas as notícias</a>
+              </p>
+            </section>
+          )}
+          {ligacoes.length > 0 && (
+            <section aria-labelledby="ligacoes-titulo">
+              <h2 id="ligacoes-titulo" class="secao">Ligações</h2>
+              <ul class="ligacoes">
+                {ligacoes.map((l) => (
+                  <li>
+                    <a href={l.href} rel="noopener" target="_blank">
+                      <span class="ligacao-rotulo">{l.rotulo}</span>
+                      {l.dominio && <span class="ligacao-dominio">{l.dominio}</span>}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+        </aside>
+      </div>
+    )
+  }
+  {
+    tema === 'c' && (
+      <div class="inicio inicio-c">
+        <h1 class="titulo-pagina" {...pagina?.edit.title}>{tituloInicio}</h1>
+        <div class="abertura">
+          <Prosa conteudo={resto} edit={editTexto} />
+        </div>
+        {ligacoes.length > 0 && (
+          <section class="bloco" aria-labelledby="ligacoes-titulo">
+            <h2 id="ligacoes-titulo">Ligações</h2>
+            <ul class="ligacoes">
+              {ligacoes.map((l) => (
+                <li>
+                  <a href={l.href} rel="noopener" target="_blank">
+                    <span class="ligacao-rotulo">{l.rotulo}</span>
+                    {l.dominio && <span class="ligacao-dominio">{l.dominio}</span>}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+        {noticias.length > 0 && (
+          <section class="bloco" aria-labelledby="recentes-titulo">
+            <h2 id="recentes-titulo">Notícias recentes</h2>
+            <ol class="datadas">
+              {noticias.map((n) => (
+                <li>
+                  {n.data ? <time datetime={n.data.toISOString()}>{dataLegivel(n.data)}</time> : <span />}
+                  <div>
+                    <a href={n.url} lang={lang(n)}>{n.titulo}</a>
+                    {n.resumo && <p lang={lang(n)}>{n.resumo}</p>}
+                  </div>
+                </li>
+              ))}
+            </ol>
+            <p class="mais">
+              <a href="/noticias">Todas as notícias</a>
+            </p>
+          </section>
+        )}
+      </div>
     )
   }
 </Base>

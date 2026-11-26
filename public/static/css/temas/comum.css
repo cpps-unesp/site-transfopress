@@ -1,0 +1,171 @@
+/* Base comum às três propostas de interface (A, B e C), carregada depois de
+   site.css. Só nesta branch: a proposta escolhida vira o site.css. */
+
+/* ---------- Alvos de toque de pelo menos 44px ---------- */
+
+.menu a,
+.busca input,
+.tags a,
+.paginacao a,
+.trilha a,
+.restrita,
+.rodape-contato > a[href^='mailto'],
+.mais a,
+.ligacoes-linha a,
+.botao {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+.busca button {
+  width: 44px;
+  min-height: 44px;
+}
+.redes a {
+  width: 44px;
+  height: 44px;
+}
+.parceiros a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+}
+.menu-movel summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 1rem;
+  text-transform: none;
+}
+.menu-movel li a {
+  display: flex;
+}
+.tags a {
+  padding: 0 0.75rem;
+}
+.paginacao a {
+  padding-inline: 0.5rem;
+}
+
+/* Citação sem a faixa colorida à esquerda: recuo e itálico, como nos livros. */
+.prosa blockquote {
+  margin: 1.5rem 0;
+  padding: 0 0 0 1.5rem;
+  border-left: 0;
+  background: none;
+  font-style: italic;
+}
+
+/* ---------- Início ---------- */
+
+.principal > .inicio {
+  max-width: none;
+}
+
+/* A primeira frase da Apresentação diz o que é a rede: fica maior. */
+.abertura .prosa > p:first-child {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+/* Links da primeira linha da Apresentação (Grupo CNPq, Transfopress
+   Internacional, JFB...). */
+.ligacoes-linha {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.25rem;
+  padding: 0;
+  margin: -0.75rem 0 1rem;
+}
+.ligacoes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.ligacoes a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 44px;
+  padding-block: 0.4rem;
+  text-decoration: none;
+}
+.ligacao-rotulo {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+.ligacao-dominio {
+  font-size: 0.85rem;
+  color: var(--cinza);
+}
+.ligacoes a:hover .ligacao-rotulo {
+  text-decoration-thickness: 2px;
+}
+
+.mais {
+  margin: 0.5rem 0 0;
+}
+.mais a {
+  font-weight: 600;
+}
+
+/* ---------- Listas em linhas (no lugar dos cartões) ---------- */
+
+:is(.lista-linhas, .tema-b .lista, .tema-c .lista) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+}
+:is(.lista-linhas, .tema-b .lista, .tema-c .lista) .cartao {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.25rem 0;
+  background: none;
+  border: 0;
+  border-top: 1px solid var(--linha);
+}
+:is(.lista-linhas, .tema-b .lista, .tema-c .lista) .cartao:last-child {
+  border-bottom: 1px solid var(--linha);
+}
+:is(.lista-linhas, .tema-b .lista, .tema-c .lista) .cartao-imagem {
+  flex: 0 0 8.5rem;
+  width: 8.5rem;
+  aspect-ratio: 4 / 3;
+}
+:is(.lista-linhas, .tema-b .lista, .tema-c .lista) .cartao-corpo {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 0;
+}
+:is(.lista-linhas, .tema-b .lista, .tema-c .lista) .cartao-resumo {
+  -webkit-line-clamp: 3;
+}
+:is(.lista-linhas, .tema-b .lista, .tema-c .lista) .cartao:focus-within {
+  outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  :is(.lista-linhas, .tema-b .lista, .tema-c .lista) .cartao {
+    gap: 0.9rem;
+  }
+  :is(.lista-linhas, .tema-b .lista, .tema-c .lista) .cartao-imagem {
+    flex-basis: 5.5rem;
+    width: 5.5rem;
+  }
+}
+
+/* Listas de links fora do texto corrido: downloads, resultados da busca e 404. */
+.downloads a,
+.resultados > li > a,
+.principal > p > a,
+.unesp {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+.pular {
+  min-height: 44px;
+}

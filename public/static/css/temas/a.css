@@ -1,0 +1,75 @@
+/* Proposta A: atual revisto.
+   Leitura: ENERGIA 1, RITMO 2, MOVIMENTO 1. Mesma identidade (cabeçalho de
+   jornais antigos, logo, azul-marinho e Source Sans 3), com menos altura antes
+   do texto e as notícias da página inicial em lista. */
+
+/* Cabeçalho mais baixo: o texto da Apresentação aparece na primeira tela. */
+.topo-interno {
+  min-height: 0;
+  padding-block: 1.1rem;
+}
+.marca img {
+  width: min(440px, 100%);
+}
+.topo-direita {
+  flex-direction: row;
+  align-items: center;
+  gap: 1.25rem;
+}
+.topo-direita .unesp img {
+  width: 104px;
+  height: auto;
+}
+
+/* Menu em caixa normal, sem divisórias; o item atual ganha um traço embaixo
+   em vez do bloco cheio. */
+.menu {
+  margin-top: 0.5rem;
+}
+.menu .envoltorio {
+  padding-bottom: 0;
+}
+.menu-largo {
+  justify-content: flex-start;
+  gap: 0 0.25rem;
+}
+.menu-largo li {
+  flex: 0 0 auto;
+  padding-inline: 0;
+}
+.menu-largo li + li {
+  border-left: 0;
+}
+.menu a {
+  padding: 0.5rem 0.9rem;
+  border-bottom: 3px solid transparent;
+  font-size: 1.0625rem;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.menu-largo li:first-child a {
+  padding-left: 0;
+}
+.menu a[aria-current='page'] {
+  background: none;
+  color: var(--primaria);
+  font-weight: 600;
+  border-bottom-color: var(--primaria);
+}
+
+/* Início: a mesma coluna de leitura do resto do site. */
+.principal > .inicio-a {
+  max-width: var(--texto);
+}
+.recentes h2 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+@media (max-width: 700px) {
+  .topo-direita .unesp img {
+    width: 90px;
+  }
+}

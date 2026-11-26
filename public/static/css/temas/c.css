@@ -1,0 +1,270 @@
+/* Proposta C: índice lateral.
+   Leitura: ENERGIA 2, RITMO 1, MOVIMENTO 1. Sem faixa de imagem: uma coluna
+   azul-marinho fixa à esquerda guarda o nome, o menu e a busca, e o texto
+   começa no alto da tela, alinhado à esquerda. Cores: branco, tinta,
+   azul-marinho e o azul-claro só sobre o azul-marinho. */
+
+body {
+  background: #fff;
+}
+
+.leiaute {
+  display: grid;
+  grid-template-columns: 18.5rem minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+/* ---------- Coluna lateral ---------- */
+
+/* A coluna azul vai até o fim da página; o conteúdo dela fica parado ao rolar. */
+.lateral {
+  background: var(--primaria);
+  color: #fff;
+}
+.lateral-interno {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  max-height: 100vh;
+  overflow-y: auto;
+  padding: 2rem 1.5rem;
+}
+.lateral-nome {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+.lateral-nome:hover {
+  color: #fff;
+}
+.lateral-nome:hover .lateral-titulo {
+  text-decoration: underline;
+}
+.lateral-titulo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.lateral-sub {
+  font-size: 0.95rem;
+  line-height: 1.35;
+  color: var(--destaque);
+}
+
+.lateral .menu {
+  margin: 0;
+}
+@media (min-width: 901px) {
+  .lateral .menu-largo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+}
+.lateral .menu-largo li {
+  flex: none;
+  padding: 0;
+  text-align: left;
+}
+.lateral .menu-largo li + li {
+  border-left: 0;
+}
+.lateral .menu a {
+  display: flex;
+  margin-inline: -0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 1.0625rem;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.lateral .menu a:hover {
+  background: rgb(255 255 255 / 0.12);
+  text-decoration: none;
+}
+.lateral .menu a[aria-current='page'] {
+  background: #fff;
+  color: var(--primaria);
+  font-weight: 600;
+}
+.lateral .busca {
+  flex: none;
+  border: 1px solid var(--destaque);
+}
+.lateral .busca input {
+  width: 100%;
+}
+
+/* Foco branco sobre o azul-marinho. */
+.lateral :focus-visible,
+.lateral .busca:focus-within {
+  outline-color: #fff;
+  box-shadow: none;
+}
+
+/* ---------- Coluna do conteúdo ---------- */
+
+.coluna {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.tema-c .principal {
+  flex: 1 0 auto;
+  width: auto;
+  margin: 0;
+  padding: 3rem clamp(1.5rem, 5vw, 4.5rem);
+}
+.tema-c .principal > * {
+  max-width: 44rem;
+  margin-inline: 0;
+}
+.tema-c .principal > .lista {
+  max-width: 50rem;
+}
+.tema-c .principal > .inicio {
+  max-width: 44rem;
+}
+
+.titulo-pagina,
+.texto h1 {
+  font-weight: 700;
+  font-size: clamp(1.8rem, 1.3rem + 1.6vw, 2.4rem);
+  line-height: 1.15;
+}
+.inicio-c .abertura .prosa > p:first-child {
+  font-size: 1.35rem;
+  line-height: 1.45;
+  color: var(--primaria);
+}
+
+/* ---------- Início: blocos depois do texto ---------- */
+
+.bloco {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--linha);
+}
+.bloco h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primaria);
+}
+.inicio-c .ligacoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  gap: 0 1.5rem;
+}
+.datadas {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.datadas li {
+  display: grid;
+  grid-template-columns: 10rem minmax(0, 1fr);
+  gap: 0 1.25rem;
+  padding: 0.5rem 0 0.9rem;
+  border-top: 1px solid #e2e2e2;
+}
+.datadas li:first-child {
+  border-top: 0;
+}
+.datadas time {
+  padding-top: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--cinza);
+}
+.datadas a {
+  display: block;
+  padding-block: 0.6rem 0.3rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.35;
+  text-decoration: none;
+}
+.datadas a:hover {
+  text-decoration: underline;
+}
+.datadas p {
+  margin: 0;
+  font-size: 0.97rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ---------- Rodapé, dentro da coluna do conteúdo ---------- */
+
+.tema-c .rodape {
+  margin-top: 0;
+}
+.tema-c .rodape .envoltorio {
+  width: auto;
+  margin: 0;
+  padding-inline: clamp(1.5rem, 5vw, 4.5rem);
+}
+.tema-c .parceiros {
+  justify-content: flex-start;
+}
+.tema-c .rodape-faixa {
+  background: #f1f2f5;
+  color: var(--tinta);
+}
+.tema-c .rodape-faixa a,
+.tema-c .redes a {
+  color: var(--primaria);
+}
+.tema-c .redes a:hover {
+  color: var(--tinta);
+}
+
+/* ---------- Telas pequenas: a coluna lateral vira barra no topo ---------- */
+
+@media (max-width: 900px) {
+  .leiaute {
+    display: block;
+  }
+  .lateral-interno {
+    position: static;
+    max-height: none;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+  .lateral-titulo {
+    font-size: 1.4rem;
+  }
+  .lateral-sub {
+    font-size: 0.9rem;
+  }
+  .lateral .menu-movel summary {
+    color: #fff;
+  }
+  .lateral .menu-movel ul {
+    margin-top: 0.25rem;
+  }
+  .lateral .menu-movel li a {
+    margin: 0;
+    border-top: 1px solid rgb(255 255 255 / 0.2);
+    border-radius: 0;
+  }
+  .tema-c .principal {
+    padding: 2rem 1rem 2.5rem;
+  }
+  .tema-c .rodape .envoltorio {
+    padding-inline: 1rem;
+  }
+  .datadas li {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .datadas time {
+    padding-top: 0.5rem;
+  }
+}

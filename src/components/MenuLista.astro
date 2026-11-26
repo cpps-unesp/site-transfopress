@@ -1,0 +1,24 @@
+---
+import type { ItemMenu } from '../lib/conteudo';
+
+// Itens do menu principal, com o item da página atual marcado.
+interface Props {
+  itens: ItemMenu[];
+  caminho: string;
+  classe?: string;
+}
+const { itens, caminho, classe } = Astro.props;
+const ativo = (url: string) => (url === '/' ? caminho === '/' : caminho === url || caminho.startsWith(`${url}/`));
+---
+
+<ul class={classe}>
+  {
+    itens.map((item) => (
+      <li>
+        <a href={item.url} aria-current={ativo(item.url) ? 'page' : undefined} rel={item.externo ? 'noopener' : undefined}>
+          {item.rotulo}
+        </a>
+      </li>
+    ))
+  }
+</ul>

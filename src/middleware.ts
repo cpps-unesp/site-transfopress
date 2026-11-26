@@ -1,5 +1,6 @@
 import { defineMiddleware } from 'astro:middleware';
 import mapa from './lib/redirecionamentos.json';
+import { ehTema } from './lib/tema';
 
 // Endereços do site antigo (WordPress) para os do site novo, com 301 para os
 // buscadores e os links já publicados acompanharem. O mapa com os casos
@@ -50,6 +51,16 @@ function destino(url: URL): string | null {
 export const onRequest = defineMiddleware((context, next) => {
   const { pathname } = context.url;
   if (INTOCADO.test(pathname)) return next();
+  // Só nesta branch: ?tema=a|b|c escolhe a proposta de interface, guardada num
+  // cookie, e volta ao mesmo endereço sem o parâmetro.
+  const tema = context.url.searchParams.get('tema');
+  if (tema !== null) {
+    const limpo = new URL(context.url);
+    limpo.searchParams.delete('tema');
+    const headers = new Headers({ Location: limpo.pathname.startsWith('//') ? '/' : `${limpo.pathname}${limpo.search}` });
+    if (ehTema(tema)) headers.set('Set-Cookie', `tema=${tema}; Path=/; Max-Age=2592000; SameSite=Lax`);
+    return new Response(null, { status: 302, headers });
+  }
   const novo = destino(context.url);
   // Destino sempre no próprio site: nunca "//outro-dominio".
   if (novo && !novo.startsWith('//') && novo !== `${pathname}${context.url.search}`) return context.redirect(novo, 301);

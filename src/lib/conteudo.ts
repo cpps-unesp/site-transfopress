@@ -230,6 +230,45 @@ export async function getPagina(slug: string): Promise<Pagina | null> {
   return { slug, titulo: str(e.data.title), resumo: str(e.data.resumo), conteudo: blocos(e.data.conteudo), edit: e.edit };
 }
 
+// Primeiro parágrafo feito só de links separados por "|" (na Apresentação:
+// Grupo CNPq | Transfopress Internacional | JFB | ...). As propostas de
+// interface mostram esses links à parte; qualquer outro texto fica como está.
+export type Ligacao = { rotulo: string; href: string; dominio: string };
+
+function dominioDe(href: string): string {
+  try {
+    return ehExterno(href) ? new URL(href).hostname.replace(/^www\./, '') : '';
+  } catch {
+    return '';
+  }
+}
+
+export function separarLigacoes(conteudo: PortableTextBlock[]): { ligacoes: Ligacao[]; resto: PortableTextBlock[] } {
+  const nada = { ligacoes: [], resto: conteudo };
+  const [primeiro, ...resto] = conteudo as unknown as {
+    _type?: string;
+    style?: string;
+    listItem?: string;
+    children?: { text?: string; marks?: string[] }[];
+    markDefs?: { _key: string; _type: string; href?: string }[];
+  }[];
+  if (!primeiro || primeiro._type !== 'block' || (primeiro.style ?? 'normal') !== 'normal' || primeiro.listItem) return nada;
+  const links = new Map((primeiro.markDefs ?? []).filter((d) => d._type === 'link').map((d) => [d._key, urlSegura(d.href)]));
+  const ligacoes: Ligacao[] = [];
+  for (const trecho of primeiro.children ?? []) {
+    const texto = String(trecho.text ?? '');
+    const href = (trecho.marks ?? []).map((m) => links.get(m)).find(Boolean);
+    if (href) {
+      const anterior = ligacoes.at(-1);
+      if (anterior?.href === href) anterior.rotulo = `${anterior.rotulo}${texto}`.trim();
+      else ligacoes.push({ rotulo: texto.trim(), href, dominio: dominioDe(href) });
+    } else if (!/^[\s|·•,;/-]*$/.test(texto)) {
+      return nada;
+    }
+  }
+  return ligacoes.length >= 2 ? { ligacoes, resto: resto as unknown as PortableTextBlock[] } : nada;
+}
+
 export async function getPaginas(): Promise<Pagina[]> {
   return (await listar('paginas', { title: 'asc' })).map((e) => ({
     slug: slugDe(e),

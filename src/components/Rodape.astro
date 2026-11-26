@@ -1,0 +1,49 @@
+---
+import Redes from './Redes.astro';
+import ImagemSite from './ImagemSite.astro';
+import type { Aparencia, Parceiro } from '../lib/conteudo';
+
+// Rodapé: logos dos parceiros, nome, endereço, e-mail e redes.
+interface Props {
+  aparencia: Aparencia;
+  parceiros: Parceiro[];
+}
+const { aparencia, parceiros } = Astro.props;
+---
+
+<footer class="rodape">
+  {
+    parceiros.length > 0 && (
+      <div class="envoltorio">
+        <h2 class="visualmente-oculto">Instituições parceiras</h2>
+        <ul class="parceiros">
+          {parceiros.map((p) => (
+            <li {...p.edit.logo}>
+              {p.link ? (
+                <a href={p.link} rel="noopener" target="_blank" title={p.nome}>
+                  <ImagemSite imagem={p.logo} alt={p.nome} />
+                </a>
+              ) : (
+                <ImagemSite imagem={p.logo} alt={p.nome} />
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+  <div class="rodape-faixa">
+    <div class="envoltorio rodape-interno">
+      <div>
+        <strong>{aparencia.nome}</strong>
+        <span>{aparencia.subtitulo}</span>
+        {aparencia.endereco && <span class="pre-linha">{aparencia.endereco}</span>}
+      </div>
+      <div class="rodape-contato">
+        {aparencia.email && <a href={`mailto:${aparencia.email}`}>{aparencia.email}</a>}
+        <Redes redes={aparencia.redes} nome={aparencia.nome} />
+        <a class="restrita" href="/_emdash/admin" rel="nofollow">Área restrita</a>
+      </div>
+    </div>
+  </div>
+</footer>
