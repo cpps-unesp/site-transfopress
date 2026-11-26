@@ -2,6 +2,7 @@
 import { PortableText } from 'emdash/ui';
 import type { PortableTextBlock } from 'emdash';
 import { IDIOMAS, type Idioma } from '../lib/conteudo';
+import Galeria from './Galeria.astro';
 
 // Texto rico do EmDash. Quando o texto está em outro idioma, o atributo lang
 // avisa os leitores de tela e os buscadores.
@@ -14,5 +15,5 @@ const { conteudo, idioma = 'pt', edit } = Astro.props;
 ---
 
 <div class="prosa" lang={idioma === 'pt' ? undefined : IDIOMAS[idioma]} {...edit}>
-  <PortableText value={conteudo} tablePlaceholder="Tabela" />
+  <PortableText value={conteudo} tablePlaceholder="Tabela" components={{ type: { gallery: Galeria } }} />
 </div>

@@ -1,0 +1,28 @@
+---
+import { Gallery } from 'emdash/ui';
+import ampliadas from '../lib/imagens-ampliadas.json';
+
+// Galeria do texto rico. As galerias que vieram do site antigo mostram as
+// miniaturas como lá, cada uma com link para a foto grande (o mapa é gerado por
+// seed/gerar-seed.mjs). Uma galeria com imagem enviada pelo admin usa a do EmDash.
+const props = Astro.props as { node: { images?: unknown } };
+type Img = { _key?: string; asset?: { url?: unknown }; alt?: string; width?: number; height?: number };
+const imagens = (Array.isArray(props.node?.images) ? props.node.images : []) as Img[];
+const urlDe = (i: Img) => (typeof i?.asset?.url === 'string' ? i.asset.url : '');
+const doSiteAntigo = imagens.length > 0 && imagens.every((i) => /^\/(wp-content|static)\//.test(urlDe(i)));
+const grande = ampliadas as Record<string, string>;
+---
+
+{
+  doSiteAntigo ? (
+    <ul class="galeria">
+      {imagens.map((i) => {
+        const src = urlDe(i);
+        const img = <img src={src} alt={i.alt ?? ''} width={i.width} height={i.height} loading="lazy" decoding="async" />;
+        return <li>{grande[src] ? <a href={grande[src]}>{img}</a> : img}</li>;
+      })}
+    </ul>
+  ) : (
+    <Gallery {...(Astro.props as any)} />
+  )
+}

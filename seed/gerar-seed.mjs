@@ -113,12 +113,19 @@ function arquivoPublico(caminho) {
 }
 
 // Valor de um campo de imagem que aponta para um arquivo antigo em public/.
+// Com provider "external" o EmDash guarda o src como está quando o item é salvo
+// no admin; sem ele, trataria a imagem como mídia própria e apagaria o src.
 function imagemLegado(caminho, alt = '') {
   const local = arquivoPublico(caminho);
   if (!local) return undefined;
   const src = encodeURI(decodeURI(caminho));
-  return { id: `legado:${decodeURI(caminho)}`, src, alt, filename: basename(local), ...dimensoes(local) };
+  return { provider: 'external', id: `legado:${decodeURI(caminho)}`, src, alt, filename: basename(local), ...dimensoes(local) };
 }
+
+// Miniaturas de galeria e a versão grande para onde o link delas apontava. Vai
+// para src/lib/imagens-ampliadas.json: o editor do EmDash não guarda link em
+// imagem de galeria, então o site procura a versão grande por aqui.
+const ampliadas = {};
 
 // Miniatura para as listas: a variante de ~300 px do WordPress, se existir.
 function miniatura(caminho) {
@@ -150,6 +157,15 @@ function htmlParaBlocos(html, { titulo, prefixo }) {
   let n = 0;
   const chave = () => `${prefixo}-${(n++).toString(36)}`;
   const embeds = [];
+  // src da imagem → href do link em volta dela no HTML original
+  const linkDaImagem = new Map();
+  const chaveSrc = (url) => {
+    try {
+      return decodeURI(url.replace(/&amp;/g, '&'));
+    } catch {
+      return url;
+    }
+  };
 
   const h = html
     // links e imagens do próprio site viram caminhos do site novo
@@ -162,6 +178,11 @@ function htmlParaBlocos(html, { titulo, prefixo }) {
     })
     // Galerias e carrosséis do tema (listas de imagens com link para o
     // original): cada imagem vira um parágrafo, agrupado depois em galeria.
+    .replace(/<a\b[^>]*?href="([^"]*)"[^>]*>\s*(<img\b[^>]*>)\s*<\/a>/g, (_, href, img) => {
+      const src = img.match(/\bsrc="([^"]*)"/)?.[1];
+      if (src && href) linkDaImagem.set(chaveSrc(src), href.replace(/&amp;/g, '&'));
+      return img;
+    })
     .replace(/<a\b[^>]*>\s*(<img\b[^>]*>)\s*<\/a>/g, '$1')
     .replace(/<li>\s*(<img\b[^>]*>)\s*<\/li>/g, '<p>$1</p>')
     .replace(/<(ul|ol)>\s*((?:<p><img\b[^>]*><\/p>\s*)+)<\/\1>/g, '$2')
@@ -171,7 +192,21 @@ function htmlParaBlocos(html, { titulo, prefixo }) {
       return `<p>@@EMBED${embeds.length - 1}@@</p>`;
     });
 
-  const blocos = gutenbergToPortableText(h, { keyGenerator: chave });
+  const convertidos = gutenbergToPortableText(h, { keyGenerator: chave });
+  // Um vídeo no meio de um parágrafo deixa o marcador dentro do texto: o
+  // parágrafo é dividido e o marcador vira um bloco próprio.
+  const blocos = [];
+  for (const b of convertidos) {
+    const t = b._type === 'block' ? textoDe(b) : '';
+    const m = t.match(/@@EMBED\d+@@/);
+    if (m && t.trim() !== m[0]) {
+      const marcador = { _type: 'block', _key: chave(), style: 'normal', markDefs: [], children: [{ _type: 'span', _key: chave(), text: m[0], marks: [] }] };
+      for (const c of b.children ?? []) if (c._type === 'span' && c.text?.includes(m[0])) c.text = c.text.replace(m[0], '');
+      blocos.push(...(t.trimStart().startsWith(m[0]) ? [marcador, b] : [b, marcador]));
+    } else {
+      blocos.push(b);
+    }
+  }
   const saida = [];
   for (const b of blocos) {
     if (b._type === 'block') {
@@ -220,12 +255,17 @@ function htmlParaBlocos(html, { titulo, prefixo }) {
         continue;
       }
       const src = encodeURI(decodeURI(url));
+      // O link que a imagem tinha (em geral, para a versão grande da foto).
+      let href = linkDaImagem.get(chaveSrc(url)) ?? '';
+      if (href.startsWith('/wp-content/')) href = arquivoPublico(href) ? encodeURI(decodeURI(href)) : '';
+      else if (!/^(\/(?!\/)|https:\/\/)/.test(href)) href = '';
       saida.push({
         _type: 'image',
         _key: chave(),
         asset: { _type: 'reference', _ref: `legado:${decodeURI(url)}`, url: src },
         ...(b.alt ? { alt: b.alt } : {}),
         ...dimensoes(local),
+        ...(href && href !== src ? { link: { href } } : {}),
       });
     } else if (b._type === 'break') {
       if (saida.at(-1)?._type !== 'break') saida.push({ ...b, _key: chave() });
@@ -239,7 +279,16 @@ function htmlParaBlocos(html, { titulo, prefixo }) {
     let j = i;
     while (j < saida.length && saida[j]._type === 'image') j++;
     if (j - i >= 3) {
-      const imagens = saida.slice(i, j);
+      const imagens = saida.slice(i, j).map((img, k, todas) => {
+        const { link, ...resto } = img;
+        if (link) ampliadas[img.asset.url] = link.href;
+        // Textos alternativos que eram só número ou nome de arquivo ("1",
+        // "3-min", "18010946_4352..._n") não dizem nada: viram a posição na galeria.
+        if (!resto.alt || /^[\d\s_.-]+n?$/i.test(resto.alt) || /\d{6,}/.test(resto.alt) || (!/\s/.test(resto.alt) && /\d/.test(resto.alt))) {
+          resto.alt = `Foto ${k + 1} de ${todas.length}`;
+        }
+        return resto;
+      });
       saida.splice(i, j - i, { _type: 'gallery', _key: chave(), columns: 3, images: imagens });
     }
   }
@@ -673,7 +722,35 @@ const seed = {
   content: entradas,
 };
 
-writeFileSync(join(RAIZ, 'seed/seed.json'), `${JSON.stringify(seed, null, 2)}\n`);
+// Itens de memória que a página Memória do site antigo não listava ganham um
+// link no fim dela, para não ficarem acessíveis só pela busca.
+{
+  const pagina = entradas.paginas.find((p) => p.slug === 'memoria');
+  const conteudo = pagina?.data.conteudo ?? [];
+  const linkados = JSON.stringify(conteudo);
+  const faltam = entradas.memoria.filter((m) => !linkados.includes(`/memoria/${m.slug}"`));
+  const rotulo = conteudo.find((b) => b._type === 'block' && textoDe(b).trim() === 'Encontros Transfopress Brasil');
+  if (faltam.length && rotulo) {
+    let n = 0;
+    const chave = () => `memoria-extra-${n++}`;
+    conteudo.push({ ...structuredClone(rotulo), _key: chave(), children: rotulo.children.map((c) => ({ ...c, _key: chave(), text: 'Outros registros' })) });
+    for (const m of faltam) {
+      const link = chave();
+      conteudo.push({
+        _type: 'block',
+        _key: chave(),
+        style: 'normal',
+        markDefs: [{ _type: 'link', _key: link, href: `/memoria/${m.slug}` }],
+        children: [{ _type: 'span', _key: chave(), text: m.data.title, marks: [link] }],
+      });
+    }
+  }
+}
+
+writeFileSync(join(RAIZ, 'src/lib/imagens-ampliadas.json'), `${JSON.stringify(ampliadas, null, 2)}\n`);
+const textoSeed = `${JSON.stringify(seed, null, 2)}\n`;
+if (textoSeed.includes('@@EMBED')) throw new Error('Sobrou um marcador @@EMBED no seed: um vídeo não foi convertido.');
+writeFileSync(join(RAIZ, 'seed/seed.json'), textoSeed);
 writeFileSync(
   join(RAIZ, 'src/lib/redirecionamentos.json'),
   `${JSON.stringify(Object.fromEntries(Object.entries(mapaMiddleware).sort()), null, 2)}\n`
@@ -681,3 +758,4 @@ writeFileSync(
 const contagem = Object.fromEntries(Object.entries(entradas).map(([k, v]) => [k, v.length]));
 console.log('seed/seed.json:', JSON.stringify(contagem), `tags: ${tags.length}`);
 console.log('src/lib/redirecionamentos.json:', Object.keys(mapaMiddleware).length, 'endereços');
+console.log('src/lib/imagens-ampliadas.json:', Object.keys(ampliadas).length, 'miniaturas de galeria');

@@ -9538,6 +9538,64 @@
                   "href": "/memoria/a-imprensa-francofona-das-americas-nos-seculos-xix-e-xx"
                 }
               ]
+            },
+            {
+              "_type": "block",
+              "_key": "memoria-extra-0",
+              "style": "normal",
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "memoria-extra-1",
+                  "text": "Outros registros",
+                  "marks": []
+                }
+              ],
+              "markDefs": []
+            },
+            {
+              "_type": "block",
+              "_key": "memoria-extra-3",
+              "style": "normal",
+              "markDefs": [
+                {
+                  "_type": "link",
+                  "_key": "memoria-extra-2",
+                  "href": "/memoria/a-profa-dra-isabel-lustosa-fcrbchamnova-proferiu-conferencia-dia-11022021-no-cham-universidade-nova-de-lisboa-com-base-nas-pesquisas-que-vem-desenvolvendo-no-transfopress"
+                }
+              ],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "memoria-extra-4",
+                  "text": "A profa. dra. Isabel Lustosa proferiu conferência no CHAM - Universidade Nova de Lisboa com base nas pesquisas que vem desenvolvendo no Transfopress.",
+                  "marks": [
+                    "memoria-extra-2"
+                  ]
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "memoria-extra-6",
+              "style": "normal",
+              "markDefs": [
+                {
+                  "_type": "link",
+                  "_key": "memoria-extra-5",
+                  "href": "/memoria/videos-e-fotografias"
+                }
+              ],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "memoria-extra-7",
+                  "text": "Vídeos do Youtube e fotografias - V Encontro Transfopress Brasil",
+                  "marks": [
+                    "memoria-extra-5"
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -9739,7 +9797,10 @@
               },
               "alt": "Captura de Tela 2015-10-09 às 20.31.11",
               "width": 150,
-              "height": 150
+              "height": 150,
+              "link": {
+                "href": "/wp-content/uploads/2015/09/Captura-de-Tela-2015-10-09-%C3%A0s-20.31.11-1024x565.png"
+              }
             },
             {
               "_type": "block",
@@ -9956,6 +10017,7 @@
           "data": "2015-09-13T06:36:15.000Z",
           "idioma": "en",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2015/09/Captura-de-Tela-2015-10-09-às-20.31.11-150x150.png",
             "src": "/wp-content/uploads/2015/09/Captura-de-Tela-2015-10-09-%C3%A0s-20.31.11-150x150.png",
             "alt": "",
@@ -10536,7 +10598,10 @@
               },
               "alt": "Programa_3Encontro_Malaga_3_1_edited-1",
               "width": 300,
-              "height": 201
+              "height": 201,
+              "link": {
+                "href": "/wp-content/uploads/2015/10/Programa_3Encontro_Malaga_3_1_edited-1.jpg"
+              }
             },
             {
               "_type": "image",
@@ -10548,7 +10613,10 @@
               },
               "alt": "Programa_3Encontro_Malaga_3-2",
               "width": 300,
-              "height": 201
+              "height": 201,
+              "link": {
+                "href": "/wp-content/uploads/2015/10/Programa_3Encontro_Malaga_3-2.jpg"
+              }
             },
             {
               "_type": "block",
@@ -10756,6 +10824,7 @@
           "data": "2015-10-19T12:15:50.000Z",
           "idioma": "es",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2015/10/Programa_3Encontro_Malaga_3_1_edited-1-300x201.jpg",
             "src": "/wp-content/uploads/2015/10/Programa_3Encontro_Malaga_3_1_edited-1-300x201.jpg",
             "alt": "",
@@ -13084,7 +13153,10 @@
               },
               "alt": "Thairine_Anphu-SP",
               "width": 300,
-              "height": 300
+              "height": 300,
+              "link": {
+                "href": "/wp-content/uploads/2016/09/14212765_10205291911376341_7016900198620107412_n.jpg"
+              }
             },
             {
               "_type": "block",
@@ -13139,6 +13211,7 @@
           "data": "2016-09-20T00:50:09.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2016/09/14212765_10205291911376341_7016900198620107412_n-300x300.jpg",
             "src": "/wp-content/uploads/2016/09/14212765_10205291911376341_7016900198620107412_n-300x300.jpg",
             "alt": "",
@@ -13441,6 +13514,7 @@
           "data": "2016-11-20T11:07:28.000Z",
           "idioma": "fr",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2016/11/seminário-7.jpg",
             "src": "/wp-content/uploads/2016/11/semin%C3%A1rio-7.jpg",
             "alt": "",
@@ -14905,7 +14979,10 @@
               },
               "alt": "Imprimir",
               "width": 239,
-              "height": 367
+              "height": 367,
+              "link": {
+                "href": "/wp-content/uploads/2016/11/cartaz_4Encontro_Transfopress_Mexico-667x1024.jpg"
+              }
             },
             {
               "_type": "block",
@@ -15104,6 +15181,7 @@
           "data": "2016-11-20T12:02:17.000Z",
           "idioma": "es",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2016/11/cartaz_4Encontro_Transfopress_Mexico-667x1024.jpg",
             "src": "/wp-content/uploads/2016/11/cartaz_4Encontro_Transfopress_Mexico-667x1024.jpg",
             "alt": "",
@@ -15820,7 +15898,7 @@
                 {
                   "_type": "span",
                   "_key": "acordo-de-cooperacao-une-2m",
-                  "text": "E-mails: anasvirbul.unesp; eri@franca.unesp.br\n",
+                  "text": "E-mails: [e-mail removido]; eri@franca.unesp.br\n",
                   "marks": []
                 },
                 {
@@ -15929,7 +16007,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/11/univ-st-quentin-300x211-200x200.jpg",
                     "url": "/wp-content/uploads/2016/11/univ-st-quentin-300x211-200x200.jpg"
                   },
-                  "alt": "univ-st-quentin-300x211",
+                  "alt": "Foto 1 de 8",
                   "width": 200,
                   "height": 200
                 },
@@ -15941,7 +16019,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/11/UVSQ-01-200x200.jpg",
                     "url": "/wp-content/uploads/2016/11/UVSQ-01-200x200.jpg"
                   },
-                  "alt": "UVSQ-01",
+                  "alt": "Foto 2 de 8",
                   "width": 200,
                   "height": 200
                 },
@@ -15953,7 +16031,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/11/UVSQ-02-200x200.jpg",
                     "url": "/wp-content/uploads/2016/11/UVSQ-02-200x200.jpg"
                   },
-                  "alt": "UVSQ-02",
+                  "alt": "Foto 3 de 8",
                   "width": 200,
                   "height": 200
                 },
@@ -15965,7 +16043,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/11/UVSQ-03-200x158.jpg",
                     "url": "/wp-content/uploads/2016/11/UVSQ-03-200x158.jpg"
                   },
-                  "alt": "UVSQ-03",
+                  "alt": "Foto 4 de 8",
                   "width": 200,
                   "height": 158
                 },
@@ -15977,7 +16055,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/11/UVSQ-04-200x183.jpg",
                     "url": "/wp-content/uploads/2016/11/UVSQ-04-200x183.jpg"
                   },
-                  "alt": "UVSQ-04",
+                  "alt": "Foto 5 de 8",
                   "width": 200,
                   "height": 183
                 },
@@ -16290,6 +16368,7 @@
           "data": "2016-11-24T15:30:34.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2016/11/univ-st-quentin-300x211.jpg",
             "src": "/wp-content/uploads/2016/11/univ-st-quentin-300x211.jpg",
             "alt": "",
@@ -16664,6 +16743,7 @@
           "data": "2016-12-18T18:07:28.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2015/09/Página-no-facebook.png",
             "src": "/wp-content/uploads/2015/09/P%C3%A1gina-no-facebook.png",
             "alt": "",
@@ -16963,6 +17043,7 @@
           "data": "2017-02-07T21:07:18.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2017/02/vencontro-300x219.jpg",
             "src": "/wp-content/uploads/2017/02/vencontro-300x219.jpg",
             "alt": "",
@@ -17149,6 +17230,7 @@
           "data": "2017-02-13T20:39:52.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2017/02/escritos-300x69.jpg",
             "src": "/wp-content/uploads/2017/02/escritos-300x69.jpg",
             "alt": "",
@@ -17545,7 +17627,10 @@
               },
               "alt": "18010946_435272190156641_6970625728689709936_n",
               "width": 275,
-              "height": 300
+              "height": 300,
+              "link": {
+                "href": "/wp-content/uploads/2017/04/18010946_435272190156641_6970625728689709936_n.jpg"
+              }
             },
             {
               "_type": "block",
@@ -17797,6 +17882,7 @@
           "data": "2017-04-18T23:35:19.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2017/04/18010946_435272190156641_6970625728689709936_n-275x300.jpg",
             "src": "/wp-content/uploads/2017/04/18010946_435272190156641_6970625728689709936_n-275x300.jpg",
             "alt": "",
@@ -18259,7 +18345,10 @@
               },
               "alt": "18010946_435272190156641_6970625728689709936_n",
               "width": 275,
-              "height": 300
+              "height": 300,
+              "link": {
+                "href": "/wp-content/uploads/2017/04/18010946_435272190156641_6970625728689709936_n.jpg"
+              }
             },
             {
               "_type": "block",
@@ -18473,6 +18562,7 @@
           "data": "2017-05-03T11:33:01.000Z",
           "idioma": "en",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2017/04/18010946_435272190156641_6970625728689709936_n-275x300.jpg",
             "src": "/wp-content/uploads/2017/04/18010946_435272190156641_6970625728689709936_n-275x300.jpg",
             "alt": "",
@@ -18742,7 +18832,10 @@
               },
               "alt": "18010946_435272190156641_6970625728689709936_n",
               "width": 275,
-              "height": 300
+              "height": 300,
+              "link": {
+                "href": "/wp-content/uploads/2017/04/18010946_435272190156641_6970625728689709936_n.jpg"
+              }
             },
             {
               "_type": "block",
@@ -18836,6 +18929,7 @@
           "data": "2017-07-09T15:02:16.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2017/04/18010946_435272190156641_6970625728689709936_n-275x300.jpg",
             "src": "/wp-content/uploads/2017/04/18010946_435272190156641_6970625728689709936_n-275x300.jpg",
             "alt": "",
@@ -19021,7 +19115,10 @@
               },
               "alt": "logo",
               "width": 300,
-              "height": 47
+              "height": 47,
+              "link": {
+                "href": "/wp-content/uploads/2017/10/logo.jpg"
+              }
             },
             {
               "_type": "image",
@@ -19033,7 +19130,10 @@
               },
               "alt": "vencontro",
               "width": 300,
-              "height": 219
+              "height": 219,
+              "link": {
+                "href": "/wp-content/uploads/2017/02/vencontro.jpg"
+              }
             },
             {
               "_type": "block",
@@ -19117,6 +19217,7 @@
           "data": "2017-10-09T13:03:57.000Z",
           "idioma": "en",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2017/10/logo-300x47.jpg",
             "src": "/wp-content/uploads/2017/10/logo-300x47.jpg",
             "alt": "",
@@ -19251,6 +19352,7 @@
           "data": "2017-11-01T10:05:22.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2017/11/1-13_14-11_IIIencontro-transforpress_brasil_convite--300x400.jpg",
             "src": "/wp-content/uploads/2017/11/1-13_14-11_IIIencontro-transforpress_brasil_convite--300x400.jpg",
             "alt": "",
@@ -19427,6 +19529,7 @@
           "data": "2017-11-10T00:23:30.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2017/11/23244073_924631314368577_8163755341833674234_n.jpg",
             "src": "/wp-content/uploads/2017/11/23244073_924631314368577_8163755341833674234_n.jpg",
             "alt": "",
@@ -20743,6 +20846,7 @@
           "data": "2018-03-15T13:33:09.000Z",
           "idioma": "fr",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2018/03/La-Presse-Francophone-Publiée-min-724x1024.jpg",
             "src": "/wp-content/uploads/2018/03/La-Presse-Francophone-Publi%C3%A9e-min-724x1024.jpg",
             "alt": "",
@@ -21784,6 +21888,7 @@
           "data": "2018-07-26T17:13:58.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2015/09/logo_escritos_dez-300x50.gif",
             "src": "/wp-content/uploads/2015/09/logo_escritos_dez-300x50.gif",
             "alt": "",
@@ -22501,6 +22606,7 @@
           "data": "2018-09-29T13:55:48.000Z",
           "idioma": "en",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2018/09/Captura-de-Tela-2018-09-29-as-11.32.47.png",
             "src": "/wp-content/uploads/2018/09/Captura-de-Tela-2018-09-29-as-11.32.47.png",
             "alt": "",
@@ -22591,7 +22697,10 @@
               },
               "alt": "img7",
               "width": 500,
-              "height": 200
+              "height": 200,
+              "link": {
+                "href": "/wp-content/uploads/2018/10/img7-1024x724.jpg"
+              }
             },
             {
               "_type": "image",
@@ -22603,12 +22712,16 @@
               },
               "alt": "img13 (1) (1)_Easy-Resize.com",
               "width": 500,
-              "height": 200
+              "height": 200,
+              "link": {
+                "href": "/wp-content/uploads/2018/10/img13-1-1_Easy-Resize.com_-1024x724.jpg"
+              }
             }
           ],
           "data": "2018-10-14T23:03:14.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2018/10/img7-500x200.jpg",
             "src": "/wp-content/uploads/2018/10/img7-500x200.jpg",
             "alt": "",
@@ -22798,7 +22911,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/1-min1-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/1-min1-500x500.jpg"
                   },
-                  "alt": "1-min",
+                  "alt": "Foto 2 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -22810,7 +22923,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/3-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/3-min-500x500.jpg"
                   },
-                  "alt": "3-min",
+                  "alt": "Foto 3 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -22822,7 +22935,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/4-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/4-min-500x500.jpg"
                   },
-                  "alt": "4-min",
+                  "alt": "Foto 4 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -22834,7 +22947,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/5-min-500x445.jpg",
                     "url": "/wp-content/uploads/2018/11/5-min-500x445.jpg"
                   },
-                  "alt": "5-min",
+                  "alt": "Foto 5 de 49",
                   "width": 500,
                   "height": 445
                 },
@@ -22846,7 +22959,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/6-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/6-min-500x500.jpg"
                   },
-                  "alt": "6-min",
+                  "alt": "Foto 6 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -22858,7 +22971,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/7-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/7-min-500x500.jpg"
                   },
-                  "alt": "7-min",
+                  "alt": "Foto 7 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -22870,7 +22983,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/8-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/8-min-500x500.jpg"
                   },
-                  "alt": "8-min",
+                  "alt": "Foto 8 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -22882,7 +22995,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/9-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/9-min-500x500.jpg"
                   },
-                  "alt": "9-min",
+                  "alt": "Foto 9 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -22894,7 +23007,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/10-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/10-min-500x500.jpg"
                   },
-                  "alt": "10-min",
+                  "alt": "Foto 10 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -22906,7 +23019,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/11-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/11-min-500x500.jpg"
                   },
-                  "alt": "11-min",
+                  "alt": "Foto 11 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -22918,7 +23031,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/12-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/12-min-500x500.jpg"
                   },
-                  "alt": "12-min",
+                  "alt": "Foto 12 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -22930,7 +23043,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/13-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/13-min-500x500.jpg"
                   },
-                  "alt": "13-min",
+                  "alt": "Foto 13 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -22942,7 +23055,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/14-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/14-min-500x500.jpg"
                   },
-                  "alt": "14-min",
+                  "alt": "Foto 14 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -22954,7 +23067,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/15-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/15-min-500x500.jpg"
                   },
-                  "alt": "15-min",
+                  "alt": "Foto 15 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -22966,7 +23079,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/16-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/16-min-500x500.jpg"
                   },
-                  "alt": "16-min",
+                  "alt": "Foto 16 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -22978,7 +23091,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/17-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/17-min-500x500.jpg"
                   },
-                  "alt": "17-min",
+                  "alt": "Foto 17 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -22990,7 +23103,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/18-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/18-min-500x500.jpg"
                   },
-                  "alt": "18-min",
+                  "alt": "Foto 18 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23002,7 +23115,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/19-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/19-min-500x500.jpg"
                   },
-                  "alt": "19-min",
+                  "alt": "Foto 19 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23014,7 +23127,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/20-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/20-min-500x500.jpg"
                   },
-                  "alt": "20-min",
+                  "alt": "Foto 20 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23026,7 +23139,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/21-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/21-min-500x500.jpg"
                   },
-                  "alt": "21-min",
+                  "alt": "Foto 21 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23038,7 +23151,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/22-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/22-min-500x500.jpg"
                   },
-                  "alt": "22-min",
+                  "alt": "Foto 22 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23050,7 +23163,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/23-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/23-min-500x500.jpg"
                   },
-                  "alt": "23-min",
+                  "alt": "Foto 23 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23062,7 +23175,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/24-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/24-min-500x500.jpg"
                   },
-                  "alt": "24-min",
+                  "alt": "Foto 24 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23074,7 +23187,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/25-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/25-min-500x500.jpg"
                   },
-                  "alt": "25-min",
+                  "alt": "Foto 25 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23086,7 +23199,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/26-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/26-min-500x500.jpg"
                   },
-                  "alt": "26-min",
+                  "alt": "Foto 26 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23098,7 +23211,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/27-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/27-min-500x500.jpg"
                   },
-                  "alt": "27-min",
+                  "alt": "Foto 27 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23110,7 +23223,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/28-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/28-min-500x500.jpg"
                   },
-                  "alt": "28-min",
+                  "alt": "Foto 28 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23122,7 +23235,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/29-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/29-min-500x500.jpg"
                   },
-                  "alt": "29-min",
+                  "alt": "Foto 29 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23134,7 +23247,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/41-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/41-min-500x500.jpg"
                   },
-                  "alt": "41-min",
+                  "alt": "Foto 30 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23146,7 +23259,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/43-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/43-min-500x500.jpg"
                   },
-                  "alt": "43-min",
+                  "alt": "Foto 31 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23158,7 +23271,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/30-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/30-min-500x500.jpg"
                   },
-                  "alt": "30-min",
+                  "alt": "Foto 32 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23170,7 +23283,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/31-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/31-min-500x500.jpg"
                   },
-                  "alt": "31-min",
+                  "alt": "Foto 33 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23182,7 +23295,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/32-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/32-min-500x500.jpg"
                   },
-                  "alt": "32-min",
+                  "alt": "Foto 34 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23194,7 +23307,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/33-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/33-min-500x500.jpg"
                   },
-                  "alt": "33-min",
+                  "alt": "Foto 35 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23206,7 +23319,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/34-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/34-min-500x500.jpg"
                   },
-                  "alt": "34-min",
+                  "alt": "Foto 36 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23218,7 +23331,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/35-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/35-min-500x500.jpg"
                   },
-                  "alt": "35-min",
+                  "alt": "Foto 37 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23230,7 +23343,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/36-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/36-min-500x500.jpg"
                   },
-                  "alt": "36-min",
+                  "alt": "Foto 38 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23242,7 +23355,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/37-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/37-min-500x500.jpg"
                   },
-                  "alt": "37-min",
+                  "alt": "Foto 39 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23254,7 +23367,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/38-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/38-min-500x500.jpg"
                   },
-                  "alt": "38-min",
+                  "alt": "Foto 40 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23266,7 +23379,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/39-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/39-min-500x500.jpg"
                   },
-                  "alt": "39-min",
+                  "alt": "Foto 41 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23278,7 +23391,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/40-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/40-min-500x500.jpg"
                   },
-                  "alt": "40-min",
+                  "alt": "Foto 42 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23290,7 +23403,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/42-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/42-min-500x500.jpg"
                   },
-                  "alt": "42-min",
+                  "alt": "Foto 43 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23302,7 +23415,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/44-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/44-min-500x500.jpg"
                   },
-                  "alt": "44-min",
+                  "alt": "Foto 44 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23314,7 +23427,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/45-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/45-min-500x500.jpg"
                   },
-                  "alt": "45-min",
+                  "alt": "Foto 45 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23326,7 +23439,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/46-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/46-min-500x500.jpg"
                   },
-                  "alt": "46-min",
+                  "alt": "Foto 46 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23338,7 +23451,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/47-min-500x500.png",
                     "url": "/wp-content/uploads/2018/11/47-min-500x500.png"
                   },
-                  "alt": "47-min",
+                  "alt": "Foto 47 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23350,7 +23463,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/48-min-500x500.png",
                     "url": "/wp-content/uploads/2018/11/48-min-500x500.png"
                   },
-                  "alt": "48-min",
+                  "alt": "Foto 48 de 49",
                   "width": 500,
                   "height": 500
                 },
@@ -23362,7 +23475,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/49-min-500x500.jpg",
                     "url": "/wp-content/uploads/2018/11/49-min-500x500.jpg"
                   },
-                  "alt": "49-min",
+                  "alt": "Foto 49 de 49",
                   "width": 500,
                   "height": 500
                 }
@@ -23372,6 +23485,7 @@
           "data": "2018-11-23T15:01:49.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2018/11/CARTAZ_A3-copia-2-500x500.jpg",
             "src": "/wp-content/uploads/2018/11/CARTAZ_A3-copia-2-500x500.jpg",
             "alt": "",
@@ -23505,7 +23619,7 @@
                     "_ref": "legado:/wp-content/uploads/2019/04/0001-300x350.jpg",
                     "url": "/wp-content/uploads/2019/04/0001-300x350.jpg"
                   },
-                  "alt": "0001",
+                  "alt": "Foto 1 de 4",
                   "width": 300,
                   "height": 350
                 },
@@ -23517,7 +23631,7 @@
                     "_ref": "legado:/wp-content/uploads/2019/04/0002-300x350.jpg",
                     "url": "/wp-content/uploads/2019/04/0002-300x350.jpg"
                   },
-                  "alt": "0002",
+                  "alt": "Foto 2 de 4",
                   "width": 300,
                   "height": 350
                 },
@@ -23529,7 +23643,7 @@
                     "_ref": "legado:/wp-content/uploads/2019/04/0003-300x350.jpg",
                     "url": "/wp-content/uploads/2019/04/0003-300x350.jpg"
                   },
-                  "alt": "0003",
+                  "alt": "Foto 3 de 4",
                   "width": 300,
                   "height": 350
                 },
@@ -23541,7 +23655,7 @@
                     "_ref": "legado:/wp-content/uploads/2019/04/0004-300x350.jpg",
                     "url": "/wp-content/uploads/2019/04/0004-300x350.jpg"
                   },
-                  "alt": "0004",
+                  "alt": "Foto 4 de 4",
                   "width": 300,
                   "height": 350
                 }
@@ -23551,6 +23665,7 @@
           "data": "2019-04-12T00:29:25.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2019/04/0001-300x350.jpg",
             "src": "/wp-content/uploads/2019/04/0001-300x350.jpg",
             "alt": "",
@@ -23843,6 +23958,7 @@
           "data": "2019-05-16T17:37:55.000Z",
           "idioma": "it",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2019/05/Rome-20191-1-400x300.jpg",
             "src": "/wp-content/uploads/2019/05/Rome-20191-1-400x300.jpg",
             "alt": "",
@@ -25124,6 +25240,7 @@
           "data": "2021-06-07T14:47:10.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-02-at-10.11.25-225x300.jpg",
             "src": "/wp-content/uploads/2021/06/WhatsApp-Image-2021-06-02-at-10.11.25-225x300.jpg",
             "alt": "",
@@ -25419,12 +25536,16 @@
               },
               "alt": "Captura de Tela 2021-08-20 às 14.16.33",
               "width": 350,
-              "height": 300
+              "height": 300,
+              "link": {
+                "href": "/wp-content/uploads/2021/08/Captura-de-Tela-2021-08-20-%C3%A0s-14.16.33-1024x647.png"
+              }
             }
           ],
           "data": "2021-08-20T17:33:05.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2021/08/Captura-de-Tela-2021-08-20-às-14.16.33-350x300.png",
             "src": "/wp-content/uploads/2021/08/Captura-de-Tela-2021-08-20-%C3%A0s-14.16.33-350x300.png",
             "alt": "",
@@ -25713,7 +25834,7 @@
                     "_ref": "legado:/wp-content/uploads/2021/09/0001-400x450.jpg",
                     "url": "/wp-content/uploads/2021/09/0001-400x450.jpg"
                   },
-                  "alt": "0001",
+                  "alt": "Foto 1 de 7",
                   "width": 400,
                   "height": 450
                 },
@@ -25725,7 +25846,7 @@
                     "_ref": "legado:/wp-content/uploads/2021/09/0002-400x450.jpg",
                     "url": "/wp-content/uploads/2021/09/0002-400x450.jpg"
                   },
-                  "alt": "0002",
+                  "alt": "Foto 2 de 7",
                   "width": 400,
                   "height": 450
                 },
@@ -25737,7 +25858,7 @@
                     "_ref": "legado:/wp-content/uploads/2021/09/0003-400x450.jpg",
                     "url": "/wp-content/uploads/2021/09/0003-400x450.jpg"
                   },
-                  "alt": "0003",
+                  "alt": "Foto 3 de 7",
                   "width": 400,
                   "height": 450
                 },
@@ -25749,7 +25870,7 @@
                     "_ref": "legado:/wp-content/uploads/2021/09/0004-400x450.jpg",
                     "url": "/wp-content/uploads/2021/09/0004-400x450.jpg"
                   },
-                  "alt": "0004",
+                  "alt": "Foto 4 de 7",
                   "width": 400,
                   "height": 450
                 },
@@ -25761,7 +25882,7 @@
                     "_ref": "legado:/wp-content/uploads/2021/09/0005-400x450.jpg",
                     "url": "/wp-content/uploads/2021/09/0005-400x450.jpg"
                   },
-                  "alt": "0005",
+                  "alt": "Foto 5 de 7",
                   "width": 400,
                   "height": 450
                 },
@@ -25773,7 +25894,7 @@
                     "_ref": "legado:/wp-content/uploads/2021/09/0006-400x450.jpg",
                     "url": "/wp-content/uploads/2021/09/0006-400x450.jpg"
                   },
-                  "alt": "0006",
+                  "alt": "Foto 6 de 7",
                   "width": 400,
                   "height": 450
                 },
@@ -25785,7 +25906,7 @@
                     "_ref": "legado:/wp-content/uploads/2021/09/0007-400x450.jpg",
                     "url": "/wp-content/uploads/2021/09/0007-400x450.jpg"
                   },
-                  "alt": "0007",
+                  "alt": "Foto 7 de 7",
                   "width": 400,
                   "height": 450
                 }
@@ -25795,6 +25916,7 @@
           "data": "2021-09-14T01:14:07.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2021/09/0001-400x450.jpg",
             "src": "/wp-content/uploads/2021/09/0001-400x450.jpg",
             "alt": "",
@@ -25872,7 +25994,7 @@
                     "_ref": "legado:/wp-content/uploads/2022/02/Programme_TR_02-400x450.jpg",
                     "url": "/wp-content/uploads/2022/02/Programme_TR_02-400x450.jpg"
                   },
-                  "alt": "Programme_TR_02",
+                  "alt": "Foto 2 de 4",
                   "width": 400,
                   "height": 450
                 },
@@ -25884,7 +26006,7 @@
                     "_ref": "legado:/wp-content/uploads/2022/02/Programme_TR_032-400x450.jpg",
                     "url": "/wp-content/uploads/2022/02/Programme_TR_032-400x450.jpg"
                   },
-                  "alt": "Programme_TR_03",
+                  "alt": "Foto 3 de 4",
                   "width": 400,
                   "height": 450
                 },
@@ -25896,7 +26018,7 @@
                     "_ref": "legado:/wp-content/uploads/2022/02/Programme_TR_042-400x450.jpg",
                     "url": "/wp-content/uploads/2022/02/Programme_TR_042-400x450.jpg"
                   },
-                  "alt": "Programme_TR_04",
+                  "alt": "Foto 4 de 4",
                   "width": 400,
                   "height": 450
                 }
@@ -25906,6 +26028,7 @@
           "data": "2022-02-15T17:31:33.000Z",
           "idioma": "fr",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2022/02/Programme_TR_01-1-400x450.jpg",
             "src": "/wp-content/uploads/2022/02/Programme_TR_01-1-400x450.jpg",
             "alt": "",
@@ -26325,12 +26448,16 @@
               },
               "alt": "dd33580a-bd79-4569-a65d-684e35daf1a0",
               "width": 400,
-              "height": 450
+              "height": 450,
+              "link": {
+                "href": "/wp-content/uploads/2022/09/dd33580a-bd79-4569-a65d-684e35daf1a0-870x1024.jpeg"
+              }
             }
           ],
           "data": "2022-09-28T22:29:43.000Z",
           "idioma": "fr",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2022/09/dd33580a-bd79-4569-a65d-684e35daf1a0-400x450.jpeg",
             "src": "/wp-content/uploads/2022/09/dd33580a-bd79-4569-a65d-684e35daf1a0-400x450.jpeg",
             "alt": "",
@@ -26463,12 +26590,16 @@
               },
               "alt": "3333",
               "width": 350,
-              "height": 300
+              "height": 300,
+              "link": {
+                "href": "/wp-content/uploads/2022/12/3333.jpg"
+              }
             }
           ],
           "data": "2022-12-01T17:21:04.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2022/12/3333-350x300.jpg",
             "src": "/wp-content/uploads/2022/12/3333-350x300.jpg",
             "alt": "",
@@ -27397,7 +27528,10 @@
               },
               "alt": "Inscrições - ENCONTRO TRANSFOPRESS BRASIL",
               "width": 250,
-              "height": 300
+              "height": 300,
+              "link": {
+                "href": "/wp-content/uploads/2023/03/Inscric%CC%A7o%CC%83es-ENCONTRO-TRANSFOPRESS-BRASIL.jpeg"
+              }
             },
             {
               "_type": "block",
@@ -27625,7 +27759,10 @@
               },
               "alt": "Programacao_Encontro_TR_BR_final_01",
               "width": 350,
-              "height": 300
+              "height": 300,
+              "link": {
+                "href": "/wp-content/uploads/2023/03/Programacao_Encontro_TR_BR_final_012-1024x724.jpg"
+              }
             },
             {
               "_type": "image",
@@ -27637,12 +27774,16 @@
               },
               "alt": "Programacao_Encontro_TR_BR_final_02",
               "width": 350,
-              "height": 300
+              "height": 300,
+              "link": {
+                "href": "/wp-content/uploads/2023/03/Programacao_Encontro_TR_BR_final_022-1024x724.jpg"
+              }
             }
           ],
           "data": "2023-03-12T23:51:42.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2023/03/Inscrições-ENCONTRO-TRANSFOPRESS-BRASIL-250x300.jpeg",
             "src": "/wp-content/uploads/2023/03/Inscric%CC%A7o%CC%83es-ENCONTRO-TRANSFOPRESS-BRASIL-250x300.jpeg",
             "alt": "",
@@ -29030,12 +29171,16 @@
               },
               "alt": "Affiche cópia 2",
               "width": 1329,
-              "height": 1920
+              "height": 1920,
+              "link": {
+                "href": "/wp-content/uploads/2023/04/Affiche-co%CC%81pia-2-709x1024.png"
+              }
             }
           ],
           "data": "2023-04-28T16:13:35.000Z",
           "idioma": "fr",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2023/04/Affiche-cópia-2-709x1024.png",
             "src": "/wp-content/uploads/2023/04/Affiche-co%CC%81pia-2-709x1024.png",
             "alt": "",
@@ -29229,7 +29374,7 @@
                     "_ref": "legado:/wp-content/uploads/2015/09/1_Capa_Mediacoes_Transnacionais-e1698146894950.jpg",
                     "url": "/wp-content/uploads/2015/09/1_Capa_Mediacoes_Transnacionais-e1698146894950.jpg"
                   },
-                  "alt": "1_Capa_Mediacoes_Transnacionais",
+                  "alt": "Foto 1 de 4",
                   "width": 254,
                   "height": 376
                 },
@@ -29241,7 +29386,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/05/Sumário_Mediacoes_01-400x400.jpg",
                     "url": "/wp-content/uploads/2023/05/Sum%C3%A1rio_Mediacoes_01-400x400.jpg"
                   },
-                  "alt": "Sumário_Mediacoes_01",
+                  "alt": "Foto 2 de 4",
                   "width": 400,
                   "height": 400
                 },
@@ -29253,7 +29398,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/05/Sumário_Mediacoes_02-400x400.jpg",
                     "url": "/wp-content/uploads/2023/05/Sum%C3%A1rio_Mediacoes_02-400x400.jpg"
                   },
-                  "alt": "Sumário_Mediacoes_02",
+                  "alt": "Foto 3 de 4",
                   "width": 400,
                   "height": 400
                 },
@@ -29265,7 +29410,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/05/Sumário_Mediacoes_03-400x400.jpg",
                     "url": "/wp-content/uploads/2023/05/Sum%C3%A1rio_Mediacoes_03-400x400.jpg"
                   },
-                  "alt": "Sumário_Mediacoes_03",
+                  "alt": "Foto 4 de 4",
                   "width": 400,
                   "height": 400
                 }
@@ -29275,6 +29420,7 @@
           "data": "2023-05-16T17:42:41.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2015/09/1_Capa_Mediacoes_Transnacionais-e1698146894950-254x300.jpg",
             "src": "/wp-content/uploads/2015/09/1_Capa_Mediacoes_Transnacionais-e1698146894950-254x300.jpg",
             "alt": "",
@@ -29888,7 +30034,7 @@
                     "_ref": "legado:/wp-content/uploads/2015/09/1_Capa_Mediacoes_Transnacionais-e1698146894950-254x300.jpg",
                     "url": "/wp-content/uploads/2015/09/1_Capa_Mediacoes_Transnacionais-e1698146894950-254x300.jpg"
                   },
-                  "alt": "1_Capa_Mediacoes_Transnacionais",
+                  "alt": "Foto 2 de 5",
                   "width": 254,
                   "height": 300
                 },
@@ -29900,7 +30046,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/05/Sumário_Mediacoes_01-300x300.jpg",
                     "url": "/wp-content/uploads/2023/05/Sum%C3%A1rio_Mediacoes_01-300x300.jpg"
                   },
-                  "alt": "Sumário_Mediacoes_01",
+                  "alt": "Foto 3 de 5",
                   "width": 300,
                   "height": 300
                 },
@@ -29912,7 +30058,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/05/Sumário_Mediacoes_02-300x300.jpg",
                     "url": "/wp-content/uploads/2023/05/Sum%C3%A1rio_Mediacoes_02-300x300.jpg"
                   },
-                  "alt": "Sumário_Mediacoes_02",
+                  "alt": "Foto 4 de 5",
                   "width": 300,
                   "height": 300
                 },
@@ -29924,7 +30070,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/05/Sumário_Mediacoes_03-300x300.jpg",
                     "url": "/wp-content/uploads/2023/05/Sum%C3%A1rio_Mediacoes_03-300x300.jpg"
                   },
-                  "alt": "Sumário_Mediacoes_03",
+                  "alt": "Foto 5 de 5",
                   "width": 300,
                   "height": 300
                 }
@@ -29934,6 +30080,7 @@
           "data": "2023-07-25T12:33:30.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2023/07/Convite_lancamento_livro_MEDIACOES-300x300.jpg",
             "src": "/wp-content/uploads/2023/07/Convite_lancamento_livro_MEDIACOES-300x300.jpg",
             "alt": "",
@@ -30955,7 +31102,7 @@
                     "_ref": "legado:/wp-content/uploads/2015/09/1_Capa_Mediacoes_Transnacionais-e1698146894950-254x300.jpg",
                     "url": "/wp-content/uploads/2015/09/1_Capa_Mediacoes_Transnacionais-e1698146894950-254x300.jpg"
                   },
-                  "alt": "1_Capa_Mediacoes_Transnacionais",
+                  "alt": "Foto 2 de 5",
                   "width": 254,
                   "height": 300
                 },
@@ -30967,7 +31114,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/05/Sumário_Mediacoes_01-300x300.jpg",
                     "url": "/wp-content/uploads/2023/05/Sum%C3%A1rio_Mediacoes_01-300x300.jpg"
                   },
-                  "alt": "Sumário_Mediacoes_01",
+                  "alt": "Foto 3 de 5",
                   "width": 300,
                   "height": 300
                 },
@@ -30979,7 +31126,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/05/Sumário_Mediacoes_02-300x300.jpg",
                     "url": "/wp-content/uploads/2023/05/Sum%C3%A1rio_Mediacoes_02-300x300.jpg"
                   },
-                  "alt": "Sumário_Mediacoes_02",
+                  "alt": "Foto 4 de 5",
                   "width": 300,
                   "height": 300
                 },
@@ -30991,7 +31138,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/05/Sumário_Mediacoes_03-300x300.jpg",
                     "url": "/wp-content/uploads/2023/05/Sum%C3%A1rio_Mediacoes_03-300x300.jpg"
                   },
-                  "alt": "Sumário_Mediacoes_03",
+                  "alt": "Foto 5 de 5",
                   "width": 300,
                   "height": 300
                 }
@@ -31001,6 +31148,7 @@
           "data": "2023-08-04T20:41:32.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2023/08/2-1ª-jornada-nacional-de-pesquisa-e1698146562884-300x254.jpg",
             "src": "/wp-content/uploads/2023/08/2-1%C2%AA-jornada-nacional-de-pesquisa-e1698146562884-300x254.jpg",
             "alt": "",
@@ -31940,11 +32088,16 @@
                 {
                   "_type": "span",
                   "_key": "videos-do-grupo-transfop-e",
-                  "text": "@@EMBED0@@",
+                  "text": "",
                   "marks": []
                 }
               ],
               "markDefs": []
+            },
+            {
+              "_type": "embed",
+              "_key": "videos-do-grupo-transfop-3c",
+              "url": "https://www.youtube.com/embed/tfVnZvP5uKI"
             },
             {
               "_type": "block",
@@ -31984,7 +32137,7 @@
             },
             {
               "_type": "embed",
-              "_key": "videos-do-grupo-transfop-3a",
+              "_key": "videos-do-grupo-transfop-3d",
               "url": "https://www.youtube.com/embed/n4t3A-nYJcQ"
             },
             {
@@ -32025,7 +32178,7 @@
             },
             {
               "_type": "embed",
-              "_key": "videos-do-grupo-transfop-3b",
+              "_key": "videos-do-grupo-transfop-3e",
               "url": "https://www.youtube.com/embed/03H0eSZGP8c"
             },
             {
@@ -32066,7 +32219,7 @@
             },
             {
               "_type": "embed",
-              "_key": "videos-do-grupo-transfop-3c",
+              "_key": "videos-do-grupo-transfop-3f",
               "url": "https://www.youtube.com/embed/Tw3e_2FVP5k"
             },
             {
@@ -32107,7 +32260,7 @@
             },
             {
               "_type": "embed",
-              "_key": "videos-do-grupo-transfop-3d",
+              "_key": "videos-do-grupo-transfop-3g",
               "url": "https://www.youtube.com/embed/qYLitwgyyck"
             },
             {
@@ -32148,7 +32301,7 @@
             },
             {
               "_type": "embed",
-              "_key": "videos-do-grupo-transfop-3e",
+              "_key": "videos-do-grupo-transfop-3h",
               "url": "https://www.youtube.com/embed/2tU7FJqODWQ"
             },
             {
@@ -32189,7 +32342,7 @@
             },
             {
               "_type": "embed",
-              "_key": "videos-do-grupo-transfop-3f",
+              "_key": "videos-do-grupo-transfop-3i",
               "url": "https://www.youtube.com/embed/RJB_ke2h0lY"
             },
             {
@@ -32230,7 +32383,7 @@
             },
             {
               "_type": "embed",
-              "_key": "videos-do-grupo-transfop-3g",
+              "_key": "videos-do-grupo-transfop-3j",
               "url": "https://www.youtube.com/embed/xCEHp9yL_OU"
             },
             {
@@ -32271,7 +32424,7 @@
             },
             {
               "_type": "embed",
-              "_key": "videos-do-grupo-transfop-3h",
+              "_key": "videos-do-grupo-transfop-3k",
               "url": "https://www.youtube.com/embed/U4A7i87qdJg"
             },
             {
@@ -32312,7 +32465,7 @@
             },
             {
               "_type": "embed",
-              "_key": "videos-do-grupo-transfop-3i",
+              "_key": "videos-do-grupo-transfop-3l",
               "url": "https://www.youtube.com/embed/wFNr__rPdBg"
             },
             {
@@ -32353,7 +32506,7 @@
             },
             {
               "_type": "embed",
-              "_key": "videos-do-grupo-transfop-3j",
+              "_key": "videos-do-grupo-transfop-3m",
               "url": "https://www.youtube.com/embed/0QRirrnSS68"
             },
             {
@@ -32394,7 +32547,7 @@
             },
             {
               "_type": "embed",
-              "_key": "videos-do-grupo-transfop-3k",
+              "_key": "videos-do-grupo-transfop-3n",
               "url": "https://www.youtube.com/embed/0lMNU58UMDY"
             },
             {
@@ -32435,7 +32588,7 @@
             },
             {
               "_type": "embed",
-              "_key": "videos-do-grupo-transfop-3l",
+              "_key": "videos-do-grupo-transfop-3o",
               "url": "https://www.youtube.com/embed/Uu2x2nOrUuM"
             },
             {
@@ -32468,7 +32621,7 @@
             },
             {
               "_type": "break",
-              "_key": "videos-do-grupo-transfop-3m",
+              "_key": "videos-do-grupo-transfop-3p",
               "style": "lineBreak"
             },
             {
@@ -32668,7 +32821,10 @@
               },
               "alt": "Capa_Cat_TR_Br_2",
               "width": 300,
-              "height": 212
+              "height": 212,
+              "link": {
+                "href": "/wp-content/uploads/2015/09/Capa_Cat_TR_Br_2.jpg"
+              }
             },
             {
               "_type": "block",
@@ -32759,6 +32915,7 @@
           "data": "2024-10-31T17:05:17.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2015/09/Capa_Cat_TR_Br_2-300x212.jpg",
             "src": "/wp-content/uploads/2015/09/Capa_Cat_TR_Br_2-300x212.jpg",
             "alt": "",
@@ -32862,12 +33019,16 @@
               },
               "alt": "FOTO_ Livro_Transfopress_2",
               "width": 225,
-              "height": 300
+              "height": 300,
+              "link": {
+                "href": "/wp-content/uploads/2024/12/FOTO_-Livro_Transfopress_2-e1734695511319.jpg"
+              }
             }
           ],
           "data": "2024-12-20T12:00:28.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2024/12/FOTO_-Livro_Transfopress_2-e1734695511319.jpg",
             "src": "/wp-content/uploads/2024/12/FOTO_-Livro_Transfopress_2-e1734695511319.jpg",
             "alt": "",
@@ -33091,7 +33252,10 @@
               },
               "alt": "Programm Veranstaltung Mehrsprachigkeit und Kulturkontakt  Version 16 21.03.2025_page-0001",
               "width": 1100,
-              "height": 1600
+              "height": 1600,
+              "link": {
+                "href": "/wp-content/uploads/2025/03/Programm-Veranstaltung-Mehrsprachigkeit-und-Kulturkontakt-Version-16-21.03.2025_page-0001-724x1024.jpg"
+              }
             },
             {
               "_type": "image",
@@ -33103,12 +33267,16 @@
               },
               "alt": "Programm Veranstaltung Mehrsprachigkeit und Kulturkontakt  Version 16 21.03.2025_page-0002",
               "width": 1100,
-              "height": 1600
+              "height": 1600,
+              "link": {
+                "href": "/wp-content/uploads/2025/03/Programm-Veranstaltung-Mehrsprachigkeit-und-Kulturkontakt-Version-16-21.03.2025_page-0002-724x1024.jpg"
+              }
             }
           ],
           "data": "2025-03-21T18:32:46.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2025/03/Programm-Veranstaltung-Mehrsprachigkeit-und-Kulturkontakt-Version-16-21.03.2025_page-0001-724x1024.jpg",
             "src": "/wp-content/uploads/2025/03/Programm-Veranstaltung-Mehrsprachigkeit-und-Kulturkontakt-Version-16-21.03.2025_page-0001-724x1024.jpg",
             "alt": "",
@@ -33446,12 +33614,16 @@
               },
               "alt": "WhatsApp Image 2025-03-31 at 12.09.36",
               "width": 940,
-              "height": 880
+              "height": 880,
+              "link": {
+                "href": "https://www.even3.com.br/xxvsemanadehistoria/"
+              }
             }
           ],
           "data": "2025-03-31T19:40:11.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2025/03/WhatsApp-Image-2025-03-31-at-12.09.36.jpeg",
             "src": "/wp-content/uploads/2025/03/WhatsApp-Image-2025-03-31-at-12.09.36.jpeg",
             "alt": "",
@@ -33572,12 +33744,16 @@
               },
               "alt": "_Livro_Hans_Jornalistas_Capa",
               "width": 202,
-              "height": 300
+              "height": 300,
+              "link": {
+                "href": "/wp-content/uploads/2015/09/Livro_Hans_Jornalistas_Capa.jpg"
+              }
             }
           ],
           "data": "2025-04-29T18:05:45.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2015/09/Livro_Hans_Jornalistas_Capa-690x1024.jpg",
             "src": "/wp-content/uploads/2015/09/Livro_Hans_Jornalistas_Capa-690x1024.jpg",
             "alt": "",
@@ -33697,12 +33873,16 @@
               },
               "alt": "Captura de Tela 2026-02-23 às 18.49.10",
               "width": 222,
-              "height": 300
+              "height": 300,
+              "link": {
+                "href": "/wp-content/uploads/2026/02/Captura-de-Tela-2026-02-23-a%CC%80s-18.49.10.png"
+              }
             }
           ],
           "data": "2026-02-24T15:03:35.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2026/02/Captura-de-Tela-2026-02-23-às-18.49.10.png",
             "src": "/wp-content/uploads/2026/02/Captura-de-Tela-2026-02-23-a%CC%80s-18.49.10.png",
             "alt": "",
@@ -33850,12 +34030,16 @@
               },
               "alt": "Midiacult-Playlista Semana de Historia",
               "width": 300,
-              "height": 159
+              "height": 159,
+              "link": {
+                "href": "/wp-content/uploads/2026/02/Midiacult-Playlista-Semana-de-Historia-1024x542.png"
+              }
             }
           ],
           "data": "2026-02-24T12:51:28.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2026/02/Midiacult-Playlista-Semana-de-Historia-300x159.png",
             "src": "/wp-content/uploads/2026/02/Midiacult-Playlista-Semana-de-Historia-300x159.png",
             "alt": "",
@@ -34040,7 +34224,7 @@
                     "_ref": "legado:/wp-content/uploads/2026/02/564918831_18383597707134620_4983833489024080328_n-240x300.jpg",
                     "url": "/wp-content/uploads/2026/02/564918831_18383597707134620_4983833489024080328_n-240x300.jpg"
                   },
-                  "alt": "564918831_18383597707134620_4983833489024080328_n",
+                  "alt": "Foto 1 de 10",
                   "width": 240,
                   "height": 300
                 },
@@ -34052,7 +34236,7 @@
                     "_ref": "legado:/wp-content/uploads/2026/02/565387838_18383597695134620_6944842182744833000_n-240x300.jpg",
                     "url": "/wp-content/uploads/2026/02/565387838_18383597695134620_6944842182744833000_n-240x300.jpg"
                   },
-                  "alt": "565387838_18383597695134620_6944842182744833000_n",
+                  "alt": "Foto 2 de 10",
                   "width": 240,
                   "height": 300
                 },
@@ -34064,7 +34248,7 @@
                     "_ref": "legado:/wp-content/uploads/2026/02/565432816_18383597719134620_7432296342730608438_n-240x300.jpg",
                     "url": "/wp-content/uploads/2026/02/565432816_18383597719134620_7432296342730608438_n-240x300.jpg"
                   },
-                  "alt": "565432816_18383597719134620_7432296342730608438_n",
+                  "alt": "Foto 3 de 10",
                   "width": 240,
                   "height": 300
                 },
@@ -34076,7 +34260,7 @@
                     "_ref": "legado:/wp-content/uploads/2026/02/565548271_18383597698134620_4056850909279272639_n-240x300.jpg",
                     "url": "/wp-content/uploads/2026/02/565548271_18383597698134620_4056850909279272639_n-240x300.jpg"
                   },
-                  "alt": "565548271_18383597698134620_4056850909279272639_n",
+                  "alt": "Foto 4 de 10",
                   "width": 240,
                   "height": 300
                 },
@@ -34088,7 +34272,7 @@
                     "_ref": "legado:/wp-content/uploads/2026/02/565872413_18383597710134620_3348770060374310559_n-240x300.jpg",
                     "url": "/wp-content/uploads/2026/02/565872413_18383597710134620_3348770060374310559_n-240x300.jpg"
                   },
-                  "alt": "565872413_18383597710134620_3348770060374310559_n",
+                  "alt": "Foto 5 de 10",
                   "width": 240,
                   "height": 300
                 },
@@ -34100,7 +34284,7 @@
                     "_ref": "legado:/wp-content/uploads/2026/02/566554250_18383597638134620_4609094541378361996_n-240x300.jpg",
                     "url": "/wp-content/uploads/2026/02/566554250_18383597638134620_4609094541378361996_n-240x300.jpg"
                   },
-                  "alt": "566554250_18383597638134620_4609094541378361996_n",
+                  "alt": "Foto 6 de 10",
                   "width": 240,
                   "height": 300
                 },
@@ -34112,7 +34296,7 @@
                     "_ref": "legado:/wp-content/uploads/2026/02/566565930_18383597692134620_5713112795421690223_n-240x300.jpg",
                     "url": "/wp-content/uploads/2026/02/566565930_18383597692134620_5713112795421690223_n-240x300.jpg"
                   },
-                  "alt": "566565930_18383597692134620_5713112795421690223_n",
+                  "alt": "Foto 7 de 10",
                   "width": 240,
                   "height": 300
                 },
@@ -34124,7 +34308,7 @@
                     "_ref": "legado:/wp-content/uploads/2026/02/566953438_18383597689134620_3004680894528839280_n-240x300.jpg",
                     "url": "/wp-content/uploads/2026/02/566953438_18383597689134620_3004680894528839280_n-240x300.jpg"
                   },
-                  "alt": "566953438_18383597689134620_3004680894528839280_n",
+                  "alt": "Foto 8 de 10",
                   "width": 240,
                   "height": 300
                 },
@@ -34136,7 +34320,7 @@
                     "_ref": "legado:/wp-content/uploads/2026/02/567301408_18383597716134620_3734970224939196451_n-240x300.jpg",
                     "url": "/wp-content/uploads/2026/02/567301408_18383597716134620_3734970224939196451_n-240x300.jpg"
                   },
-                  "alt": "567301408_18383597716134620_3734970224939196451_n",
+                  "alt": "Foto 9 de 10",
                   "width": 240,
                   "height": 300
                 },
@@ -34148,7 +34332,7 @@
                     "_ref": "legado:/wp-content/uploads/2026/02/568032047_18383597713134620_2087154781800861558_n-240x300.jpg",
                     "url": "/wp-content/uploads/2026/02/568032047_18383597713134620_2087154781800861558_n-240x300.jpg"
                   },
-                  "alt": "568032047_18383597713134620_2087154781800861558_n",
+                  "alt": "Foto 10 de 10",
                   "width": 240,
                   "height": 300
                 }
@@ -34442,6 +34626,7 @@
           "data": "2026-02-26T05:36:56.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2026/02/564918831_18383597707134620_4983833489024080328_n-240x300.jpg",
             "src": "/wp-content/uploads/2026/02/564918831_18383597707134620_4983833489024080328_n-240x300.jpg",
             "alt": "",
@@ -34597,7 +34782,10 @@
               },
               "alt": "Un_Anniversario",
               "width": 300,
-              "height": 400
+              "height": 400,
+              "link": {
+                "href": "/wp-content/uploads/2015/09/Un_Anniversario-655x1024.jpg"
+              }
             },
             {
               "_type": "block",
@@ -34735,6 +34923,7 @@
           "data": "2015-09-20T10:21:11.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2015/09/Un_Anniversario-300x400.jpg",
             "src": "/wp-content/uploads/2015/09/Un_Anniversario-300x400.jpg",
             "alt": "",
@@ -35144,7 +35333,7 @@
                     "_ref": "legado:/wp-content/uploads/2015/09/02-Hollender_editorMessager_28-12-1901-300x400.jpg",
                     "url": "/wp-content/uploads/2015/09/02-Hollender_editorMessager_28-12-1901-300x400.jpg"
                   },
-                  "alt": "02-Hollender_editorMessager_28-12-1901",
+                  "alt": "Foto 1 de 3",
                   "width": 300,
                   "height": 400
                 },
@@ -35156,7 +35345,7 @@
                     "_ref": "legado:/wp-content/uploads/2015/09/Messager_SP_14_06_1924-1-300x400.jpg",
                     "url": "/wp-content/uploads/2015/09/Messager_SP_14_06_1924-1-300x400.jpg"
                   },
-                  "alt": "Messager_SP_14_06_1924-1",
+                  "alt": "Foto 2 de 3",
                   "width": 300,
                   "height": 400
                 },
@@ -35168,7 +35357,7 @@
                     "_ref": "legado:/wp-content/uploads/2015/09/Messager_SP_14_07_1902-4_edited-300x400.jpg",
                     "url": "/wp-content/uploads/2015/09/Messager_SP_14_07_1902-4_edited-300x400.jpg"
                   },
-                  "alt": "Messager_SP_14_07_1902-4_edited",
+                  "alt": "Foto 3 de 3",
                   "width": 300,
                   "height": 400
                 }
@@ -35300,6 +35489,7 @@
           "data": "2015-10-01T18:29:34.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2015/09/02-Hollender_editorMessager_28-12-1901-300x400.jpg",
             "src": "/wp-content/uploads/2015/09/02-Hollender_editorMessager_28-12-1901-300x400.jpg",
             "alt": "",
@@ -35454,7 +35644,10 @@
               },
               "alt": "Fig-01-Imprensa-japonesa",
               "width": 300,
-              "height": 400
+              "height": 400,
+              "link": {
+                "href": "/wp-content/uploads/2015/09/Fig-01-Imprensa-japonesa-1024x1016.jpg"
+              }
             },
             {
               "_type": "block",
@@ -35531,6 +35724,7 @@
           "data": "2015-10-05T17:45:25.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2015/09/Fig-01-Imprensa-japonesa-300x400.jpg",
             "src": "/wp-content/uploads/2015/09/Fig-01-Imprensa-japonesa-300x400.jpg",
             "alt": "",
@@ -35728,7 +35922,10 @@
               },
               "alt": "02-Hollender_editorMessager_28-12-1901",
               "width": 1500,
-              "height": 1026
+              "height": 1026,
+              "link": {
+                "href": "/wp-content/uploads/2015/09/02-Hollender_editorMessager_28-12-1901-1024x700.jpg"
+              }
             },
             {
               "_type": "image",
@@ -35811,6 +36008,7 @@
           "data": "2015-10-12T05:05:17.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2015/09/02-Hollender_editorMessager_28-12-1901-300x400.jpg",
             "src": "/wp-content/uploads/2015/09/02-Hollender_editorMessager_28-12-1901-300x400.jpg",
             "alt": "",
@@ -36483,7 +36681,10 @@
               },
               "alt": "fig 05",
               "width": 300,
-              "height": 127
+              "height": 127,
+              "link": {
+                "href": "/wp-content/uploads/2015/10/fig-05.png"
+              }
             },
             {
               "_type": "block",
@@ -36903,7 +37104,10 @@
               },
               "alt": "Messager_Brésil_1878",
               "width": 300,
-              "height": 400
+              "height": 400,
+              "link": {
+                "href": "/wp-content/uploads/2015/10/Messager_Br%C3%A9sil_1878-736x1024.jpg"
+              }
             },
             {
               "_type": "image",
@@ -36915,7 +37119,10 @@
               },
               "alt": "Messager_Brésil_28_jun_1884",
               "width": 300,
-              "height": 400
+              "height": 400,
+              "link": {
+                "href": "/wp-content/uploads/2015/10/Messager_Br%C3%A9sil_28_jun_1884-679x1024.jpg"
+              }
             },
             {
               "_type": "block",
@@ -37030,6 +37237,7 @@
           "data": "2015-10-19T14:32:53.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2015/10/fig-05-300x127.png",
             "src": "/wp-content/uploads/2015/10/fig-05-300x127.png",
             "alt": "",
@@ -37418,7 +37626,10 @@
               },
               "alt": "page0001_s",
               "width": 300,
-              "height": 400
+              "height": 400,
+              "link": {
+                "href": "/wp-content/uploads/2016/06/page0001_s.jpg"
+              }
             },
             {
               "_type": "image",
@@ -37430,7 +37641,10 @@
               },
               "alt": "page0001_s (1)",
               "width": 300,
-              "height": 400
+              "height": 400,
+              "link": {
+                "href": "/wp-content/uploads/2016/06/page0001_s-1.jpg"
+              }
             },
             {
               "_type": "block",
@@ -37696,6 +37910,7 @@
           "data": "2016-06-03T01:59:30.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2016/06/page0001_s-300x400.jpg",
             "src": "/wp-content/uploads/2016/06/page0001_s-300x400.jpg",
             "alt": "",
@@ -37947,7 +38162,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/09/Imagem_03_Spaghetto_SP_26-04-1931_V2-500x500.jpg",
                     "url": "/wp-content/uploads/2016/09/Imagem_03_Spaghetto_SP_26-04-1931_V2-500x500.jpg"
                   },
-                  "alt": "Imagem_03_Spaghetto_SP_26-04-1931_V2",
+                  "alt": "Foto 3 de 3",
                   "width": 500,
                   "height": 500
                 }
@@ -38189,6 +38404,7 @@
           "data": "2016-09-06T17:03:12.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2016/09/Imagem_01_La-Difesa_SP_7-4-1923_V2-500x500.jpg",
             "src": "/wp-content/uploads/2016/09/Imagem_01_La-Difesa_SP_7-4-1923_V2-500x500.jpg",
             "alt": "",
@@ -38393,7 +38609,10 @@
               },
               "alt": "Coluna feminina Fujin ran",
               "width": 500,
-              "height": 366
+              "height": 366,
+              "link": {
+                "href": "/wp-content/uploads/2016/11/Se%C3%A7%C3%A3o-feminina-em-jornal-japon%C3%AAs.png"
+              }
             },
             {
               "_type": "block",
@@ -38470,6 +38689,7 @@
           "data": "2016-11-03T09:06:25.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2016/11/Seção-feminina-em-jornal-japonês-500x366.png",
             "src": "/wp-content/uploads/2016/11/Se%C3%A7%C3%A3o-feminina-em-jornal-japon%C3%AAs-500x366.png",
             "alt": "",
@@ -38610,7 +38830,10 @@
               },
               "alt": "Corriere pagina 1",
               "width": 195,
-              "height": 300
+              "height": 300,
+              "link": {
+                "href": "/wp-content/uploads/2017/11/Corriere-pagina-1-666x1024.jpg"
+              }
             },
             {
               "_type": "block",
@@ -38694,6 +38917,7 @@
           "data": "2017-11-22T10:31:48.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2017/11/Corriere-pagina-1-666x1024.jpg",
             "src": "/wp-content/uploads/2017/11/Corriere-pagina-1-666x1024.jpg",
             "alt": "",
@@ -39220,6 +39444,7 @@
           "data": "2017-11-24T14:33:39.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2017/11/verbete-037-768x1024.jpg",
             "src": "/wp-content/uploads/2017/11/verbete-037-768x1024.jpg",
             "alt": "",
@@ -39570,6 +39795,7 @@
           "data": "2017-11-25T18:59:06.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2017/11/1-596x1024.jpg",
             "src": "/wp-content/uploads/2017/11/1-596x1024.jpg",
             "alt": "",
@@ -40177,6 +40403,7 @@
           "data": "2017-11-26T13:18:34.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2017/11/Kalendarz-Ludu-1939_1-500x500.jpg",
             "src": "/wp-content/uploads/2017/11/Kalendarz-Ludu-1939_1-500x500.jpg",
             "alt": "",
@@ -40533,6 +40760,7 @@
           "data": "2017-11-26T21:36:17.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2017/11/Capa-La-Scure-703x1024.jpg",
             "src": "/wp-content/uploads/2017/11/Capa-La-Scure-703x1024.jpg",
             "alt": "",
@@ -40863,6 +41091,7 @@
           "data": "2017-11-28T10:09:09.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2017/11/Figura2_DV_capa_1871_Nova-683x1024.jpg",
             "src": "/wp-content/uploads/2017/11/Figura2_DV_capa_1871_Nova-683x1024.jpg",
             "alt": "",
@@ -41469,6 +41698,7 @@
           "data": "2017-12-07T13:03:19.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2017/12/Stella-dItalia-imagem-690x1024.jpg",
             "src": "/wp-content/uploads/2017/12/Stella-dItalia-imagem-690x1024.jpg",
             "alt": "",
@@ -41954,6 +42184,7 @@
           "data": "2018-02-14T18:30:21.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2018/02/1-A-Gazeta-Israelita-de-Sao-Paulo1937-500x500.jpg",
             "src": "/wp-content/uploads/2018/02/1-A-Gazeta-Israelita-de-Sao-Paulo1937-500x500.jpg",
             "alt": "",
@@ -42150,6 +42381,7 @@
           "data": "2018-02-28T00:17:54.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2018/02/Imagem-Jornal-La-Tribuna-724x1024.jpg",
             "src": "/wp-content/uploads/2018/02/Imagem-Jornal-La-Tribuna-724x1024.jpg",
             "alt": "",
@@ -42530,6 +42762,7 @@
           "data": "2018-03-10T01:19:14.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2018/03/A-Humanidade-1915-min-500x500.jpg",
             "src": "/wp-content/uploads/2018/03/A-Humanidade-1915-min-500x500.jpg",
             "alt": "",
@@ -42820,6 +43053,7 @@
           "data": "2018-03-31T02:37:15.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2018/03/O-Futuro-Israelita-Porto-Alegre-1920-min-500x500.jpg",
             "src": "/wp-content/uploads/2018/03/O-Futuro-Israelita-Porto-Alegre-1920-min-500x500.jpg",
             "alt": "",
@@ -43074,7 +43308,10 @@
               },
               "alt": "O Futuro Israelita, Porto Alegre, 1920-min",
               "width": 500,
-              "height": 500
+              "height": 500,
+              "link": {
+                "href": "/wp-content/uploads/2018/03/O-Futuro-Israelita-Porto-Alegre-1920-min-755x1024.jpg"
+              }
             },
             {
               "_type": "image",
@@ -43086,7 +43323,10 @@
               },
               "alt": "A Humanidade 1915-min",
               "width": 500,
-              "height": 500
+              "height": 500,
+              "link": {
+                "href": "/wp-content/uploads/2018/03/A-Humanidade-1915-min-687x1024.jpg"
+              }
             },
             {
               "_type": "block",
@@ -43318,6 +43558,7 @@
           "data": "2018-05-24T23:48:30.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2018/03/O-Futuro-Israelita-Porto-Alegre-1920-min-500x500.jpg",
             "src": "/wp-content/uploads/2018/03/O-Futuro-Israelita-Porto-Alegre-1920-min-500x500.jpg",
             "alt": "",
@@ -43821,6 +44062,7 @@
           "data": "2021-03-12T14:33:59.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2021/03/almanacco-1926-705x1024.jpg",
             "src": "/wp-content/uploads/2021/03/almanacco-1926-705x1024.jpg",
             "alt": "",
@@ -43919,7 +44161,10 @@
               },
               "alt": "N1-P1",
               "width": 300,
-              "height": 400
+              "height": 400,
+              "link": {
+                "href": "/wp-content/uploads/2021/09/N1-P1-666x1024.jpg"
+              }
             },
             {
               "_type": "block",
@@ -44053,6 +44298,7 @@
           "data": "2021-09-17T11:59:02.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2021/09/N1-P1-300x400.jpg",
             "src": "/wp-content/uploads/2021/09/N1-P1-300x400.jpg",
             "alt": "",
@@ -44663,7 +44909,10 @@
               },
               "alt": "tabela tania 2",
               "width": 960,
-              "height": 1920
+              "height": 1920,
+              "link": {
+                "href": "/wp-content/uploads/2023/04/tabela-tania-2-1-512x1024.jpg"
+              }
             },
             {
               "_type": "block",
@@ -44683,6 +44932,7 @@
           "data": "2023-04-22T15:15:27.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2023/04/tabela-tania-2-1-512x1024.jpg",
             "src": "/wp-content/uploads/2023/04/tabela-tania-2-1-512x1024.jpg",
             "alt": "",
@@ -45326,6 +45576,7 @@
           "data": "2023-11-30T18:34:08.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2023/11/002670060013-300x400.jpg",
             "src": "/wp-content/uploads/2023/11/002670060013-300x400.jpg",
             "alt": "",
@@ -45558,6 +45809,7 @@
           "data": "2024-01-12T19:03:40.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2015/09/Eco-del-Para-300x400.jpg",
             "src": "/wp-content/uploads/2015/09/Eco-del-Para-300x400.jpg",
             "alt": "",
@@ -45894,6 +46146,7 @@
           "data": "2024-03-08T13:23:14.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2015/09/Messager-journal-politique-300x400.jpg",
             "src": "/wp-content/uploads/2015/09/Messager-journal-politique-300x400.jpg",
             "alt": "",
@@ -46072,6 +46325,7 @@
           "data": "2024-03-08T14:04:36.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2015/09/Fig-2-Shukan-300x400.jpg",
             "src": "/wp-content/uploads/2015/09/Fig-2-Shukan-300x400.jpg",
             "alt": "",
@@ -46959,7 +47213,7 @@
                     "_ref": "legado:/wp-content/uploads/2019/11/1-150x150.jpeg",
                     "url": "/wp-content/uploads/2019/11/1-150x150.jpeg"
                   },
-                  "alt": "1",
+                  "alt": "Foto 1 de 19",
                   "width": 150,
                   "height": 150
                 },
@@ -46971,7 +47225,7 @@
                     "_ref": "legado:/wp-content/uploads/2019/11/2-150x150.jpeg",
                     "url": "/wp-content/uploads/2019/11/2-150x150.jpeg"
                   },
-                  "alt": "2",
+                  "alt": "Foto 2 de 19",
                   "width": 150,
                   "height": 150
                 },
@@ -46983,7 +47237,7 @@
                     "_ref": "legado:/wp-content/uploads/2019/11/3-150x150.jpeg",
                     "url": "/wp-content/uploads/2019/11/3-150x150.jpeg"
                   },
-                  "alt": "3",
+                  "alt": "Foto 3 de 19",
                   "width": 150,
                   "height": 150
                 },
@@ -46995,7 +47249,7 @@
                     "_ref": "legado:/wp-content/uploads/2019/11/4-150x150.jpeg",
                     "url": "/wp-content/uploads/2019/11/4-150x150.jpeg"
                   },
-                  "alt": "4",
+                  "alt": "Foto 4 de 19",
                   "width": 150,
                   "height": 150
                 },
@@ -47007,7 +47261,7 @@
                     "_ref": "legado:/wp-content/uploads/2019/11/5-150x150.jpeg",
                     "url": "/wp-content/uploads/2019/11/5-150x150.jpeg"
                   },
-                  "alt": "5",
+                  "alt": "Foto 5 de 19",
                   "width": 150,
                   "height": 150
                 },
@@ -47019,7 +47273,7 @@
                     "_ref": "legado:/wp-content/uploads/2019/11/6-150x150.jpeg",
                     "url": "/wp-content/uploads/2019/11/6-150x150.jpeg"
                   },
-                  "alt": "6",
+                  "alt": "Foto 6 de 19",
                   "width": 150,
                   "height": 150
                 },
@@ -47031,7 +47285,7 @@
                     "_ref": "legado:/wp-content/uploads/2019/11/7-150x150.jpeg",
                     "url": "/wp-content/uploads/2019/11/7-150x150.jpeg"
                   },
-                  "alt": "7",
+                  "alt": "Foto 7 de 19",
                   "width": 150,
                   "height": 150
                 },
@@ -47043,7 +47297,7 @@
                     "_ref": "legado:/wp-content/uploads/2019/11/8-150x150.jpeg",
                     "url": "/wp-content/uploads/2019/11/8-150x150.jpeg"
                   },
-                  "alt": "8",
+                  "alt": "Foto 8 de 19",
                   "width": 150,
                   "height": 150
                 },
@@ -47055,7 +47309,7 @@
                     "_ref": "legado:/wp-content/uploads/2019/11/9-150x150.jpeg",
                     "url": "/wp-content/uploads/2019/11/9-150x150.jpeg"
                   },
-                  "alt": "9",
+                  "alt": "Foto 9 de 19",
                   "width": 150,
                   "height": 150
                 },
@@ -47067,7 +47321,7 @@
                     "_ref": "legado:/wp-content/uploads/2019/11/10-150x150.jpeg",
                     "url": "/wp-content/uploads/2019/11/10-150x150.jpeg"
                   },
-                  "alt": "10",
+                  "alt": "Foto 10 de 19",
                   "width": 150,
                   "height": 150
                 },
@@ -47079,7 +47333,7 @@
                     "_ref": "legado:/wp-content/uploads/2019/11/11-150x150.jpeg",
                     "url": "/wp-content/uploads/2019/11/11-150x150.jpeg"
                   },
-                  "alt": "11",
+                  "alt": "Foto 11 de 19",
                   "width": 150,
                   "height": 150
                 },
@@ -47091,7 +47345,7 @@
                     "_ref": "legado:/wp-content/uploads/2019/11/12-150x150.jpeg",
                     "url": "/wp-content/uploads/2019/11/12-150x150.jpeg"
                   },
-                  "alt": "12",
+                  "alt": "Foto 12 de 19",
                   "width": 150,
                   "height": 150
                 },
@@ -47103,7 +47357,7 @@
                     "_ref": "legado:/wp-content/uploads/2019/11/13-150x150.jpeg",
                     "url": "/wp-content/uploads/2019/11/13-150x150.jpeg"
                   },
-                  "alt": "13",
+                  "alt": "Foto 13 de 19",
                   "width": 150,
                   "height": 150
                 },
@@ -47115,7 +47369,7 @@
                     "_ref": "legado:/wp-content/uploads/2019/11/14-150x150.jpeg",
                     "url": "/wp-content/uploads/2019/11/14-150x150.jpeg"
                   },
-                  "alt": "14",
+                  "alt": "Foto 14 de 19",
                   "width": 150,
                   "height": 150
                 },
@@ -47127,7 +47381,7 @@
                     "_ref": "legado:/wp-content/uploads/2019/11/15-150x150.jpeg",
                     "url": "/wp-content/uploads/2019/11/15-150x150.jpeg"
                   },
-                  "alt": "15",
+                  "alt": "Foto 15 de 19",
                   "width": 150,
                   "height": 150
                 },
@@ -47139,7 +47393,7 @@
                     "_ref": "legado:/wp-content/uploads/2019/11/16-150x150.jpeg",
                     "url": "/wp-content/uploads/2019/11/16-150x150.jpeg"
                   },
-                  "alt": "16",
+                  "alt": "Foto 16 de 19",
                   "width": 150,
                   "height": 150
                 },
@@ -47151,7 +47405,7 @@
                     "_ref": "legado:/wp-content/uploads/2019/11/17-150x150.jpeg",
                     "url": "/wp-content/uploads/2019/11/17-150x150.jpeg"
                   },
-                  "alt": "17",
+                  "alt": "Foto 17 de 19",
                   "width": 150,
                   "height": 150
                 },
@@ -47163,7 +47417,7 @@
                     "_ref": "legado:/wp-content/uploads/2019/11/18-150x150.jpeg",
                     "url": "/wp-content/uploads/2019/11/18-150x150.jpeg"
                   },
-                  "alt": "18",
+                  "alt": "Foto 18 de 19",
                   "width": 150,
                   "height": 150
                 },
@@ -47323,6 +47577,7 @@
           "data": "2019-11-14T22:36:34.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2019/11/1-150x150.jpeg",
             "src": "/wp-content/uploads/2019/11/1-150x150.jpeg",
             "alt": "",
@@ -47429,7 +47684,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/1-min1-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/1-min1-300x400.jpg"
                   },
-                  "alt": "1-min",
+                  "alt": "Foto 1 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47441,7 +47696,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/3-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/3-min-300x400.jpg"
                   },
-                  "alt": "3-min",
+                  "alt": "Foto 2 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47453,7 +47708,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/4-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/4-min-300x400.jpg"
                   },
-                  "alt": "4-min",
+                  "alt": "Foto 3 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47465,7 +47720,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/5-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/5-min-300x400.jpg"
                   },
-                  "alt": "5-min",
+                  "alt": "Foto 4 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47477,7 +47732,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/6-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/6-min-300x400.jpg"
                   },
-                  "alt": "6-min",
+                  "alt": "Foto 5 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47489,7 +47744,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/7-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/7-min-300x400.jpg"
                   },
-                  "alt": "7-min",
+                  "alt": "Foto 6 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47501,7 +47756,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/8-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/8-min-300x400.jpg"
                   },
-                  "alt": "8-min",
+                  "alt": "Foto 7 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47513,7 +47768,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/9-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/9-min-300x400.jpg"
                   },
-                  "alt": "9-min",
+                  "alt": "Foto 8 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47525,7 +47780,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/10-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/10-min-300x400.jpg"
                   },
-                  "alt": "10-min",
+                  "alt": "Foto 9 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47537,7 +47792,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/11-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/11-min-300x400.jpg"
                   },
-                  "alt": "11-min",
+                  "alt": "Foto 10 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47549,7 +47804,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/12-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/12-min-300x400.jpg"
                   },
-                  "alt": "12-min",
+                  "alt": "Foto 11 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47561,7 +47816,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/13-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/13-min-300x400.jpg"
                   },
-                  "alt": "13-min",
+                  "alt": "Foto 12 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47573,7 +47828,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/14-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/14-min-300x400.jpg"
                   },
-                  "alt": "14-min",
+                  "alt": "Foto 13 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47585,7 +47840,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/15-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/15-min-300x400.jpg"
                   },
-                  "alt": "15-min",
+                  "alt": "Foto 14 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47597,7 +47852,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/16-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/16-min-300x400.jpg"
                   },
-                  "alt": "16-min",
+                  "alt": "Foto 15 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47609,7 +47864,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/17-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/17-min-300x400.jpg"
                   },
-                  "alt": "17-min",
+                  "alt": "Foto 16 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47621,7 +47876,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/18-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/18-min-300x400.jpg"
                   },
-                  "alt": "18-min",
+                  "alt": "Foto 17 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47633,7 +47888,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/19-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/19-min-300x400.jpg"
                   },
-                  "alt": "19-min",
+                  "alt": "Foto 18 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47645,7 +47900,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/20-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/20-min-300x400.jpg"
                   },
-                  "alt": "20-min",
+                  "alt": "Foto 19 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47657,7 +47912,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/21-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/21-min-300x400.jpg"
                   },
-                  "alt": "21-min",
+                  "alt": "Foto 20 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47669,7 +47924,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/22-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/22-min-300x400.jpg"
                   },
-                  "alt": "22-min",
+                  "alt": "Foto 21 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47681,7 +47936,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/23-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/23-min-300x400.jpg"
                   },
-                  "alt": "23-min",
+                  "alt": "Foto 22 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47693,7 +47948,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/24-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/24-min-300x400.jpg"
                   },
-                  "alt": "24-min",
+                  "alt": "Foto 23 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47705,7 +47960,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/25-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/25-min-300x400.jpg"
                   },
-                  "alt": "25-min",
+                  "alt": "Foto 24 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47717,7 +47972,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/26-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/26-min-300x400.jpg"
                   },
-                  "alt": "26-min",
+                  "alt": "Foto 25 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47729,7 +47984,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/27-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/27-min-300x400.jpg"
                   },
-                  "alt": "27-min",
+                  "alt": "Foto 26 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47741,7 +47996,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/28-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/28-min-300x400.jpg"
                   },
-                  "alt": "28-min",
+                  "alt": "Foto 27 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47753,7 +48008,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/29-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/29-min-300x400.jpg"
                   },
-                  "alt": "29-min",
+                  "alt": "Foto 28 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47765,7 +48020,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/41-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/41-min-300x400.jpg"
                   },
-                  "alt": "41-min",
+                  "alt": "Foto 29 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47777,7 +48032,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/43-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/43-min-300x400.jpg"
                   },
-                  "alt": "43-min",
+                  "alt": "Foto 30 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47789,7 +48044,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/30-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/30-min-300x400.jpg"
                   },
-                  "alt": "30-min",
+                  "alt": "Foto 31 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47801,7 +48056,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/31-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/31-min-300x400.jpg"
                   },
-                  "alt": "31-min",
+                  "alt": "Foto 32 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47813,7 +48068,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/32-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/32-min-300x400.jpg"
                   },
-                  "alt": "32-min",
+                  "alt": "Foto 33 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47825,7 +48080,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/33-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/33-min-300x400.jpg"
                   },
-                  "alt": "33-min",
+                  "alt": "Foto 34 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47837,7 +48092,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/34-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/34-min-300x400.jpg"
                   },
-                  "alt": "34-min",
+                  "alt": "Foto 35 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47849,7 +48104,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/35-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/35-min-300x400.jpg"
                   },
-                  "alt": "35-min",
+                  "alt": "Foto 36 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47861,7 +48116,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/36-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/36-min-300x400.jpg"
                   },
-                  "alt": "36-min",
+                  "alt": "Foto 37 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47873,7 +48128,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/37-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/37-min-300x400.jpg"
                   },
-                  "alt": "37-min",
+                  "alt": "Foto 38 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47885,7 +48140,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/38-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/38-min-300x400.jpg"
                   },
-                  "alt": "38-min",
+                  "alt": "Foto 39 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47897,7 +48152,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/39-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/39-min-300x400.jpg"
                   },
-                  "alt": "39-min",
+                  "alt": "Foto 40 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47909,7 +48164,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/40-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/40-min-300x400.jpg"
                   },
-                  "alt": "40-min",
+                  "alt": "Foto 41 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47921,7 +48176,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/42-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/42-min-300x400.jpg"
                   },
-                  "alt": "42-min",
+                  "alt": "Foto 42 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47933,7 +48188,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/44-min-300x400.png",
                     "url": "/wp-content/uploads/2018/11/44-min-300x400.png"
                   },
-                  "alt": "44-min",
+                  "alt": "Foto 43 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47945,7 +48200,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/45-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/45-min-300x400.jpg"
                   },
-                  "alt": "45-min",
+                  "alt": "Foto 44 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47957,7 +48212,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/46-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/46-min-300x400.jpg"
                   },
-                  "alt": "46-min",
+                  "alt": "Foto 45 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47969,7 +48224,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/47-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/47-min-300x400.jpg"
                   },
-                  "alt": "47-min",
+                  "alt": "Foto 46 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47981,7 +48236,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/48-min-300x400.png",
                     "url": "/wp-content/uploads/2018/11/48-min-300x400.png"
                   },
-                  "alt": "48-min",
+                  "alt": "Foto 47 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -47993,7 +48248,7 @@
                     "_ref": "legado:/wp-content/uploads/2018/11/49-min-300x400.jpg",
                     "url": "/wp-content/uploads/2018/11/49-min-300x400.jpg"
                   },
-                  "alt": "49-min",
+                  "alt": "Foto 48 de 49",
                   "width": 300,
                   "height": 400
                 },
@@ -48061,6 +48316,7 @@
           "data": "2018-12-11T19:01:20.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2018/11/1-min1-300x400.jpg",
             "src": "/wp-content/uploads/2018/11/1-min1-300x400.jpg",
             "alt": "",
@@ -48464,7 +48720,10 @@
               },
               "alt": "IEncontroTransfopressPainel",
               "width": 210,
-              "height": 300
+              "height": 300,
+              "link": {
+                "href": "/wp-content/uploads/2016/07/affiche_finale_baixa-717x1024.jpg"
+              }
             },
             {
               "_type": "block",
@@ -48589,6 +48848,7 @@
           "data": "2013-11-29T21:22:56.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2016/07/affiche_finale_baixa-717x1024.jpg",
             "src": "/wp-content/uploads/2016/07/affiche_finale_baixa-717x1024.jpg",
             "alt": "",
@@ -49172,6 +49432,7 @@
           "data": "2016-05-24T18:22:49.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2016/08/1-20160523_163314-600x400.jpg",
             "src": "/wp-content/uploads/2016/08/1-20160523_163314-600x400.jpg",
             "alt": "",
@@ -49680,7 +49941,10 @@
               },
               "alt": "IIEncontroTransfopressCartaz",
               "width": 230,
-              "height": 300
+              "height": 300,
+              "link": {
+                "href": "/wp-content/uploads/2016/07/transfopress_cartaz-1-784x1024.png"
+              }
             },
             {
               "_type": "block",
@@ -49965,6 +50229,7 @@
           "data": "2014-11-29T10:51:26.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2016/08/II-Encontro-Transfopress-Br-14.jpg",
             "src": "/wp-content/uploads/2016/08/II-Encontro-Transfopress-Br-14.jpg",
             "alt": "",
@@ -50359,6 +50624,7 @@
           "data": "2017-11-14T18:42:11.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2017/11/1-13_14-11_IIIencontro-transforpress_brasil_convite--300x400.jpg",
             "src": "/wp-content/uploads/2017/11/1-13_14-11_IIIencontro-transforpress_brasil_convite--300x400.jpg",
             "alt": "",
@@ -50535,7 +50801,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/IMG_0714-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/IMG_0714-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress2",
+                  "alt": "Foto 1 de 29",
                   "width": 600,
                   "height": 400
                 },
@@ -50547,7 +50813,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/IMG_0706-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/IMG_0706-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress3-1",
+                  "alt": "Foto 2 de 29",
                   "width": 600,
                   "height": 400
                 },
@@ -50559,7 +50825,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/IMG_0698-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/IMG_0698-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress3",
+                  "alt": "Foto 3 de 29",
                   "width": 600,
                   "height": 400
                 },
@@ -50571,7 +50837,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/IMG_0694-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/IMG_0694-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress4",
+                  "alt": "Foto 4 de 29",
                   "width": 600,
                   "height": 400
                 },
@@ -50583,7 +50849,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/b3-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/b3-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress27",
+                  "alt": "Foto 5 de 29",
                   "width": 600,
                   "height": 400
                 },
@@ -50595,7 +50861,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/b4-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/b4-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress26",
+                  "alt": "Foto 6 de 29",
                   "width": 600,
                   "height": 400
                 },
@@ -50607,7 +50873,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/b5-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/b5-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress25",
+                  "alt": "Foto 7 de 29",
                   "width": 600,
                   "height": 400
                 },
@@ -50619,7 +50885,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/b6-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/b6-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress24",
+                  "alt": "Foto 8 de 29",
                   "width": 600,
                   "height": 400
                 },
@@ -50631,7 +50897,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/b7-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/b7-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress23",
+                  "alt": "Foto 9 de 29",
                   "width": 600,
                   "height": 400
                 },
@@ -50643,7 +50909,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/b8-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/b8-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress22",
+                  "alt": "Foto 10 de 29",
                   "width": 600,
                   "height": 400
                 },
@@ -50655,7 +50921,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/b9-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/b9-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress21",
+                  "alt": "Foto 11 de 29",
                   "width": 600,
                   "height": 400
                 },
@@ -50667,7 +50933,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/b10-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/b10-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress20",
+                  "alt": "Foto 12 de 29",
                   "width": 600,
                   "height": 400
                 },
@@ -50679,7 +50945,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/IMG_0452-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/IMG_0452-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress19",
+                  "alt": "Foto 13 de 29",
                   "width": 600,
                   "height": 400
                 },
@@ -50691,7 +50957,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/IMG_0458-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/IMG_0458-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress18",
+                  "alt": "Foto 14 de 29",
                   "width": 600,
                   "height": 400
                 },
@@ -50703,7 +50969,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/IMG_0469-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/IMG_0469-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress17",
+                  "alt": "Foto 15 de 29",
                   "width": 600,
                   "height": 400
                 },
@@ -50715,7 +50981,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/IMG_0475-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/IMG_0475-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress16",
+                  "alt": "Foto 16 de 29",
                   "width": 600,
                   "height": 400
                 },
@@ -50727,7 +50993,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/IMG_0480-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/IMG_0480-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress15",
+                  "alt": "Foto 17 de 29",
                   "width": 600,
                   "height": 400
                 },
@@ -50739,7 +51005,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/IMG_0521-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/IMG_0521-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress14",
+                  "alt": "Foto 18 de 29",
                   "width": 600,
                   "height": 400
                 },
@@ -50751,7 +51017,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/IMG_0648-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/IMG_0648-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress8",
+                  "alt": "Foto 19 de 29",
                   "width": 600,
                   "height": 400
                 },
@@ -50763,7 +51029,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/IMG_0634-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/IMG_0634-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress9",
+                  "alt": "Foto 20 de 29",
                   "width": 600,
                   "height": 400
                 },
@@ -50775,7 +51041,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/IMG_0628-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/IMG_0628-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress9-1",
+                  "alt": "Foto 21 de 29",
                   "width": 600,
                   "height": 400
                 },
@@ -50787,7 +51053,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/IMG_0621-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/IMG_0621-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress10",
+                  "alt": "Foto 22 de 29",
                   "width": 600,
                   "height": 400
                 },
@@ -50799,7 +51065,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/IMG_0618-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/IMG_0618-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress11",
+                  "alt": "Foto 23 de 29",
                   "width": 600,
                   "height": 400
                 },
@@ -50811,7 +51077,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/IMG_0583-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/IMG_0583-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress12",
+                  "alt": "Foto 24 de 29",
                   "width": 600,
                   "height": 400
                 },
@@ -50823,7 +51089,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/IMG_0570-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/IMG_0570-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress13",
+                  "alt": "Foto 25 de 29",
                   "width": 600,
                   "height": 400
                 },
@@ -50835,7 +51101,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/IMG_0649-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/IMG_0649-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress7",
+                  "alt": "Foto 26 de 29",
                   "width": 600,
                   "height": 400
                 },
@@ -50847,7 +51113,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/IMG_0676-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/IMG_0676-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress6",
+                  "alt": "Foto 27 de 29",
                   "width": 600,
                   "height": 400
                 },
@@ -50859,7 +51125,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/IMG_0681-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/IMG_0681-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress5",
+                  "alt": "Foto 28 de 29",
                   "width": 600,
                   "height": 400
                 },
@@ -50871,7 +51137,7 @@
                     "_ref": "legado:/wp-content/uploads/2016/07/b2-600x400.jpg",
                     "url": "/wp-content/uploads/2016/07/b2-600x400.jpg"
                   },
-                  "alt": "3EncuentroTransfopress1",
+                  "alt": "Foto 29 de 29",
                   "width": 600,
                   "height": 400
                 }
@@ -50945,7 +51211,10 @@
               },
               "alt": "IIIEncontroTransfopressPainel",
               "width": 225,
-              "height": 300
+              "height": 300,
+              "link": {
+                "href": "/wp-content/uploads/2016/07/b620d753fc5c6174b1efafcbc281b3a0.jpg"
+              }
             },
             {
               "_type": "block",
@@ -51152,6 +51421,7 @@
           "data": "2015-11-05T17:27:56.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2016/07/IMG_0714-600x400.jpg",
             "src": "/wp-content/uploads/2016/07/IMG_0714-600x400.jpg",
             "alt": "",
@@ -51386,7 +51656,7 @@
                     "_ref": "legado:/wp-content/uploads/2017/01/15220044_1189705724400113_1436755440612641153_n-500x500.jpg",
                     "url": "/wp-content/uploads/2017/01/15220044_1189705724400113_1436755440612641153_n-500x500.jpg"
                   },
-                  "alt": "15220044_1189705724400113_1436755440612641153_n",
+                  "alt": "Foto 1 de 7",
                   "width": 500,
                   "height": 500
                 },
@@ -51398,7 +51668,7 @@
                     "_ref": "legado:/wp-content/uploads/2017/01/14054050_1189705927733426_761085871263692652_n-500x500.jpg",
                     "url": "/wp-content/uploads/2017/01/14054050_1189705927733426_761085871263692652_n-500x500.jpg"
                   },
-                  "alt": "14054050_1189705927733426_761085871263692652_n",
+                  "alt": "Foto 2 de 7",
                   "width": 500,
                   "height": 500
                 },
@@ -51410,7 +51680,7 @@
                     "_ref": "legado:/wp-content/uploads/2017/01/15109636_1189705761066776_1978005676980281658_n-500x500.jpg",
                     "url": "/wp-content/uploads/2017/01/15109636_1189705761066776_1978005676980281658_n-500x500.jpg"
                   },
-                  "alt": "15109636_1189705761066776_1978005676980281658_n",
+                  "alt": "Foto 3 de 7",
                   "width": 500,
                   "height": 500
                 },
@@ -51422,7 +51692,7 @@
                     "_ref": "legado:/wp-content/uploads/2017/01/15178968_1189705804400105_3631698595979579772_n-500x500.jpg",
                     "url": "/wp-content/uploads/2017/01/15178968_1189705804400105_3631698595979579772_n-500x500.jpg"
                   },
-                  "alt": "15178968_1189705804400105_3631698595979579772_n",
+                  "alt": "Foto 4 de 7",
                   "width": 500,
                   "height": 500
                 },
@@ -51434,7 +51704,7 @@
                     "_ref": "legado:/wp-content/uploads/2017/01/15193668_1189705851066767_248019834065298350_n-500x500.jpg",
                     "url": "/wp-content/uploads/2017/01/15193668_1189705851066767_248019834065298350_n-500x500.jpg"
                   },
-                  "alt": "15193668_1189705851066767_248019834065298350_n",
+                  "alt": "Foto 5 de 7",
                   "width": 500,
                   "height": 500
                 },
@@ -51446,7 +51716,7 @@
                     "_ref": "legado:/wp-content/uploads/2017/01/15203241_1189705711066781_8955234607916866134_n-500x500.jpg",
                     "url": "/wp-content/uploads/2017/01/15203241_1189705711066781_8955234607916866134_n-500x500.jpg"
                   },
-                  "alt": "15203241_1189705711066781_8955234607916866134_n",
+                  "alt": "Foto 6 de 7",
                   "width": 500,
                   "height": 500
                 },
@@ -51722,6 +51992,7 @@
           "data": "2016-11-25T17:08:24.000Z",
           "idioma": "es",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2017/01/15220044_1189705724400113_1436755440612641153_n-500x500.jpg",
             "src": "/wp-content/uploads/2017/01/15220044_1189705724400113_1436755440612641153_n-500x500.jpg",
             "alt": "",
@@ -51888,7 +52159,7 @@
                     "_ref": "legado:/wp-content/uploads/2015/09/1_Capa_Mediacoes_Transnacionais-e1698146894950.jpg",
                     "url": "/wp-content/uploads/2015/09/1_Capa_Mediacoes_Transnacionais-e1698146894950.jpg"
                   },
-                  "alt": "1_Capa_Mediacoes_Transnacionais",
+                  "alt": "Foto 3 de 3",
                   "width": 254,
                   "height": 376
                 }
@@ -51921,7 +52192,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/05-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/05-150x150.jpg"
                   },
-                  "alt": "05",
+                  "alt": "Foto 1 de 5",
                   "width": 150,
                   "height": 150
                 },
@@ -51933,7 +52204,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/04-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/04-150x150.jpg"
                   },
-                  "alt": "04",
+                  "alt": "Foto 2 de 5",
                   "width": 150,
                   "height": 150
                 },
@@ -51945,7 +52216,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/03-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/03-150x150.jpg"
                   },
-                  "alt": "03",
+                  "alt": "Foto 3 de 5",
                   "width": 150,
                   "height": 150
                 },
@@ -51957,7 +52228,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/02-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/02-150x150.jpg"
                   },
-                  "alt": "02",
+                  "alt": "Foto 4 de 5",
                   "width": 150,
                   "height": 150
                 },
@@ -51969,7 +52240,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/01-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/01-150x150.jpg"
                   },
-                  "alt": "01",
+                  "alt": "Foto 5 de 5",
                   "width": 150,
                   "height": 150
                 }
@@ -51979,6 +52250,7 @@
           "data": "2023-10-24T11:16:06.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2023/08/2-1ª-jornada-nacional-de-pesquisa-e1698146562884-300x254.jpg",
             "src": "/wp-content/uploads/2023/08/2-1%C2%AA-jornada-nacional-de-pesquisa-e1698146562884-300x254.jpg",
             "alt": "",
@@ -52167,6 +52439,7 @@
           "data": "2023-10-24T14:45:21.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2023/07/Convite_lancamento_livro_MEDIACOES-300x300.jpg",
             "src": "/wp-content/uploads/2023/07/Convite_lancamento_livro_MEDIACOES-300x300.jpg",
             "alt": "",
@@ -52881,7 +53154,10 @@
               },
               "alt": "ENCONTRO TRANSFOPRESS BRASIL",
               "width": 246,
-              "height": 300
+              "height": 300,
+              "link": {
+                "href": "/wp-content/uploads/2023/03/ENCONTRO-TRANSFOPRESS-BRASIL1-e1697549582509.jpeg"
+              }
             },
             {
               "_type": "block",
@@ -53170,7 +53446,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/001-150x150.png",
                     "url": "/wp-content/uploads/2023/10/001-150x150.png"
                   },
-                  "alt": "001",
+                  "alt": "Foto 1 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53182,7 +53458,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/002-150x150.png",
                     "url": "/wp-content/uploads/2023/10/002-150x150.png"
                   },
-                  "alt": "002",
+                  "alt": "Foto 2 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53194,7 +53470,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/003-150x150.png",
                     "url": "/wp-content/uploads/2023/10/003-150x150.png"
                   },
-                  "alt": "003",
+                  "alt": "Foto 3 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53206,7 +53482,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/004-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/004-150x150.jpg"
                   },
-                  "alt": "004",
+                  "alt": "Foto 4 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53218,7 +53494,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/006-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/006-150x150.jpg"
                   },
-                  "alt": "006",
+                  "alt": "Foto 5 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53230,7 +53506,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/007_1-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/007_1-150x150.jpg"
                   },
-                  "alt": "007_1",
+                  "alt": "Foto 6 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53242,7 +53518,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/007-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/007-150x150.jpg"
                   },
-                  "alt": "007",
+                  "alt": "Foto 7 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53254,7 +53530,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/08-1-150x150.png",
                     "url": "/wp-content/uploads/2023/10/08-1-150x150.png"
                   },
-                  "alt": "08-1",
+                  "alt": "Foto 8 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53266,7 +53542,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/008-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/008-150x150.jpg"
                   },
-                  "alt": "008",
+                  "alt": "Foto 9 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53278,7 +53554,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/0081-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/0081-150x150.jpg"
                   },
-                  "alt": "008(1)",
+                  "alt": "Foto 10 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53290,7 +53566,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/009-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/009-150x150.jpg"
                   },
-                  "alt": "009",
+                  "alt": "Foto 11 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53302,7 +53578,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/010-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/010-150x150.jpg"
                   },
-                  "alt": "010",
+                  "alt": "Foto 12 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53314,7 +53590,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/011-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/011-150x150.jpg"
                   },
-                  "alt": "011",
+                  "alt": "Foto 13 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53326,7 +53602,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/012-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/012-150x150.jpg"
                   },
-                  "alt": "012",
+                  "alt": "Foto 14 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53338,7 +53614,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/013-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/013-150x150.jpg"
                   },
-                  "alt": "013",
+                  "alt": "Foto 15 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53350,7 +53626,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/014-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/014-150x150.jpg"
                   },
-                  "alt": "014",
+                  "alt": "Foto 16 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53362,7 +53638,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/0141-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/0141-150x150.jpg"
                   },
-                  "alt": "014(1)",
+                  "alt": "Foto 17 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53374,7 +53650,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/015-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/015-150x150.jpg"
                   },
-                  "alt": "015",
+                  "alt": "Foto 18 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53386,7 +53662,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/016-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/016-150x150.jpg"
                   },
-                  "alt": "016",
+                  "alt": "Foto 19 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53398,7 +53674,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/017-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/017-150x150.jpg"
                   },
-                  "alt": "017",
+                  "alt": "Foto 20 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53410,7 +53686,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/018-e1697463605694-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/018-e1697463605694-150x150.jpg"
                   },
-                  "alt": "018",
+                  "alt": "Foto 21 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53422,7 +53698,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/019_1-150x150.jpeg",
                     "url": "/wp-content/uploads/2023/10/019_1-150x150.jpeg"
                   },
-                  "alt": "019_1",
+                  "alt": "Foto 22 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53434,7 +53710,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/019_2-150x150.jpeg",
                     "url": "/wp-content/uploads/2023/10/019_2-150x150.jpeg"
                   },
-                  "alt": "019_2",
+                  "alt": "Foto 23 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53446,7 +53722,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/019-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/019-150x150.jpg"
                   },
-                  "alt": "019",
+                  "alt": "Foto 24 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53458,7 +53734,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/020-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/020-150x150.jpg"
                   },
-                  "alt": "020",
+                  "alt": "Foto 25 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53470,7 +53746,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/021-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/021-150x150.jpg"
                   },
-                  "alt": "021",
+                  "alt": "Foto 26 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53482,7 +53758,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/023-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/023-150x150.jpg"
                   },
-                  "alt": "023",
+                  "alt": "Foto 27 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53494,7 +53770,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/024-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/024-150x150.jpg"
                   },
-                  "alt": "024",
+                  "alt": "Foto 28 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53506,7 +53782,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/025-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/025-150x150.jpg"
                   },
-                  "alt": "025",
+                  "alt": "Foto 29 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53518,7 +53794,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/026-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/026-150x150.jpg"
                   },
-                  "alt": "026",
+                  "alt": "Foto 30 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53530,7 +53806,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/027-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/027-150x150.jpg"
                   },
-                  "alt": "027",
+                  "alt": "Foto 31 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53542,7 +53818,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/028-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/028-150x150.jpg"
                   },
-                  "alt": "028",
+                  "alt": "Foto 32 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53554,7 +53830,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/029_1-150x150.jpeg",
                     "url": "/wp-content/uploads/2023/10/029_1-150x150.jpeg"
                   },
-                  "alt": "029_1",
+                  "alt": "Foto 33 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53566,7 +53842,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/029-e1697463572685-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/029-e1697463572685-150x150.jpg"
                   },
-                  "alt": "029",
+                  "alt": "Foto 34 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53578,7 +53854,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/030-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/030-150x150.jpg"
                   },
-                  "alt": "030",
+                  "alt": "Foto 35 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53590,7 +53866,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/031-150x150.jpeg",
                     "url": "/wp-content/uploads/2023/10/031-150x150.jpeg"
                   },
-                  "alt": "031",
+                  "alt": "Foto 36 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53602,7 +53878,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/033-150x150.jpeg",
                     "url": "/wp-content/uploads/2023/10/033-150x150.jpeg"
                   },
-                  "alt": "033",
+                  "alt": "Foto 37 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53614,7 +53890,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/034-150x150.jpeg",
                     "url": "/wp-content/uploads/2023/10/034-150x150.jpeg"
                   },
-                  "alt": "034",
+                  "alt": "Foto 38 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53626,7 +53902,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/035-150x150.jpeg",
                     "url": "/wp-content/uploads/2023/10/035-150x150.jpeg"
                   },
-                  "alt": "035",
+                  "alt": "Foto 39 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53638,7 +53914,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/036-150x150.jpeg",
                     "url": "/wp-content/uploads/2023/10/036-150x150.jpeg"
                   },
-                  "alt": "036",
+                  "alt": "Foto 40 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53650,7 +53926,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/037-150x150.jpeg",
                     "url": "/wp-content/uploads/2023/10/037-150x150.jpeg"
                   },
-                  "alt": "037",
+                  "alt": "Foto 41 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53662,7 +53938,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/038-150x150.jpeg",
                     "url": "/wp-content/uploads/2023/10/038-150x150.jpeg"
                   },
-                  "alt": "038",
+                  "alt": "Foto 42 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53674,7 +53950,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/040-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/040-150x150.jpg"
                   },
-                  "alt": "040",
+                  "alt": "Foto 43 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53686,7 +53962,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/042-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/042-150x150.jpg"
                   },
-                  "alt": "042",
+                  "alt": "Foto 44 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53698,7 +53974,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/043-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/043-150x150.jpg"
                   },
-                  "alt": "043",
+                  "alt": "Foto 45 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53710,7 +53986,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/045_1-150x150.jpeg",
                     "url": "/wp-content/uploads/2023/10/045_1-150x150.jpeg"
                   },
-                  "alt": "045_1",
+                  "alt": "Foto 46 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53722,7 +53998,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/045_2-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/045_2-150x150.jpg"
                   },
-                  "alt": "045_2",
+                  "alt": "Foto 47 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53734,7 +54010,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/20230918_1642331-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/20230918_1642331-150x150.jpg"
                   },
-                  "alt": "20230918_164233",
+                  "alt": "Foto 48 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53746,7 +54022,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/20230918_1641551-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/20230918_1641551-150x150.jpg"
                   },
-                  "alt": "20230918_164155",
+                  "alt": "Foto 49 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53758,7 +54034,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/20230918_1642181-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/20230918_1642181-150x150.jpg"
                   },
-                  "alt": "20230918_164218",
+                  "alt": "Foto 50 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53770,7 +54046,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/20230918_1629301-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/20230918_1629301-150x150.jpg"
                   },
-                  "alt": "20230918_162930",
+                  "alt": "Foto 51 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53782,7 +54058,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/045_3-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/045_3-150x150.jpg"
                   },
-                  "alt": "045_3",
+                  "alt": "Foto 52 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53794,7 +54070,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/048-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/048-150x150.jpg"
                   },
-                  "alt": "048",
+                  "alt": "Foto 53 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53806,7 +54082,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/046-e1697463473999-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/046-e1697463473999-150x150.jpg"
                   },
-                  "alt": "046",
+                  "alt": "Foto 54 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53818,7 +54094,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/047-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/047-150x150.jpg"
                   },
-                  "alt": "047",
+                  "alt": "Foto 55 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53830,7 +54106,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/049-e1697463415647-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/049-e1697463415647-150x150.jpg"
                   },
-                  "alt": "049",
+                  "alt": "Foto 56 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53842,7 +54118,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/20230919_1233141-e1697808626576-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/20230919_1233141-e1697808626576-150x150.jpg"
                   },
-                  "alt": "20230919_123314",
+                  "alt": "Foto 57 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53854,7 +54130,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/20230921_1446161-e1697808593984-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/20230921_1446161-e1697808593984-150x150.jpg"
                   },
-                  "alt": "20230921_144616",
+                  "alt": "Foto 58 de 59",
                   "width": 150,
                   "height": 150
                 },
@@ -53866,7 +54142,7 @@
                     "_ref": "legado:/wp-content/uploads/2023/10/045-e1697463533393-150x150.jpg",
                     "url": "/wp-content/uploads/2023/10/045-e1697463533393-150x150.jpg"
                   },
-                  "alt": "045",
+                  "alt": "Foto 59 de 59",
                   "width": 150,
                   "height": 150
                 }
@@ -53876,6 +54152,7 @@
           "data": "2023-10-17T11:29:23.000Z",
           "idioma": "pt",
           "imagem": {
+            "provider": "external",
             "id": "legado:/wp-content/uploads/2023/03/ENCONTRO-TRANSFOPRESS-BRASIL1-246x300.jpeg",
             "src": "/wp-content/uploads/2023/03/ENCONTRO-TRANSFOPRESS-BRASIL1-246x300.jpeg",
             "alt": "",
@@ -54063,6 +54340,7 @@
           "link": "https://www.unesp.br",
           "ordem": 1,
           "logo": {
+            "provider": "external",
             "id": "legado:/static/img/parceiros/unesp.png",
             "src": "/static/img/parceiros/unesp.png",
             "alt": "Unesp",
@@ -54081,6 +54359,7 @@
           "link": "https://www.chcsc.uvsq.fr",
           "ordem": 2,
           "logo": {
+            "provider": "external",
             "id": "legado:/static/img/parceiros/chcsc.png",
             "src": "/static/img/parceiros/chcsc.png",
             "alt": "CHCSC - Centre d'Histoire Culturelle des Sociétés Contemporaines (UVSQ)",
@@ -54099,6 +54378,7 @@
           "link": "https://www.unior.it",
           "ordem": 3,
           "logo": {
+            "provider": "external",
             "id": "legado:/static/img/parceiros/orientale.png",
             "src": "/static/img/parceiros/orientale.png",
             "alt": "Università degli Studi di Napoli \"L'Orientale\"",
@@ -54117,6 +54397,7 @@
           "link": "https://www.unicamp.br",
           "ordem": 4,
           "logo": {
+            "provider": "external",
             "id": "legado:/static/img/parceiros/unicamp.png",
             "src": "/static/img/parceiros/unicamp.png",
             "alt": "Unicamp",
@@ -54135,6 +54416,7 @@
           "link": "https://www.ufpr.br",
           "ordem": 5,
           "logo": {
+            "provider": "external",
             "id": "legado:/static/img/parceiros/ufpr.png",
             "src": "/static/img/parceiros/ufpr.png",
             "alt": "UFPR",
@@ -54153,6 +54435,7 @@
           "link": "https://www.ufscar.br",
           "ordem": 6,
           "logo": {
+            "provider": "external",
             "id": "legado:/static/img/parceiros/ufscar.png",
             "src": "/static/img/parceiros/ufscar.png",
             "alt": "UFSCar",
@@ -54171,6 +54454,7 @@
           "link": "https://www.gov.br/fcrb",
           "ordem": 7,
           "logo": {
+            "provider": "external",
             "id": "legado:/static/img/parceiros/fcrb.png",
             "src": "/static/img/parceiros/fcrb.png",
             "alt": "Fundação Casa de Rui Barbosa",
@@ -54189,6 +54473,7 @@
           "link": "https://www.ufrgs.br",
           "ordem": 8,
           "logo": {
+            "provider": "external",
             "id": "legado:/static/img/parceiros/ufrgs.png",
             "src": "/static/img/parceiros/ufrgs.png",
             "alt": "UFRGS",
@@ -54207,6 +54492,7 @@
           "link": "https://portalpadrao.ufma.br",
           "ordem": 9,
           "logo": {
+            "provider": "external",
             "id": "legado:/static/img/parceiros/ufma.png",
             "src": "/static/img/parceiros/ufma.png",
             "alt": "UFMA",
@@ -54225,6 +54511,7 @@
           "link": "https://www.unisinos.br",
           "ordem": 10,
           "logo": {
+            "provider": "external",
             "id": "legado:/static/img/parceiros/unisinos.png",
             "src": "/static/img/parceiros/unisinos.png",
             "alt": "Unisinos",
@@ -54243,6 +54530,7 @@
           "link": "https://www.ucs.br",
           "ordem": 11,
           "logo": {
+            "provider": "external",
             "id": "legado:/static/img/parceiros/ucs.png",
             "src": "/static/img/parceiros/ucs.png",
             "alt": "UCS - Universidade de Caxias do Sul",
@@ -54261,6 +54549,7 @@
           "link": "http://jfb.franca.unesp.br",
           "ordem": 12,
           "logo": {
+            "provider": "external",
             "id": "legado:/static/img/parceiros/jfb.png",
             "src": "/static/img/parceiros/jfb.png",
             "alt": "JFB",
@@ -54279,6 +54568,7 @@
           "link": "https://www.unifesp.br",
           "ordem": 13,
           "logo": {
+            "provider": "external",
             "id": "legado:/static/img/parceiros/unifesp.png",
             "src": "/static/img/parceiros/unifesp.png",
             "alt": "Unifesp",
@@ -54297,6 +54587,7 @@
           "link": "",
           "ordem": 14,
           "logo": {
+            "provider": "external",
             "id": "legado:/static/img/parceiros/biblioteca-digital.png",
             "src": "/static/img/parceiros/biblioteca-digital.png",
             "alt": "Biblioteca Digital da Unesp",
@@ -54315,6 +54606,7 @@
           "link": "https://fapesp.br",
           "ordem": 15,
           "logo": {
+            "provider": "external",
             "id": "legado:/static/img/parceiros/fapesp.png",
             "src": "/static/img/parceiros/fapesp.png",
             "alt": "FAPESP",
@@ -54333,6 +54625,7 @@
           "link": "https://www.gov.br/cnpq",
           "ordem": 16,
           "logo": {
+            "provider": "external",
             "id": "legado:/static/img/parceiros/cnpq.png",
             "src": "/static/img/parceiros/cnpq.png",
             "alt": "CNPq",

@@ -33,4 +33,4 @@ jobs:
         run: npm run ci
 
       - name: Seed gerado a partir do script
-        run: node seed/gerar-seed.mjs && git diff --exit-code seed/seed.json src/lib/redirecionamentos.json
+        run: node seed/gerar-seed.mjs && git diff --exit-code seed/seed.json src/lib/redirecionamentos.json src/lib/imagens-ampliadas.json
